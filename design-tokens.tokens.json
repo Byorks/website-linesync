@@ -1,0 +1,789 @@
+{
+  "gradient": {
+    "line": {
+      "description": "",
+      "type": "custom-gradient",
+      "value": {
+        "gradientType": "linear",
+        "rotation": 180,
+        "stops": [
+          {
+            "position": 0,
+            "color": "#988fc5ff"
+          },
+          {
+            "position": 1,
+            "color": "#392779ff"
+          }
+        ]
+      },
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:8feb73931bed8da4d5302e28a390eeda9840f956,",
+          "exportKey": "gradient"
+        }
+      }
+    },
+    "line 2": {
+      "description": "",
+      "type": "custom-gradient",
+      "value": {
+        "gradientType": "linear",
+        "rotation": 180,
+        "stops": [
+          {
+            "position": 0,
+            "color": "#988fc5ff"
+          },
+          {
+            "position": 0.45,
+            "color": "#392779ff"
+          }
+        ]
+      },
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:7aa342db50c6276178dc0b180256f3463c13368b,",
+          "exportKey": "gradient"
+        }
+      }
+    }
+  },
+  "color": {
+    "pastelgreen-950": {
+      "description": "",
+      "type": "color",
+      "value": "#14270cff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:f88b27da86a5d9265e847028a041d602785ee943,",
+          "exportKey": "color"
+        }
+      }
+    },
+    "pastelgreen-900": {
+      "description": "",
+      "type": "color",
+      "value": "#2b491eff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:64ebda09dc9c3fc6db71ba6fb1c56c648d423d46,",
+          "exportKey": "color"
+        }
+      }
+    },
+    "pastelgreen-800": {
+      "description": "",
+      "type": "color",
+      "value": "#31551fff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:81dae71611f0571edd3b6ab7b58566dc274bb3be,",
+          "exportKey": "color"
+        }
+      }
+    },
+    "pastelgreen-700": {
+      "description": "",
+      "type": "color",
+      "value": "#3b6a21ff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:bdfcc13ade30c721e170ff7d46474a601ef7c227,",
+          "exportKey": "color"
+        }
+      }
+    },
+    "pastelgreen-600": {
+      "description": "",
+      "type": "color",
+      "value": "#4a8b25ff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:4550d9ffed35dbb8349e9f2bf0f93566a3be5c1e,",
+          "exportKey": "color"
+        }
+      }
+    },
+    "pastelgreen-500": {
+      "description": "",
+      "type": "color",
+      "value": "#63ae34ff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:dd6ab18653c7f11e6f84ed7f429b8ba5b75becbb,",
+          "exportKey": "color"
+        }
+      }
+    },
+    "pastelgreen-400": {
+      "description": "",
+      "type": "color",
+      "value": "#63ae34ff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:499c23a00d712180cd90bf37e6684b5e32065ecd,",
+          "exportKey": "color"
+        }
+      }
+    },
+    "pastelgreen-300-main": {
+      "description": "",
+      "type": "color",
+      "value": "#82c952ff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:efd4f324f699bea520d1e631aece10db2eec620c,",
+          "exportKey": "color"
+        }
+      }
+    },
+    "pastelgreen-200": {
+      "description": "",
+      "type": "color",
+      "value": "#c6eaacff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:8b2585caa365d3f9c6d04b08d1d75f9b9a6decc7,",
+          "exportKey": "color"
+        }
+      }
+    },
+    "pastelgreen-100": {
+      "description": "",
+      "type": "color",
+      "value": "#e2f4d3ff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:94543bf61fae13921dad6096b63166950fe5e1ca,",
+          "exportKey": "color"
+        }
+      }
+    },
+    "pastelgreen-50": {
+      "description": "",
+      "type": "color",
+      "value": "#f3faebff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:0b796d9c856c0e038b80f7907582c3e6b4bfe30e,",
+          "exportKey": "color"
+        }
+      }
+    },
+    "misk-50": {
+      "description": "",
+      "type": "color",
+      "value": "#eef0ffff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:1b638cd8c71c5126fbe40515693fc541270cf350,",
+          "exportKey": "color"
+        }
+      }
+    },
+    "misk-100": {
+      "description": "",
+      "type": "color",
+      "value": "#e0e3ffff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:378055c862b7ff53732d1dadecf0b56a39807000,",
+          "exportKey": "color"
+        }
+      }
+    },
+    "misk-200": {
+      "description": "",
+      "type": "color",
+      "value": "#c8cbfdff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:d9b85d7e35e3594dc33b877d6660555cdde54562,",
+          "exportKey": "color"
+        }
+      }
+    },
+    "misk-300": {
+      "description": "",
+      "type": "color",
+      "value": "#a6aafbff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:16d11bc01bd2d5a35053fb629c9fdaf29ee5c05a,",
+          "exportKey": "color"
+        }
+      }
+    },
+    "misk-400": {
+      "description": "",
+      "type": "color",
+      "value": "#8682f7ff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:af553e05a095f71b1a9909d4338d70718729cef3,",
+          "exportKey": "color"
+        }
+      }
+    },
+    "misk-500": {
+      "description": "",
+      "type": "color",
+      "value": "#7364f0ff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:963028a3f580f4a2d45300b772099848224e8116,",
+          "exportKey": "color"
+        }
+      }
+    },
+    "misk-600": {
+      "description": "",
+      "type": "color",
+      "value": "#6448e3ff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:8fe36101511866306e321e677069525431581c48,",
+          "exportKey": "color"
+        }
+      }
+    },
+    "misk-700": {
+      "description": "",
+      "type": "color",
+      "value": "#5639c9ff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:0d050bece9927b9ac91f0fc3db73711d621a6d06,",
+          "exportKey": "color"
+        }
+      }
+    },
+    "misk-800": {
+      "description": "",
+      "type": "color",
+      "value": "#4631a2ff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:7e3b1158bcbcf3589a7c2594d85551f3448ccde8,",
+          "exportKey": "color"
+        }
+      }
+    },
+    "misk-900-main": {
+      "description": "",
+      "type": "color",
+      "value": "#362a73ff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:4b552d71d3fd7f91428ea8bc75a35b8a9abdafa3,",
+          "exportKey": "color"
+        }
+      }
+    },
+    "misk-950": {
+      "description": "",
+      "type": "color",
+      "value": "#241b4bff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:8b18ac4178539f9b7ce07e18e2464eeea933e6d2,",
+          "exportKey": "color"
+        }
+      }
+    },
+    "bluebell-50": {
+      "description": "",
+      "type": "color",
+      "value": "#eef0ffff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:8160ef9df58e117eb01f250f6a176b9b9f20380e,",
+          "exportKey": "color"
+        }
+      }
+    },
+    "bluebell-100": {
+      "description": "",
+      "type": "color",
+      "value": "#f0f0f7ff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:a83e8b50f2bd5ca692d995aabe6b3638f7d554f9,",
+          "exportKey": "color"
+        }
+      }
+    },
+    "bluebell-200": {
+      "description": "",
+      "type": "color",
+      "value": "#e4e4f0ff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:501eda1e577fe83135b99aed9b465facbb005d78,",
+          "exportKey": "color"
+        }
+      }
+    },
+    "bluebell-300": {
+      "description": "",
+      "type": "color",
+      "value": "#cecee4ff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:06627c975b759917ccb3bcb42e0b4b6613559541,",
+          "exportKey": "color"
+        }
+      }
+    },
+    "bluebell-400": {
+      "description": "",
+      "type": "color",
+      "value": "#b4b1d4ff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:b1fa6165abdb7ac5118358e91ada9eef5a4f61a2,",
+          "exportKey": "color"
+        }
+      }
+    },
+    "bluebell-500-main": {
+      "description": "",
+      "type": "color",
+      "value": "#9690c1ff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:4a9da645020d2b9ec8d84d1f3106d3d7a89da1f7,",
+          "exportKey": "color"
+        }
+      }
+    },
+    "bluebell-600": {
+      "description": "",
+      "type": "color",
+      "value": "#8277b0ff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:36ff9b3a894a40959820742e6c69e0af410b3129,",
+          "exportKey": "color"
+        }
+      }
+    },
+    "bluebell-700": {
+      "description": "",
+      "type": "color",
+      "value": "#70659cff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:06e513d64092261a3ff5151b0a306b66e22702d4,",
+          "exportKey": "color"
+        }
+      }
+    },
+    "bluebell-800": {
+      "description": "",
+      "type": "color",
+      "value": "#5d5483ff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:4a07541086e160c3e8da1c4b63160a19186cf6fb,",
+          "exportKey": "color"
+        }
+      }
+    },
+    "bluebell-900": {
+      "description": "",
+      "type": "color",
+      "value": "#4e466cff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:c77840eae6a8d55cd34269c82892d5f6453ad3af,",
+          "exportKey": "color"
+        }
+      }
+    },
+    "bluebell-950": {
+      "description": "",
+      "type": "color",
+      "value": "#322d48ff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:f7a91de2b8d7d8ed5f06a5c0515d0987d2bb3de5,",
+          "exportKey": "color"
+        }
+      }
+    }
+  },
+  "grid": {
+    "grid": {
+      "description": null,
+      "type": "custom-grid",
+      "value": {
+        "pattern": "grid",
+        "sectionSize": 10
+      },
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:e11d7977006ea4d2bee49b5fa2e3ac62d8232f9b,",
+          "exportKey": "grid"
+        }
+      }
+    }
+  },
+  "font": {
+    "corpo": {
+      "type": "custom-fontStyle",
+      "value": {
+        "fontSize": 16,
+        "textDecoration": "none",
+        "fontFamily": "Inter",
+        "fontWeight": 400,
+        "fontStyle": "normal",
+        "fontStretch": "normal",
+        "letterSpacing": 0,
+        "lineHeight": 19.2,
+        "paragraphIndent": 0,
+        "paragraphSpacing": 0,
+        "textCase": "none"
+      },
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:351184945dee304b5094d85bd5957feaa37a8ca9,",
+          "exportKey": "font"
+        }
+      }
+    },
+    "titulo h2": {
+      "type": "custom-fontStyle",
+      "value": {
+        "fontSize": 36,
+        "textDecoration": "none",
+        "fontFamily": "Manrope",
+        "fontWeight": 600,
+        "fontStyle": "normal",
+        "fontStretch": "normal",
+        "letterSpacing": 0,
+        "lineHeight": 43.2,
+        "paragraphIndent": 0,
+        "paragraphSpacing": 0,
+        "textCase": "none"
+      },
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:83dc6a38dc206b6bf7a0bb82ecd7bda87734006a,",
+          "exportKey": "font"
+        }
+      }
+    },
+    "titulo h3": {
+      "type": "custom-fontStyle",
+      "value": {
+        "fontSize": 32,
+        "textDecoration": "none",
+        "fontFamily": "Manrope",
+        "fontWeight": 600,
+        "fontStyle": "normal",
+        "fontStretch": "normal",
+        "letterSpacing": 0,
+        "lineHeight": 38.4,
+        "paragraphIndent": 0,
+        "paragraphSpacing": 0,
+        "textCase": "none"
+      },
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:5877934b6ba99623be5a40376e51d0faaa48ca03,",
+          "exportKey": "font"
+        }
+      }
+    },
+    "titulo h2 mobile": {
+      "type": "custom-fontStyle",
+      "value": {
+        "fontSize": 32,
+        "textDecoration": "none",
+        "fontFamily": "Manrope",
+        "fontWeight": 600,
+        "fontStyle": "normal",
+        "fontStretch": "normal",
+        "letterSpacing": 0,
+        "lineHeight": 38.4,
+        "paragraphIndent": 0,
+        "paragraphSpacing": 0,
+        "textCase": "none"
+      },
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:77d324f460013e1ce60515899588da0e10015a3e,",
+          "exportKey": "font"
+        }
+      }
+    }
+  },
+  "variable collection": {
+    "minsk-900-m": {
+      "type": "color",
+      "value": "#362a73ff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "collection": "Variable collection",
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "variableId": "VariableID:321:223",
+          "exportKey": "variables"
+        }
+      }
+    },
+    "minsk-950": {
+      "type": "color",
+      "value": "#241b4bff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "collection": "Variable collection",
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "variableId": "VariableID:321:261",
+          "exportKey": "variables"
+        }
+      }
+    },
+    "color": {
+      "description": "",
+      "type": "color",
+      "value": "{variable collection.minsk-900-m}",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "collection": "Variable collection",
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "variableId": "VariableID:324:220",
+          "exportKey": "variables"
+        }
+      }
+    }
+  },
+  "typography": {
+    "corpo": {
+      "fontSize": {
+        "type": "dimension",
+        "value": 16
+      },
+      "textDecoration": {
+        "type": "string",
+        "value": "none"
+      },
+      "fontFamily": {
+        "type": "string",
+        "value": "Inter"
+      },
+      "fontWeight": {
+        "type": "number",
+        "value": 400
+      },
+      "fontStyle": {
+        "type": "string",
+        "value": "normal"
+      },
+      "fontStretch": {
+        "type": "string",
+        "value": "normal"
+      },
+      "letterSpacing": {
+        "type": "dimension",
+        "value": 0
+      },
+      "lineHeight": {
+        "type": "dimension",
+        "value": 19.2
+      },
+      "paragraphIndent": {
+        "type": "dimension",
+        "value": 0
+      },
+      "paragraphSpacing": {
+        "type": "dimension",
+        "value": 0
+      },
+      "textCase": {
+        "type": "string",
+        "value": "none"
+      }
+    },
+    "titulo h2": {
+      "fontSize": {
+        "type": "dimension",
+        "value": 36
+      },
+      "textDecoration": {
+        "type": "string",
+        "value": "none"
+      },
+      "fontFamily": {
+        "type": "string",
+        "value": "Manrope"
+      },
+      "fontWeight": {
+        "type": "number",
+        "value": 600
+      },
+      "fontStyle": {
+        "type": "string",
+        "value": "normal"
+      },
+      "fontStretch": {
+        "type": "string",
+        "value": "normal"
+      },
+      "letterSpacing": {
+        "type": "dimension",
+        "value": 0
+      },
+      "lineHeight": {
+        "type": "dimension",
+        "value": 43.2
+      },
+      "paragraphIndent": {
+        "type": "dimension",
+        "value": 0
+      },
+      "paragraphSpacing": {
+        "type": "dimension",
+        "value": 0
+      },
+      "textCase": {
+        "type": "string",
+        "value": "none"
+      }
+    },
+    "titulo h3": {
+      "fontSize": {
+        "type": "dimension",
+        "value": 32
+      },
+      "textDecoration": {
+        "type": "string",
+        "value": "none"
+      },
+      "fontFamily": {
+        "type": "string",
+        "value": "Manrope"
+      },
+      "fontWeight": {
+        "type": "number",
+        "value": 600
+      },
+      "fontStyle": {
+        "type": "string",
+        "value": "normal"
+      },
+      "fontStretch": {
+        "type": "string",
+        "value": "normal"
+      },
+      "letterSpacing": {
+        "type": "dimension",
+        "value": 0
+      },
+      "lineHeight": {
+        "type": "dimension",
+        "value": 38.4
+      },
+      "paragraphIndent": {
+        "type": "dimension",
+        "value": 0
+      },
+      "paragraphSpacing": {
+        "type": "dimension",
+        "value": 0
+      },
+      "textCase": {
+        "type": "string",
+        "value": "none"
+      }
+    },
+    "titulo h2 mobile": {
+      "fontSize": {
+        "type": "dimension",
+        "value": 32
+      },
+      "textDecoration": {
+        "type": "string",
+        "value": "none"
+      },
+      "fontFamily": {
+        "type": "string",
+        "value": "Manrope"
+      },
+      "fontWeight": {
+        "type": "number",
+        "value": 600
+      },
+      "fontStyle": {
+        "type": "string",
+        "value": "normal"
+      },
+      "fontStretch": {
+        "type": "string",
+        "value": "normal"
+      },
+      "letterSpacing": {
+        "type": "dimension",
+        "value": 0
+      },
+      "lineHeight": {
+        "type": "dimension",
+        "value": 38.4
+      },
+      "paragraphIndent": {
+        "type": "dimension",
+        "value": 0
+      },
+      "paragraphSpacing": {
+        "type": "dimension",
+        "value": 0
+      },
+      "textCase": {
+        "type": "string",
+        "value": "none"
+      }
+    }
+  }
+}
