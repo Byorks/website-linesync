@@ -43,8 +43,13 @@
  
 @layer utilities {
     link-nav-hover {
-        @apply text-misk-900  transition hover:text-bold hover:text-misk-950;
+        @apply text-misk-900  transition hover:font-bold hover:text-misk-950;
     }    
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url(/assets/fonts/Manrope/Manrope-VariableFont_wght.ttf);
 }
 
 .container-grid {
