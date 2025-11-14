@@ -40,11 +40,11 @@
     --color-bluebell-900: #4e466c;
     --color-bluebell-950: #322d48;
 }
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+ 
+@layer utilities {
+    link-nav-hover {
+        @apply text-misk-900  transition hover:text-bold hover:text-misk-950;
+    }    
 }
 
 .container-grid {
