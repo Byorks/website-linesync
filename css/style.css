@@ -39,6 +39,10 @@
     --color-bluebell-800: #5d5483;
     --color-bluebell-900: #4e466c;
     --color-bluebell-950: #322d48;
+
+    /* Tipografia*/
+    --font-title: "Manrope";
+    --font-body: "Inter", sans-serif, i-sans-serif, system-ui,; 
 }
 
 @layer utilities {
@@ -47,18 +51,27 @@
     }
 
     .title-h2 {
-        @apply
+        @apply text-3xl md:text-4xl
     }
+
+    .bt-terciary {
+        @apply py-2 px-9 text-base  text-bluebell-50 bg-misk-900 hover:bg-misk-600 hover:border hover:border-pastelgreen-300 transition ease-in-out duration-300 rounded-[5px] cursor-pointer
+    }
+
+    p {
+        @apply font-body text-base text-left
+    }
+   
 }
 
 @font-face {
     font-family: "Manrope";
-    src: url("/assets/fonts/Manrope/Manrope-VariableFont_wght.ttf") format("truetype");
+    src: url("../assets/fonts/Manrope/Manrope-VariableFont_wght.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "Inter";
-    src: url("/assets/fonts/Inter/Inter-variable.ttf") format("truetype");
+    src: url("../assets/fonts/Inter/Inter-variable.ttf") format("truetype");
 }
 
 .container-grid {
@@ -67,23 +80,3 @@
     margin: 0 auto;
 }
 
-/* swiper */
-/* .swiper {
-    width: 100%;
-    height: 100%;
-} */
-
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #444;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.swiper-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
