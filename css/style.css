@@ -40,11 +40,11 @@
     --color-bluebell-900: #4e466c;
     --color-bluebell-950: #322d48;
 }
- 
+
 @layer utilities {
-    link-nav-hover {
-        @apply text-misk-900  transition hover:font-bold hover:text-misk-950;
-    }    
+    .link-nav-hover {
+        @apply text-misk-900 transition ease-in-out duration-300 hover:font-semibold hover:text-misk-950/75;
+    }
 }
 
 @font-face {
@@ -56,4 +56,25 @@
     max-width: 1620px;
     width: 80vw;
     margin: 0 auto;
+}
+
+/* swiper */
+/* .swiper {
+    width: 100%;
+    height: 100%;
+} */
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

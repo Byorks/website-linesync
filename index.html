@@ -15,8 +15,6 @@
 </head>
 
 <body>
-
-
     <header class="w-full h-[66px] bg-misk-50 border-b-[1.3px] border-pastelgreen-300">
         <div class="w-full h-full px-6 flex items-center justify-between">
             <div class="logo">
@@ -420,28 +418,20 @@
                 <nav aria-label="Global" class="hidden md:block">
                     <ul class="flex items-center gap-6 text-sm">
                         <li>
-                            <a class="text-gray-500 transition hover:text-gray-500/75 hover:font-bold" href="#"> Sobre </a>
+                            <a class="link-nav-hover" href="#"> Sobre </a>
                         </li>
 
                         <li>
-                            <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Carreiras </a>
+                            <a class="link-nav-hover" href="#"> Carreiras </a>
                         </li>
 
                         <li>
-                            <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Serviços</a>
+                            <a class="link-nav-hover" href="#"> Serviços</a>
                         </li>
 
                         <li>
-                            <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Setores de atuação </a>
+                            <a class="link-nav-hover" href="#"> Setores de atuação </a>
                         </li>
-
-                        <!-- <li>
-                            <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Projects </a>
-                        </li>
-
-                        <li>
-                            <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Blog </a>
-                        </li> -->
                     </ul>
                 </nav>
             </div>
@@ -469,15 +459,30 @@
         </div>
 
         </div>
-
-
     </header>
 
+    <main>
+        <section>
+            <div class="container">
+                <div id="main-banner h-auto py-8">
+                    <!-- Swiper -->
+                    <div class="swiper mySwiper h-[90dvh] max-h-dvh md:max-h-[70dvh]">
+                        <div class="swiper-wrapper  ">
+                            <div class="swiper-slide h-full"><img src="https://unsplash.it/640/?random" alt=""></div>
+                            <div class="swiper-slide h-full"><img src="https://unsplash.it/640/?image=2" alt=""></div>
+                            <div class="swiper-slide h-full"><img src="https://unsplash.it/640/?image=10" alt=""></div>
+                            <div class="swiper-slide h-full"><img src="https://unsplash.it/640/?image=67" alt=""></div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+    
+                </div>
+            </div>
+        </section>
+    </main>
 
-
-    <h1 class="text-3xl font-bold underline font-[Manrope]">
-        Hello world!
-    </h1>
 </body>
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
