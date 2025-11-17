@@ -45,11 +45,20 @@
     .link-nav-hover {
         @apply text-misk-900 transition ease-in-out duration-300 hover:font-semibold hover:text-misk-950/75;
     }
+
+    .title-h2 {
+        @apply
+    }
 }
 
 @font-face {
     font-family: "Manrope";
-    src: url(/assets/fonts/Manrope/Manrope-VariableFont_wght.ttf);
+    src: url("/assets/fonts/Manrope/Manrope-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("/assets/fonts/Inter/Inter-variable.ttf") format("truetype");
 }
 
 .container-grid {
