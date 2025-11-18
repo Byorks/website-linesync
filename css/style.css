@@ -40,9 +40,16 @@
     --color-bluebell-900: #4e466c;
     --color-bluebell-950: #322d48;
 
-    /* Tipografia*/
+    /* Tipografia */
     --font-title: "Manrope";
-    --font-body: "Inter", sans-serif, i-sans-serif, system-ui,; 
+    --font-body: "Inter", sans-serif, i-sans-serif, system-ui,;
+
+    /* Animações */
+    --keyframes-loop-scroll: loop-scroll;
+
+    --animate-loop-scroll: loop-scroll 15s linear infinite;
+
+   
 }
 
 @layer utilities {
@@ -51,11 +58,15 @@
     }
 
     .title-h2 {
-        @apply text-3xl md:text-4xl font-title font-bold text-misk-950
+        @apply text-3xl md:text-4xl font-title font-semibold text-misk-950
     }
     
-    .bt-terciary {
-        @apply py-2 px-9 text-base  text-bluebell-50 bg-misk-900 hover:bg-misk-600 hover:border hover:border-pastelgreen-300 transition ease-in-out duration-300 rounded-[5px] cursor-pointer
+    .btn-terciary {
+        @apply py-2 px-9 text-base  text-bluebell-50 bg-misk-900 hover:bg-misk-600 hover:border hover:border-pastelgreen-300 transition ease-in-out duration-300 rounded-[5px] cursor-pointer active:bg-misk-100 active:text-misk-950
+    }
+    
+    .card-btn {
+        @apply py-2 pl-4 pr-2 flex self-end items-center text-pastelgreen-900 text-sm font-bold gap-3 bg-pastelgreen-300 rounded-md cursor-pointer border border-pastelgreen-300 hover:bg-pastelgreen-200 hover:border hover:border-pastelgreen-600 transition ease-in-out duration-300 active:bg-pastelgreen-600 active:text-pastelgreen-50 active:border active:stroke-pastelgreen-200 active:duration-150
     }
 
     p {
@@ -72,6 +83,11 @@
 @font-face {
     font-family: "Inter";
     src: url("../assets/fonts/Inter/Inter-variable.ttf") format("truetype");
+}
+
+@keyframes loop-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
 }
 
 .container-grid {

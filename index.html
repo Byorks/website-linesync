@@ -13,7 +13,9 @@
     <link rel="stylesheet" href="/assets/libs/swiper/swiper-bundle.min.css" />
 
     <!-- Lucide Icones -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- <script src="https://unpkg.com/lucide@latest"></script> -->
+    <!-- Development version -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 
 </head>
 
@@ -526,7 +528,7 @@
                                         officia
                                         deserunt mollit anim id est laborum.
                                     </p>
-                                    <button class="bt-terciary">
+                                    <button class="btn-terciary">
                                         Contato
                                     </button>
                                 </div>
@@ -554,7 +556,7 @@
                                         officia
                                         deserunt mollit anim id est laborum.
                                     </p>
-                                    <button class="bt-terciary">
+                                    <button class="btn-terciary">
                                         Contato
                                     </button>
                                 </div>
@@ -570,17 +572,19 @@
             </div>
         </section>
 
-        <section id="avantages" class="container px-4 md:px-12 xl:px-0 mx-auto">
+        <section id="avantages" class="container px-4 md:px-12 xl:px-0 mx-auto mb-8 md:mb-16">
             <div class="flex items-center flex-col md:max-w-5xl 2xl:max-w-none py-10 mx-auto">
                 <div class="row">
                     <h2 class="pb-8 title-h2">
-                        Benefícios
+                        Nossos diferenciais
                     </h2>
                 </div>
 
-                <div class="grid grid-cols-4 lg:grid-cols-12">
+                <div class="grid grid-cols-4 sm:grid-cols-8 lg:grid-cols-12 gap-4 md:gap-5">
+                    <!-- Card 1 -->
                     <div class="feature-card shadow-md bg-misk-50 col-span-4 rounded-lg p-4 flex flex-col gap-6">
-                        <div class="icon p-1 bg-pastelgreen-500 text-pastelgreen-900 aspect-square w-12 flex justify-center items-center rounded-md">
+                        <div
+                            class="icon p-1 bg-pastelgreen-500 text-pastelgreen-900 aspect-square w-12 flex justify-center items-center rounded-md">
                             <svg class="fill-current" width="21" height="28" viewBox="0 0 21 28" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -598,10 +602,76 @@
                                 exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                             </p>
                         </div>
-                        <button type="button" class="py-2 pl-4 pr-2 flex self-end text-pastelgreen-900 text-sm  font-bold gap-3 bg-pastelgreen-300 rounded-md cursor-pointer">Saiba
-                            mais <i class="text-pastelgreen-900" data-lucide="chevron-right"></i></button>
+                        <button type="button" class="card-btn">
+                            Saiba
+                            mais <i class="text-pastelgreen" data-lucide="chevron-right"></i>
+                        </button>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="feature-card shadow-md bg-misk-50 col-span-4 rounded-lg p-4 flex flex-col gap-6">
+                        <div
+                            class="icon p-1 bg-pastelgreen-500 text-pastelgreen-900 aspect-square w-12 flex justify-center items-center rounded-md">
+                            <i data-lucide="target"></i>
+                        </div>
+                        <div class="text-card">
+                            <h3 class="font-title font-bold text-base pb-2">
+                                Titulo card
+                            </h3>
+                            <p class="text-sm">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </p>
+                        </div>
+                        <button type="button" class="card-btn">
+                            Saiba
+                            mais <i class="text-pastelgreen" data-lucide="chevron-right"></i>
+                        </button>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="feature-card shadow-md bg-misk-50 col-span-4 rounded-lg p-4 flex flex-col gap-6">
+                        <div
+                            class="icon p-1 bg-pastelgreen-500 text-pastelgreen-900 aspect-square w-12 flex justify-center items-center rounded-md">
+                            <i data-lucide="square-mouse-pointer"></i>
+                        </div>
+                        <div class="text-card">
+                            <h3 class="font-title font-bold text-base pb-2">
+                                Titulo card
+                            </h3>
+                            <p class="text-sm">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </p>
+                        </div>
+                        <button type="button" class="card-btn">
+                            Saiba
+                            mais <i class="text-pastelgreen" data-lucide="chevron-right"></i>
+                        </button>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section class="w-full flex justify-center flex-col items-center py-10 overflow-hidden bg-bluebell-300">
+            <h2 class="pb-4 title-h2">
+                Quem já faz parte
+            </h2>
+
+            <div class="flex space-x-16 items-center animate-loop-scroll w-full">
+                <img class="w-48" loading="lazy" src="assets/img/logos-parceiras/AstraZeneca LabWare.png" alt="">
+                <img class="w-48" loading="lazy" src="assets/img/logos-parceiras/CAT Logo LabWare Customer.png" alt="">
+                <img class="w-48" loading="lazy" src="assets/img/logos-parceiras/Chevron LabWare LIMS.png" alt="">
+                <img class="w-48" loading="lazy" src="assets/img/logos-parceiras/Eurofins Uses LabWare.png" alt="">
+                <img class="w-48" loading="lazy" src="assets/img/logos-parceiras/Goodyear Uses LabWare.png" alt="">
+                <img class="w-48" loading="lazy" src="assets/img/logos-parceiras/Hersheys LabWare LIMS.png" alt="">
+                <img class="w-48" loading="lazy" src="assets/img/logos-parceiras/Johnson&Johnson LabWare LIMS.png"
+                    alt="">
+                <img class="w-48" loading="lazy" src="assets/img/logos-parceiras/Kelloggs LabWare LIMS.png" alt="">
+                <img class="w-48" loading="lazy" src="assets/img/logos-parceiras/pfizer_20210109-1.png" alt="">
+                <img class="w-48" loading="lazy" src="assets/img/logos-parceiras/Roche LabWare.png" alt="">
+                <img class="w-48" loading="lazy" src="assets/img/logos-parceiras/Samuel Adams LabWare LIMS.png" alt="">
+                <img loading="lazy" src="assets/img/logos-parceiras/Sasol LabWare LIMS.png" alt="">
             </div>
         </section>
     </main>
