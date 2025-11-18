@@ -26,6 +26,19 @@ const carrosselHomeServices = new Swiper(".swiper-services", {
   },
 });
 
+const carrosselHomeCases = new Swiper(".swiper-cases", {
+  cssMode: true,
+  navigation: {
+    nextEl: ".swiper-button-next-3",
+    prevEl: ".swiper-button-prev-3",
+  },
+  pagination: {
+    el: ".swiper-pagination-3",
+  },
+  mousewheel: true,
+  keyboard: true,
+});
+
 // Lucide
 lucide.createIcons();
 
