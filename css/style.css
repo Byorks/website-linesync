@@ -47,7 +47,7 @@
     /* Animações */
     --keyframes-loop-scroll: loop-scroll;
 
-    --animate-loop-scroll: loop-scroll 15s linear infinite;
+    --animate-loop-scroll: loop-scroll 50s linear infinite;
 
    
 }
@@ -93,9 +93,12 @@
     from { transform: translateX(0); }
     to { transform: translateX(-100%); }
 }
+
 :root {
-    --duration: 2s;
+    --duration: 10s;
+    --totalitems: 12;
 }
+
 .container-grid {
     max-width: 1620px;
     width: 80vw;
@@ -108,20 +111,23 @@
     height: 8vw;
     width: 80vw;
     overflow: hidden;
+    border: red 1px solid;
 }
 
 .img-item {
     position: absolute;
     height: inherit;
-    width: 8vw;
+    width: 12vw;
     left: 100%;
     animation: scrollX var(--duration) linear infinite;
+    animation-delay: calc(var(--duration) / var(--totalitems) * (var(--totalitems) - var(--i)));
+
     & img {
-        height: inherit;
+      
     }
 }
 
-@keyframes scrollx {
+@keyframes scrollX{
     to {
         left: -8vw;
     }
