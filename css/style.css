@@ -93,10 +93,36 @@
     from { transform: translateX(0); }
     to { transform: translateX(-100%); }
 }
-
+:root {
+    --duration: 2s;
+}
 .container-grid {
     max-width: 1620px;
     width: 80vw;
     margin: 0 auto;
 }
 
+.wrapper {
+    position: relative;
+    display: flex;
+    height: 8vw;
+    width: 80vw;
+    overflow: hidden;
+}
+
+.img-item {
+    position: absolute;
+    height: inherit;
+    width: 8vw;
+    left: 100%;
+    animation: scrollX var(--duration) linear infinite;
+    & img {
+        height: inherit;
+    }
+}
+
+@keyframes scrollx {
+    to {
+        left: -8vw;
+    }
+}
