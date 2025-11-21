@@ -42,29 +42,39 @@
 
     /* Tipografia */
     --font-title: "Manrope";
-    --font-body: "Inter", sans-serif, i-sans-serif, system-ui,;
+    --font-body: "Inter", sans-serif, i-sans-serif, system-ui, ;
 
     /* Animações */
-    --keyframes-loop-scroll: loop-scroll;
-
     --animate-loop-scroll: loop-scroll 50s linear infinite;
 
-   
+    @keyframes loop-scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
 }
 
 @layer utilities {
-    .link-nav-hover {
-        @apply text-misk-900 transition ease-in-out duration-300 hover:font-semibold font-body hover:text-misk-950/75;
+    .link-nav {
+        @apply text-misk-900 transition ease-in-out duration-300 font-medium hover:font-semibold font-body hover:text-misk-950/75;
     }
 
     .title-h2 {
         @apply text-3xl md:text-4xl font-title font-semibold text-misk-950
     }
-    
-    .btn-terciary {
-        @apply py-2 px-9 text-base  text-bluebell-50 bg-misk-900 hover:bg-misk-600 hover:border hover:border-pastelgreen-300 transition ease-in-out duration-300 rounded-[5px] cursor-pointer active:bg-misk-100 active:text-misk-950
+
+    .nav-btn {
+        @apply w-11 h-11 border border-bluebell-900 hover:border-misk-400 bg-bluebell-900 rounded-md [&>svg]:text-pastelgreen-400 hover:[&>svg]:text-misk-300 hover:[&>svg]:transition hover:[&>svg]:ease-in-out hover:[&>svg]:duration-300 transition ease-out duration-300 cursor-pointer
     }
-    
+
+    .btn-tertiary {
+        @apply py-2 px-9 text-base text-bluebell-50 bg-misk-900 hover:bg-misk-600 hover:border hover:border-pastelgreen-300 transition ease-in-out duration-300 rounded-[5px] cursor-pointer active:bg-misk-100 active:text-misk-950
+    }
+
     .card-btn {
         @apply py-2 pl-4 pr-2 flex self-end items-center text-pastelgreen-900 text-sm font-bold gap-3 bg-pastelgreen-300 rounded-md cursor-pointer border border-pastelgreen-300 hover:bg-pastelgreen-200 hover:border hover:border-pastelgreen-600 transition ease-in-out duration-300 active:bg-pastelgreen-600 active:text-pastelgreen-50 active:border active:stroke-pastelgreen-200 active:duration-150
     }
@@ -76,7 +86,7 @@
     p {
         @apply font-body text-base text-left
     }
-   
+
 }
 
 @font-face {
@@ -89,10 +99,6 @@
     src: url("../assets/fonts/Inter/Inter-variable.ttf") format("truetype");
 }
 
-@keyframes loop-scroll {
-    from { transform: translateX(0); }
-    to { transform: translateX(-100%); }
-}
 
 :root {
     --duration: 10s;
@@ -109,7 +115,7 @@
     position: relative;
     display: flex;
     height: 8vw;
-    width: 80vw;
+    width: 100vw;
     overflow: hidden;
     border: red 1px solid;
 }
@@ -117,17 +123,17 @@
 .img-item {
     position: absolute;
     height: inherit;
-    width: 12vw;
+    width: 8vw;
     left: 100%;
     animation: scrollX var(--duration) linear infinite;
-    animation-delay: calc(var(--duration) / var(--totalitems) * (var(--totalitems) - var(--i)));
+    animation-delay: calc(var(--duration)/var(--totalitems) * (var(--totalitems) - var(--i)) * -1);
 
     & img {
-      
+        height: auto;
     }
 }
 
-@keyframes scrollX{
+@keyframes scrollX {
     to {
         left: -8vw;
     }
