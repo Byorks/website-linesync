@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Linesync Home</title>
-    <link rel="stylesheet" href="/css/components.css">
-    <link href="./css/output.css" rel="stylesheet">
-    <link rel="shortcut icon" href="assets/img/icons/favicon-32x32.png" type="image/x-icon">
+    <title>Programa de Estágio</title>
+    <link rel="stylesheet" href="../css/components.css">
+    <link href="../css/output.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../assets/img/icons/favicon-32x32.png" type="image/x-icon">
 
     <!-- Link Swiper's CSS -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
-    <link rel="stylesheet" href="/assets/libs/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../assets/libs/swiper/swiper-bundle.min.css" />
 
     <!-- Lucide Icones -->
     <!-- <script src="https://unpkg.com/lucide@latest"></script> -->
@@ -20,11 +19,11 @@
 
 </head>
 
-<body class="font-body">
-    <header class="w-full h-[66px] bg-misk-200 border-b-[1.3px] border-pastelgreen-300 sticky top-0 z-100">
+<body>
+      <header class="w-full h-[66px] bg-misk-200 border-b-[1.3px] border-pastelgreen-300 sticky top-0 z-100">
         <div class="w-full h-full px-6 flex items-center justify-between">
             <div class="logo">
-                <a class="block text-teal-600" href="#">
+                <a class="block text-teal-600" href="/index.html">
                     <span class="sr-only">Home</span>
                     <!-- Logo -->
                     <svg width="121" height="42" viewBox="0 0 121 42" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -437,7 +436,7 @@
                         </li>
 
                         <li>
-                            <a class="link-nav" href="pages/trainee-promo.html"> Carreiras </a>
+                            <a class="link-nav" href="#"> Carreiras </a>
                         </li>
 
                         <li>
@@ -474,372 +473,14 @@
 
         </div>
     </header>
-    <div id="menu-overlay"
-        class="fixed inset-0 bg-black/40 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-300 z-30">
-    </div>
+
     <main>
-        <section class="mx-auto px-0">
-            <div class="pb-10 mx-auto">
-                <div id="main-banner">
-                    <!-- Swiper -->
-                    <div class="swiper mySwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide h-full "><img src="https://unsplash.it/640/?random" alt=""
-                                    class=" h-dvh max-h-dvh md:max-h-[70dvh]"></div>
-                            <div class="swiper-slide h-full"><img src="https://unsplash.it/640/?image=2" alt=""
-                                    class=" h-dvh max-h-dvh md:max-h-[70dvh]"></div>
-                            <div class="swiper-slide h-full"><img src="https://unsplash.it/640/?image=10" alt=""
-                                    class=" h-dvh max-h-dvh md:max-h-[70dvh]"></div>
-                            <div class="swiper-slide h-full"><img src="https://unsplash.it/640/?image=67" alt=""
-                                    class=" h-dvh max-h-dvh md:max-h-[70dvh]"></div>
-                        </div>
-                        <!-- <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div> -->
-                        <div class="swiper-pagination"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="slogan" class="flex justify-center py-6 ">
-                <p class="font-bold font-title text-3xl">“Frase de impacto“</p>
-            </div>
-
-        </section>
-
-        <section class="my-24 container px-4 md:px-12 xl:px-0 mx-auto">
-            <div class="md:max-w-5xl 2xl:max-w-none py-10 mx-auto">
-                <!-- Swiper -->
-                <div class="swiper swiper-services">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div
-                                class="w-full flex flex-col-reverse sm:grid sm:grid-cols-4 md:grid-cols-12 gap-5 items-center justify-center">
-                                <div class=" col-span-4 md:col-start-1 md:col-span-6 h-3/4">
-                                    <img src="https://unsplash.it/640/?image=10" class="rounded-lg h-full"
-                                        alt="imagem ilustrativa">
-                                </div>
-                                <div class="col-span-4 md:col-span-5 md:col-end-13">
-                                    <h2 class="pb-8 title-h2">
-                                        ELN
-                                    </h2>
-                                    <p class="mb-8 md:mb-12">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                        nostrud
-                                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                                        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                                        nulla
-                                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                                        officia
-                                        deserunt mollit anim id est laborum.
-                                    </p>
-                                    <button class="btn-tertiary">
-                                        Contato
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div
-                                class="w-full flex flex-col-reverse sm:grid sm:grid-cols-4 md:grid-cols-12 gap-5 items-center justify-center">
-                                <div class=" col-span-4 md:col-start-1 md:col-span-6 h-3/4">
-                                    <img src="https://unsplash.it/640/?image=10" class="rounded-lg h-full"
-                                        alt="imagem ilustrativa">
-                                </div>
-                                <div class="col-span-4 md:col-span-5 md:col-end-13">
-                                    <h2 class="pb-8 title-h2">
-                                        LIMS
-                                    </h2>
-                                    <p class="mb-8 md:mb-12">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                        nostrud
-                                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                                        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                                        nulla
-                                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                                        officia
-                                        deserunt mollit anim id est laborum.
-                                    </p>
-                                    <button class="btn-terciary">
-                                        Contato
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">Slide 2</div>
-                        <div class="swiper-slide">Slide 3</div>
-                        <div class="swiper-slide">Slide 4</div>
-                    </div>
-                    <div class="swiper-pagination-2 flex justify-center py-4"></div>
-                </div>
-            </div>
-        </section>
-
-        <section id="avantages" class="container px-4 md:px-12 xl:px-0 mx-auto mb-8 md:mb-16">
-            <div class="flex items-center flex-col md:max-w-5xl 2xl:max-w-none py-10 mx-auto">
-                <div class="row">
-                    <h2 class="pb-8 title-h2">
-                        Nossos diferenciais
-                    </h2>
-                </div>
-
-                <div class="grid grid-cols-4 sm:grid-cols-8 lg:grid-cols-12 gap-4 md:gap-5">
-                    <!-- Card 1 -->
-                    <div class="feature-card shadow-md bg-bluebell-900 col-span-4 rounded-lg p-4 flex flex-col gap-6">
-                        <div
-                            class="icon p-1 bg-pastelgreen-100 text-pastelgreen-900 aspect-square w-12 flex justify-center items-center rounded-md">
-                            <svg class="fill-current" width="21" height="28" viewBox="0 0 21 28" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M8.22519 11.1881C7.47744 11.1881 6.84186 10.9267 6.31844 10.4039C5.79502 9.8812 5.53331 9.24645 5.53331 8.49967C5.53331 7.7529 5.79502 7.11814 6.31844 6.5954C6.84186 6.07266 7.47744 5.81129 8.22519 5.81129C8.97293 5.81129 9.60851 6.07266 10.1319 6.5954C10.6554 7.11814 10.9171 7.7529 10.9171 8.49967C10.9171 9.24645 10.6554 9.8812 10.1319 10.4039C9.60851 10.9267 8.97293 11.1881 8.22519 11.1881ZM1.49549 27.9158C1.07177 27.9158 0.716339 27.7724 0.429206 27.4856C0.143069 27.1999 0 26.8454 0 26.4222C0 25.9991 0.143069 25.6446 0.429206 25.3588C0.716339 25.0721 1.07177 24.9287 1.49549 24.9287H7.47744V21.9416C5.40868 21.9416 3.6455 21.2132 2.1879 19.7565C0.7293 18.3008 0 16.5399 0 14.4739C0 12.9554 0.392317 11.6112 1.17695 10.4413C1.96258 9.27134 2.92867 8.41255 4.07521 7.86491C3.95058 8.46233 3.97551 9.02839 4.14998 9.56308C4.32446 10.0988 4.54878 10.5409 4.82295 10.8893C4.22476 11.3125 3.76963 11.8477 3.45757 12.4949C3.14651 13.1421 2.99098 13.8018 2.99098 14.4739C2.99098 15.7185 3.42716 16.7764 4.29953 17.6477C5.1719 18.5189 6.2312 18.9545 7.47744 18.9545H17.9459C18.3696 18.9545 18.7245 19.0974 19.0107 19.3832C19.2978 19.6699 19.4414 20.0249 19.4414 20.4481C19.4414 20.8712 19.2978 21.2257 19.0107 21.5115C18.7245 21.7982 18.3696 21.9416 17.9459 21.9416H11.9639V24.9287H19.4414C19.8651 24.9287 20.22 25.0721 20.5061 25.3588C20.7933 25.6446 20.9368 25.9991 20.9368 26.4222C20.9368 26.8454 20.7933 27.1999 20.5061 27.4856C20.22 27.7724 19.8651 27.9158 19.4414 27.9158H1.49549ZM14.8801 14.1005C14.5312 14.2249 14.1698 14.2249 13.7959 14.1005C13.422 13.976 13.1728 13.7146 13.0481 13.3164L13.0108 13.2043C12.612 13.3288 12.2196 13.3099 11.8338 13.1476C11.447 12.9863 11.1912 12.7065 11.0666 12.3082L10.8797 11.7481C11.2286 11.4743 11.5716 11.0571 11.9086 10.4965C12.2446 9.93696 12.4126 9.27134 12.4126 8.49967C12.4126 7.30483 11.9953 6.30914 11.1608 5.51258C10.3254 4.71602 9.32188 4.31774 8.15041 4.31774L7.96348 3.83234C7.789 3.38427 7.789 2.99197 7.96348 2.65542C8.13795 2.31987 8.41212 2.08986 8.786 1.9654L8.89816 1.92806V1.89072C8.69876 1.44266 8.69278 1.0628 8.88021 0.751147C9.06665 0.44049 9.3468 0.222929 9.72068 0.098467C10.0945 -0.0259953 10.456 -0.0324673 10.8049 0.0790509C11.1539 0.191565 11.428 0.459408 11.6274 0.88258L11.6648 0.957257C12.0636 0.832795 12.4564 0.851215 12.8433 1.01252C13.2291 1.17482 13.4843 1.45511 13.6089 1.85339L16.6747 10.2546C16.8492 10.7027 16.8427 11.1009 16.6553 11.4494C16.4688 11.7979 16.1887 12.0344 15.8148 12.1589H15.7774L15.8148 12.2709C15.9394 12.6194 15.921 12.9743 15.7595 13.3358C15.597 13.6962 15.3038 13.9511 14.8801 14.1005Z"
-                                    fill="currentColor" />
-                            </svg>
-                        </div>
-                        <div class="text-card">
-                            <h3 class="font-title font-bold text-base pb-2 text-misk-50">
-                                Titulo card
-                            </h3>
-                            <p class="text-sm text-misk-50">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            </p>
-                        </div>
-                        <button type="button" class="card-btn">
-                            Saiba
-                            mais <i class="text-pastelgreen" data-lucide="chevron-right"></i>
-                        </button>
-                    </div>
-                    <!-- Card 2 -->
-                    <div class="feature-card shadow-md bg-bluebell-900 col-span-4 rounded-lg p-4 flex flex-col gap-6">
-                        <div
-                            class="icon p-1 bg-pastelgreen-100 text-pastelgreen-900 aspect-square w-12 flex justify-center items-center rounded-md">
-                            <i data-lucide="target"></i>
-                        </div>
-                        <div class="text-card">
-                            <h3 class="font-title font-bold text-base pb-2  text-misk-50">
-                                Titulo card
-                            </h3>
-                            <p class="text-sm  text-misk-50">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            </p>
-                        </div>
-                        <button type="button" class="card-btn">
-                            Saiba
-                            mais <i class="text-pastelgreen" data-lucide="chevron-right"></i>
-                        </button>
-                    </div>
-                    <!-- Card 3 -->
-                    <div class="feature-card shadow-md bg-bluebell-900 col-span-4 rounded-lg p-4 flex flex-col gap-6">
-                        <div
-                            class="icon p-1 bg-pastelgreen-100 text-pastelgreen-900 aspect-square w-12 flex justify-center items-center rounded-md">
-                            <i data-lucide="square-mouse-pointer"></i>
-                        </div>
-                        <div class="text-card">
-                            <h3 class="font-title font-bold text-base pb-2 text-misk-50">
-                                Titulo card
-                            </h3>
-                            <p class="text-sm text-misk-50">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            </p>
-                        </div>
-                        <button type="button" class="card-btn">
-                            Saiba
-                            mais <i class="text-pastelgreen" data-lucide="chevron-right"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <section
-            class="w-full flex justify-center flex-col items-center py-10 overflow-hidden   bg-[url(/assets/img/ui/pattern.png)] bg-misk-50">
-            <h2 class="pb-4 title-h2">
-                Quem já faz parte
-            </h2>
-
-            <div class="wrapper">
-                <!-- <div class="img-item" style="--i:1">
-                    <img class="w-auto pr-4" loading="lazy" src="assets/img/logos-parceiras/AstraZeneca LabWare.png"
-                        alt="">
-                </div> -->
-                <!-- 
-                <div class="img-item" style="--i:2">
-                    <img class=" pr-4" loading="lazy" src="assets/img/logos-parceiras/CAT Logo LabWare Customer.png"
-                        alt="">
-                </div>
-                <div class="img-item" style="--i:3"><img loading="lazy"
-                        src="assets/img/logos-parceiras/Chevron LabWare LIMS.png" alt="">
-                </div>
-                <div class="img-item" style="--i:4"><img loading="lazy"
-                        src="assets/img/logos-parceiras/Eurofins Uses LabWare.png" alt="">
-                </div>
-                <div class="img-item" style="--i:5"><img loading="lazy"
-                        src="assets/img/logos-parceiras/Goodyear Uses LabWare.png" alt="">
-                </div>
-                <div class="img-item" style="--i:6"><img loading="lazy"
-                        src="assets/img/logos-parceiras/Hersheys LabWare LIMS.png" alt="">
-                </div>
-                <div class="img-item" style="--i:7"><img loading="lazy"
-                        src="assets/img/logos-parceiras/Johnson&Johnson LabWare LIMS.png" alt="">
-                </div>
-                <div class="img-item" style="--i:8"><img loading="lazy"
-                        src="assets/img/logos-parceiras/Kelloggs LabWare LIMS.png" alt="">
-                </div>
-                <div class="img-item" style="--i:9"><img loading="lazy"
-                        src="assets/img/logos-parceiras/pfizer_20210109-1.png" alt="">
-                </div>
-                <div class="img-item" style="--i:10"><img loading="lazy"
-                        src="assets/img/logos-parceiras/Roche LabWare.png" alt="">
-                </div>
-                <div class="img-item" style="--i:11"><img loading="lazy"
-                        src="assets/img/logos-parceiras/Samuel Adams LabWare LIMS.png" alt="">
-                </div>
-                <div class="img-item" style="--i:12"><img loading="lazy"
-                        src="assets/img/logos-parceiras/Sasol LabWare LIMS.png" alt="">
-                </div> -->
-
-                <div class="img-item" style="--i:1">
-                    <img class=" pr-4" loading="lazy" src="assets/img/logos-parceiras/teste/img-1.png" alt="">
-                </div>
-                <div class="img-item" style="--i:2"><img loading="lazy" src="assets/img/logos-parceiras/teste/img-2.png"
-                        alt="">
-                </div>
-                <div class="img-item" style="--i:3"><img loading="lazy" src="assets/img/logos-parceiras/teste/img-3.png"
-                        alt="">
-                </div>
-                <div class="img-item" style="--i:4"><img loading="lazy" src="assets/img/logos-parceiras/teste/img-4.png"
-                        alt="">
-                </div>
-                <div class="img-item" style="--i:5"><img loading="lazy" src="assets/img/logos-parceiras/teste/img-5.png"
-                        alt="">
-                </div>
-                <div class="img-item" style="--i:6"><img loading="lazy" src="assets/img/logos-parceiras/teste/img-6.png"
-                        alt="">
-                </div>
-                <div class="img-item" style="--i:7"><img loading="lazy" src="assets/img/logos-parceiras/teste/img-7.png"
-                        alt="">
-                </div>
-                <div class="img-item" style="--i:8"><img loading="lazy" src="assets/img/logos-parceiras/teste/img-8.png"
-                        alt="">
-                </div>
-
-            </div>
-        </section>
-
-        <section id="cases" class="container mx-auto px-4 md:px-12 xl:px-0">
-            <div class="md:max-w-5xl 2xl:max-w-none py-10 mx-auto">
-
-                <!-- Swiper -->
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper rounded-lg">
-                        <div class="swiper-slide h-full">
-                            <div class="px-6 py-6 grid grid-cols-8 bg-misk-50 border-[.5px] border-bluebell-400 items">
-                                <div class="flex flex-col col-span-4 gap-1 justify-between">
-                                    <div class="logo w-40 h-auto">
-                                        <img src="assets/img/logos-parceiras/Hersheys LabWare LIMS.png" alt="">
-                                    </div>
-                                    <div class="description">
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                            consequat.
-                                        </p>
-                                    </div>
-                                    <div class="flex gap-4">
-                                        <div class=" cases-bullet">
-                                            <p>LIMS</p>
-                                        </div>
-                                        <div class=" cases-bullet">
-                                            <p>Alimentos</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-span-4 flex items-center">
-                                    <img class="w-full max-h-5/6 rounded-sm" src="https://unsplash.it/640/?image=10"
-                                        alt="">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide h-full">
-                            <div class="px-6 py-6 grid grid-cols-8 bg-misk-50 border-[.5px] border-bluebell-400 items">
-                                <div class="flex flex-col col-span-4 gap-1 justify-between">
-                                    <div class="logo w-40 h-auto">
-                                        <img src="assets/img/logos-parceiras/Goodyear Uses LabWare.png" alt="">
-                                    </div>
-                                    <div class="description">
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                            consequat.
-                                        </p>
-                                    </div>
-                                    <div class="flex gap-4">
-                                        <div class=" cases-bullet">
-                                            <p>LIMS</p>
-                                        </div>
-                                        <div class=" cases-bullet">
-                                            <p>ELN</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-span-4 flex items-center">
-                                    <img class="w-full max-h-5/6 rounded-sm" src="https://unsplash.it/640/?image=10"
-                                        alt="">
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="swiper-button-next bg-misk-50 p-3 rounded-3xl border-bluebell-900 border"></div>
-                    <div class="swiper-button-prev  bg-misk-50 p-3 rounded-3xl border-bluebell-900 borde"></div>
-                    <div class="swiper-pagination"></div>
-                </div>
-            </div>
-        </section>
-
-        <section id="avantages" class="container px-4 md:px-12 xl:px-0 mx-auto mb-8 md:mb-16">
-            <div class="flex items-center flex-col md:max-w-5xl 2xl:max-w-none py-10 mx-auto min-h-[50vh] ">
-                <div class="row">
-                    <h2 class="pb-8 title-h2">
-                        Trabalhe conosco
-                    </h2>
-                </div>
-
-                <!-- Banner carreiras -->
-                <div class="w-full  bg-bluebell-600 flex flex-col items-center justify-end ">
-
-                    <div class="h-2/5 w-3/5 p-6 flex flex-col items justify-end">
-                        <h3>
-                            Venha ser LineSync
-                        </h3>
-
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna
-                        </p>
-                        <button type="button" class="card-btn mx-auto">Saiba mais</button>
-                    </div>
-                </div>
-
-            </div>
-        </section>
+        
     </main>
 
     <footer class="w-full">
-        <img class="w-full hidden md:block pointer-events-none" src="assets/img/ui/footer-4.svg" alt="Imagem">
-        <img class="w-full md:hidden pointer-events-none" src="assets/img/ui/footer-4-mobile-2.svg" alt="Imagem">
+        <img class="w-full hidden md:block pointer-events-none" src="/assets/img/ui/footer-4.svg" alt="Imagem">
+        <img class="w-full md:hidden pointer-events-none" src="/assets/img/ui/footer-4-mobile-2.svg" alt="Imagem">
 
         <div class="w-full bg-misk-200 md:pb-20">
             <div class="bg-misk-200 px-4 md:container md:mx-auto md:grid md:grid-cols-12 md:gap-6">
@@ -965,11 +606,10 @@
         </div>
 
     </footer>
-
 </body>
-<!-- Swiper JS -->
-<script src="assets/libs/swiper/swiper-bundle.min.js"></script>
-<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
-<script src="assets/js/main.js"></script>
 
+<!-- Swiper JS -->
+<script src="../assets/libs/swiper/swiper-bundle.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+<script src="../assets/js/main.js"></script>
 </html>
