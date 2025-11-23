@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programa de Estágio</title>
-    <link rel="stylesheet" href="../css/components.css">
-    <link href="../css/output.css" rel="stylesheet">
     <link rel="shortcut icon" href="../assets/img/icons/favicon-32x32.png" type="image/x-icon">
 
+    <!-- Tailwind CSS 4.1 -->
+    <link rel="stylesheet" href="../css/components.css">
+    <link href="../css/output.css" rel="stylesheet">
+
+
     <!-- Link Swiper's CSS -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
+
     <link rel="stylesheet" href="../assets/libs/swiper/swiper-bundle.min.css" />
 
-    <!-- Lucide Icones -->
-    <!-- <script src="https://unpkg.com/lucide@latest"></script> -->
+    <!-- Lucide Ícones -->
     <!-- Development version -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 
 </head>
 
-<body>
-      <header class="w-full h-[66px] bg-misk-200 border-b-[1.3px] border-pastelgreen-300 sticky top-0 z-100">
+<body class="bg-misk-50">
+    <header class="w-full h-[66px] bg-misk-200 border-b-[1.3px] border-pastelgreen-300 sticky top-0 z-100">
         <div class="w-full h-full px-6 flex items-center justify-between">
             <div class="logo">
+                <a class="block text-misk-700 font-bold text-lg" href="/">
+                    <img src="../assets/img/ui/linesync-header-logo.svg" alt="LineSync" class="h-12">
+                </a>
+            </div>
+            <!-- <div class="logo">
                 <a class="block text-teal-600" href="/index.html">
                     <span class="sr-only">Home</span>
-                    <!-- Logo -->
                     <svg width="121" height="42" viewBox="0 0 121 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <mask id="mask0_523_650" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="24" y="11"
                             width="2" height="2">
@@ -417,7 +424,7 @@
                             fill="white" />
                     </svg>
                 </a>
-            </div>
+            </div> -->
 
 
             <!-- Opção 1 Menu -->
@@ -427,7 +434,7 @@
             </div>
 
             <div id="menu" data-state="closed"
-                class="w-full duration-300 grow flex justify-center md:relative md:top-[inherit] top-[-300%] absolute left-0 z-40 bg-misk-200/90 backdrop-blur-sm md:bg-transparent">
+                class="w-full duration-300 grow flex justify-center md:relative md:top-[inherit] top-[-300%] absolute left-0 z-40 bg-misk-200/90 backdrop-blur-sm sm:backdrop-blur-none md:bg-transparent">
                 <nav aria-label="Global">
                     <ul
                         class="py-6 w-[80%] md:w-full flex items-center gap-6 text-md md:text-sm flex-col md:flex-row absolute md:relative bg-misk-200 md:bg-transparent rounded-b-sm  right-0">
@@ -473,9 +480,304 @@
 
         </div>
     </header>
+    <div id="menu-overlay"
+        class="fixed inset-0 bg-black/40 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-300 z-30">
+    </div>
 
     <main>
-        
+        <!-- Hero Section -->
+        <section class="w-full bg-linear-to-b from-misk-200 to-misk-100 py-8 md:py-16 px-4 md:px-6 ">
+            <div class="md:max-w-5xl 2xl:max-w-none py-10 mx-auto">
+
+            </div>
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <!-- Hero Content -->
+                <div class="flex flex-col gap-6 items-center">
+                    <h1 class="title-h2 text-4xl md:text-5xl">Programa de estágio</h1>
+                    <p class="text-base md:text-lg text-misk-800">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempore incididunt ut
+                        labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                        ut
+                        aliquip ex ea commodo consequat.
+                    </p>
+                    <button class="btn-tertiary w-fit">Comece</button>
+                </div>
+
+                <!-- Hero Image Placeholder -->
+                <div class="w-full h-64 md:h-80 bg-bluebell-200 rounded-lg flex items-center justify-center">
+                    <span class="text-bluebell-600 font-semibold">Imagem Hero</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Por que a LineSync Section -->
+        <section class="w-full bg-misk-50 py-12 md:py-20 px-4 md:px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="title-h2 text-center mb-12">Por que a LineSync?</h2>
+
+                <div class="grid grid-cols-4 md:grid-cols-12 md:gap-6">
+                    <div class="grid grid-cols-1  gap-6 col-span-4 md:gap-8 md:col-span-6">
+                        <h2 class="title-h2 text-center mb-12 pt-6 md:pt-0 hidd en md:block">Nossos diferenciais</h2>
+                        <!-- Card 1 -->
+                        <div class="flex flex-col gap-4 p-6 bg-misk-100 rounded-lg border border-misk-200">
+                            <div class="w-12 h-12 bg-misk-800 rounded-lg flex items-center justify-center">
+                                <svg data-lucide="zap" width="24" height="24" class="text-pastelgreen-300"></svg>
+                            </div>
+                            <h3 class="font-title font-semibold text-lg text-misk-950">Tecnologia para impacto</h3>
+                            <p class="text-misk-700">Esculpir um recorte ocupado non problem, sunt in culpa qui officia
+                                deserunt
+                                mollit anim id est laborum.</p>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="flex flex-col gap-4 p-6 bg-misk-100 rounded-lg border border-misk-200">
+                            <div class="w-12 h-12 bg-misk-800 rounded-lg flex items-center justify-center">
+                                <svg data-lucide="zap" width="24" height="24" class="text-pastelgreen-300"></svg>
+                            </div>
+                            <h3 class="font-title font-semibold text-lg text-misk-950">Tecnologia para impacto</h3>
+                            <p class="text-misk-700">Esculpir um recorte ocupado non problem, sunt in culpa qui officia
+                                deserunt
+                                mollit anim id est laborum.</p>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="flex flex-col gap-4 p-6 bg-misk-100 rounded-lg border border-misk-200">
+                            <div class="w-12 h-12 bg-misk-800 rounded-lg flex items-center justify-center">
+                                <svg data-lucide="zap" width="24" height="24" class="text-pastelgreen-300"></svg>
+                            </div>
+                            <h3 class="font-title font-semibold text-lg text-misk-950">Tecnologia para impacto</h3>
+                            <p class="text-misk-700">Esculpir um recorte ocupado non problem, sunt in culpa qui officia
+                                deserunt
+                                mollit anim id est laborum.</p>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="flex flex-col gap-4 p-6 bg-misk-100 rounded-lg border border-misk-200">
+                            <div class="w-12 h-12 bg-misk-800 rounded-lg flex items-center justify-center">
+                                <svg data-lucide="zap" width="24" height="24" class="text-pastelgreen-300"></svg>
+                            </div>
+                            <h3 class="font-title font-semibold text-lg text-misk-950">Tecnologia para impacto</h3>
+                            <p class="text-misk-700">Esculpir um recorte ocupado non problem, sunt in culpa qui officia
+                                deserunt
+                                mollit anim id est laborum.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-span-4 md:col-span-6 overflow-hidden">
+                        <h2 class="title-h2 text-center mb-12 pt-6 md:pt-0">Cultura</h2>
+
+                        <!-- Swiper Container -->
+
+                        <div class="swiper-culture">
+                            <div class="swiper-wrapper">
+                                <!-- Slide 1 -->
+                                <div class="swiper-slide">
+                                    <div class="flex flex-col gap-4 p-8 bg-misk-500 rounded-lg text-white min-h-80">
+                                        <h3 class="font-title font-semibold text-2xl">Inovação</h3>
+                                        <p class="text-sm md:text-base">Lorem ipsum dolor sit amet, consectetur
+                                            adipiscing
+                                            elit,
+                                            sed
+                                            do eiusmod tempore incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                            minim
+                                            veniam,
+                                            quis nostrud exercitation.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 2 -->
+                                <div class="swiper-slide">
+                                    <div class="flex flex-col gap-4 p-8 bg-misk-500 rounded-lg text-white min-h-80">
+                                        <h3 class="font-title font-semibold text-2xl">Inovação</h3>
+                                        <p class="text-sm md:text-base">Lorem ipsum dolor sit amet, consectetur
+                                            adipiscing
+                                            elit,
+                                            sed
+                                            do eiusmod tempore incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                            minim
+                                            veniam,
+                                            quis nostrud exercitation.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 3 -->
+                                <div class="swiper-slide">
+                                    <div class="flex flex-col gap-4 p-8 bg-misk-500 rounded-lg text-white min-h-80">
+                                        <h3 class="font-title font-semibold text-2xl">Inovação</h3>
+                                        <p class="text-sm md:text-base">Lorem ipsum dolor sit amet, consectetur
+                                            adipiscing
+                                            elit,
+                                            sed
+                                            do eiusmod tempore incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                            minim
+                                            veniam,
+                                            quis nostrud exercitation.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 4 -->
+                                <div class="swiper-slide">
+                                    <div class="flex flex-col gap-4 p-8 bg-misk-500 rounded-lg text-white min-h-80">
+                                        <h3 class="font-title font-semibold text-2xl">Inovação</h3>
+                                        <p class="text-sm md:text-base">Lorem ipsum dolor sit amet, consectetur
+                                            adipiscing
+                                            elit,
+                                            sed
+                                            do eiusmod tempore incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                            minim
+                                            veniam,
+                                            quis nostrud exercitation.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Pagination -->
+                            <div class="swiper-pagination mt-6 gap-2"></div>
+
+                            <!-- Navigation -->
+                            <div class="flex justify-center gap-4 mt-6">
+                                <button type="button" aria-label="previous slid" title="previous slide"
+                                    class="swiper-button-prev-2 w-10 h-10 bg-misk-600 text-white rounded-lg flex items-center justify-center hover:bg-misk-700">
+                                    <svg data-lucide="chevron-left" width="20" height="20"></svg>
+                                </button>
+                                <button type="button" aria-label="next slide" title="next slide"
+                                    class="swiper-button-next-2 w-10 h-10 bg-misk-600 text-white rounded-lg flex items-center justify-center hover:bg-misk-700">
+                                    <svg data-lucide="chevron-right" width="20" height="20"></svg>
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+
+
+        <!-- Como a LineSync muda tudo Section -->
+        <section class="w-full bg-linear-to-b from-misk-200 to-misk-100 py-12 md:py-20 px-4 md:px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="title-h2 text-center mb-4">Como a LineSync muda tudo?</h2>
+                <p class="text-center text-misk-700 mb-12">Jogar a gamificação é intencional</p>
+
+                <!-- Video/Image Placeholder -->
+                <div class="w-full h-64 md:h-96 bg-bluebell-200 rounded-lg flex items-center justify-center mb-12">
+                    <span class="text-bluebell-600 font-semibold">Vídeo ou Imagem</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Requisitos Section -->
+        <section class="w-full bg-misk-50 py-12 md:py-20 px-4 md:px-6">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                <!-- Left Content -->
+                <div class="flex flex-col gap-6">
+                    <h2 class="title-h2">Requisitos</h2>
+                    <p class="text-misk-700">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempore incididunt ut
+                        labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                        ut
+                        aliquip ex ea commodo consequat.
+                    </p>
+
+                    <div class="mt-4">
+                        <h3 class="font-title font-semibold text-lg text-misk-900 mb-4">Data limite</h3>
+                        <div class="grid grid-cols-4 gap-4">
+                            <div class="flex flex-col items-center gap-2 p-4 bg-misk-300 rounded-lg">
+                                <span class="text-sm text-misk-900 font-bold">Dias</span>
+                                <span class="font-title font-bold text-2xl text-misk-900" count-days>00</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-2 p-4 bg-misk-300 rounded-lg">
+                                <span class="text-sm text-misk-900 font-bold">Horas</span>
+                                <span count-hours class="font-title font-bold text-2xl text-misk-900">00</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-2 p-4 bg-misk-300 rounded-lg">
+                                <span class="text-sm text-misk-900 font-bold">Minutos</span>
+                                <span class="font-title font-bold text-2xl text-misk-900" count-minutes>00</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-2 p-4 bg-misk-300 rounded-lg">
+                                <span class="text-sm text-misk-900 font-bold">Segundos</span>
+                                <span class="font-title font-bold text-2xl text-misk-900" count-seconds>00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="flex flex-col gap-6 bg-white p-6 md:p-8 rounded-lg border border-misk-200">
+                    <h3 class="font-title font-semibold text-xl text-misk-900">Inscreva-se</h3>
+
+                    <form id="internship-form" class="flex flex-col gap-4">
+                        <!-- Nome -->
+                        <div class="flex flex-col gap-2">
+                            <label for="nome" class="form-label ">Nome</label>
+                            <input type="text" id="nome" name="nome" placeholder="Seu nome"
+                                class="px-4 py-2 border border-misk-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-misk-600"
+                                required>
+                        </div>
+
+                        <!-- Sobrenome -->
+                        <div class="flex flex-col gap-2">
+                            <label for="sobrenome" class="form-label">Sobrenome</label>
+                            <input type="text" id="sobrenome" name="sobrenome" placeholder="Seu sobrenome"
+                                class="px-4 py-2 border border-misk-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-misk-600"
+                                required>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="flex flex-col gap-2">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" placeholder="seu@email.com"
+                                class="px-4 py-2 border border-misk-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-misk-600"
+                                required>
+                        </div>
+
+                        <!-- Telefone -->
+                        <div class="flex flex-col gap-2">
+                            <label for="telefone" class="form-label">Telefone</label>
+                            <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999"
+                                class="px-4 py-2 border border-misk-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-misk-600"
+                                required>
+                        </div>
+
+                        <!-- Experiência -->
+                        <div class="flex flex-col gap-2">
+                            <label for="experiencia" class="form-label">Conte sua experiência</label>
+                            <textarea id="experiencia" name="experiencia" placeholder="Descreva sua experiência..."
+                                rows="4"
+                                class="px-4 py-2 border border-misk-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-misk-600 resize-none"
+                                required></textarea>
+                        </div>
+
+                        <!-- Currículo -->
+                        <div class="flex flex-col gap-2">
+                            <label for="curriculo" class="form-label">Currículo</label>
+                            <input type="file" id="curriculo" name="curriculo" accept=".pdf,.doc,.docx"
+                                class="px-4 py-2 border border-misk-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-misk-600"
+                                required>
+                        </div>
+
+                        <!-- Checkbox -->
+                        <div class="flex items-center gap-2 mt-2">
+                            <input type="checkbox" id="terms" name="terms" class="w-4 h-4 cursor-pointer" required>
+                            <label for="terms" class="text-sm text-misk-700 cursor-pointer">
+                                Você concorda em fornecer seus dados para uso do processo seletivo.
+                            </label>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn-tertiary w-full mt-4">
+                            Enviar
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="w-full">
@@ -522,7 +824,9 @@
                     class="bg-misk-200  pt-3 pb-6  grid grid-cols-4 gap-6 md:pb-0 md:pt-0 md:col-span-4 md:col-start-1 order-3 md:order-1">
                     <!-- Logotipo -->
                     <div class="col-span-2 col-start-1 md:col-span-2 text-misk-950 ">
-                        <svg class="w-full h-auto" width="1024" height="355" viewBox="0 0 1024 355" fill="none"
+                        <img src="../assets/img/ui/logo-negativo.svg" alt="LineSync" class="w-full h-auto svg-misk">
+
+                        <!-- <svg class="w-full h-auto" width="1024" height="355" viewBox="0 0 1024 355" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_386_524)">
                                 <path
@@ -584,7 +888,7 @@
                                     <rect width="1024" height="355" fill="white" />
                                 </clipPath>
                             </defs>
-                        </svg>
+                        </svg> -->
 
                     </div>
                     <div class="col-span-4 col-start-1 md:col-span-3">
@@ -611,5 +915,6 @@
 <!-- Swiper JS -->
 <script src="../assets/libs/swiper/swiper-bundle.min.js"></script>
 <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
-<script src="../assets/js/main.js"></script>
+<script defer src="../assets/js/main.js"></script>
+
 </html>

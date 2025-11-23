@@ -1,20 +1,165 @@
- /* Swiper */
- .swiper {
-     width: 100%;
-     height: 100%;
- }
+/* ============================================
+   SWIPER STYLES
+   ============================================ */
 
- .swiper-slide {
-     text-align: center;
-     font-size: 18px;
-     /* background: #444; */
-     display: flex;
-     justify-content: center;
-     align-items: center;
- }
+.swiper {
+    width: 100%;
+    height: 100%;
+}
 
- .swiper-slide img {
-     width: 100%;
-     height: 100%;
-     object-fit: cover;
- }
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Pagination bullets personalizado */
+.swiper-pagination-bullets .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    /* background: transparent; */
+    background: var(--color-misk-300);
+
+    opacity: 0.6;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+}
+
+.swiper-pagination-bullets .swiper-pagination-bullet-active {
+    background: linear-gradient(180deg, rgba(152, 143, 197, 1) 0%, rgba(57, 39, 121, 1) 100%);
+    opacity: 1;
+    transform: scale(1.2);
+    border: 1.5px solid var(--color-misk-50);
+}
+
+/* Posição no banner full screen */
+.swiper-banner .swiper-pagination {
+    bottom: 24px !important;
+}
+
+/* Para o carrossel de serviços (embaixo, centralizado) */
+.swiper-services .swiper-pagination {
+    bottom: 10px !important;
+}
+
+
+.swiper-cases {
+    & .swiper-button-next {
+        color: var(--color-misk-50)
+    }
+
+    & .swiper-button-prev {
+        color: var(--color-misk-50)
+    }
+}
+
+/* ============================================
+   FORM STYLES
+   ============================================ */
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+input[type="file"] {
+    @apply w-full;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+input[type="file"]:focus {
+    @apply ring-misk-600 border-misk-600;
+}
+
+/* Checkbox Custom Style */
+input[type="checkbox"] {
+    @apply accent-misk-600;
+}
+
+/* ============================================
+   SCROLLBAR STYLES
+   ============================================ */
+
+::-webkit-scrollbar {
+    @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-misk-100;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-misk-400 rounded-lg hover:bg-misk-600;
+}
+
+/* ============================================
+   ANIMATION UTILITIES
+   ============================================ */
+
+:root {
+    --duration: 10s;
+    --totalitems: 8;
+}
+
+.container-grid {
+    max-width: 1620px;
+    width: 80vw;
+    margin: 0 auto;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vw;
+    width: 120vw;
+    overflow: hidden;
+}
+
+.img-item {
+    position: absolute;
+    height: auto;
+    width: 20vw;
+    left: 100%;
+    animation: scrollX var(--duration) linear infinite;
+    animation-delay: calc(var(--duration)/var(--totalitems) * (var(--totalitems) - var(--i)) * -1);
+}
+
+.img-item img {
+    height: auto;
+}
+
+@keyframes scrollX {
+    to {
+        left: -8vw;
+    }
+}
+
+
+.svg-misk {
+    filter: invert(12%) sepia(55%) saturate(1236%) hue-rotate(221deg) brightness(91%) contrast(101%);
+}
+
+
+@media only screen and (max-width: 600px) {
+    .wrapper {
+        height: 20vw;
+        width: 400vw;
+    }
+
+    .img-item {
+        width: 70vw;
+    }
+
+}
