@@ -1,0 +1,169 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container-grid {
+    max-width: 1620px;
+    width: 80vw;
+    margin: 0 auto;
+}
+
+#produtos1 {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: "Montserrat";
+    margin-bottom: 80px;
+}
+
+.alinhamentocards {
+
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: space-between;
+
+
+}
+
+.produtoscard {
+    background-color: #EEF0FF;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px gray;
+
+    height: 340px;
+    width: 80%px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+
+    font-size: 15px;
+
+
+}
+
+.imgcard {
+    width: 60px;   
+    height: 60px;
+}
+
+.produtoscard button {
+    height: 40px;
+    width: 120px;   
+    background-color: #82C952;
+    color: #2B491E;
+
+    border-style: none;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px;
+
+    align-self: flex-end;
+
+}
+
+.titulo2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+
+    font-family: "Montserrat";
+}
+
+.produtosparagrafo1 {
+    font-family: "Montserrat";
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 40pxs;
+
+}
+
+.produtosparagrafo1 img {
+    height: 30%;
+    width: 30%;
+    border-radius: 10px;
+}
+
+.produtosparagrafo1 p {
+    width: 50%;
+}
+
+.produtosparagrafo2 {
+    font-family: "Montserrat";
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 40pxs;
+
+}
+
+.produtosparagrafo2 img {
+    height: 30%;
+    width: 30%;
+    border-radius: 10px;
+}
+
+.produtosparagrafo2 p {
+    width: 50%;
+}
+
+.opcoes {
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+    margin-top: 100px;
+}
+
+.produtosopcoescard1 {
+    background-color: #CECEE4;
+
+    width: 40%;
+    height: 200px;
+
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.produtosopcoescard2 {
+    background-color: #B4B1D4;
+
+    width: 40%;
+    height: 200px;
+
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.produtosopcoescard3 {
+    background-color: #9690C1;
+
+    width: 40%;
+    height: 200px;
+
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.produtosopcoescard4 {
+    background-color: #8277B0;
+
+    width: 40%;
+    height: 200px;
+
+    border-radius: 10px;
+    padding: 20px;
+}
