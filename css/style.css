@@ -94,7 +94,7 @@
     }
 
     .cases-bullet {
-        @apply max-w-fit h-auto text-misk-50 font-semibold bg-misk-900 py-1 px-6 rounded-3xl
+        @apply max-w-fit h-auto font-semibold bg-pastelgreen-300 text-[#1E1E1E] py-1 px-6 rounded-3xl
     }
 
     p {
