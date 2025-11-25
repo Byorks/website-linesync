@@ -1,0 +1,129 @@
+:root {
+    /* 🎨 Pastel Green */
+    --pastelgreen-50: #f3faeb;
+    --pastelgreen-100: #e2f4d3;
+    --pastelgreen-200: #c6eaac;
+    --pastelgreen-300: #82c952;
+    --pastelgreen-400: #63ae34;
+    --pastelgreen-500: #63ae34;
+    --pastelgreen-600: #4a8b25;
+    --pastelgreen-700: #3b6a21;
+    --pastelgreen-800: #31551f;
+    --pastelgreen-900: #2b491e;
+    --pastelgreen-950: #14270c;
+
+    /* 🎨 Misk */
+    --misk-50: #eef0ff;
+    --misk-100: #e0e3ff;
+    --misk-200: #c8cbfd;
+    --misk-300: #a6aaff;
+    --misk-400: #8682f7;
+    --misk-500: #7364f0;
+    --misk-600: #6448e3;
+    --misk-700: #5639c9;
+    --misk-800: #4631a2;
+    --misk-900: #362a73;
+    --misk-950: #241b4b;
+
+    /* 🎨 BlueBell */
+    --bluebell-50: #eef0ff;
+    --bluebell-100: #f0f0f7;
+    --bluebell-200: #e4e4f0;
+    --bluebell-300: #cecee4;
+    --bluebell-400: #b4b1d4;
+    --bluebell-500: #9690c1;
+    --bluebell-600: #8277b0;
+    --bluebell-700: #70659c;
+    --bluebell-800: #5d5483;
+    --bluebell-900: #4e466c;
+    --bluebell-950: #322d48;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url(assets/fonts/Manrope-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url(assets/fonts/Inter-VariableFont_opsz\,wght.ttf);
+}
+
+@font-face {
+    font-family: 'Inttalic';
+    src: url(assets/fonts/Inter-Italic-VariableFont_opsz\,wght.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter';
+}
+
+.container-grid {
+    max-width: 1620px;
+    width: 80vw;
+    margin: 0 auto;
+}
+
+.contact {}
+
+.titletext {
+    text-align: center;
+    font-family: 'Manrope';
+}
+
+.cct-content {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.cct-falas {
+    flex-direction: column;
+    padding-left: 200px;
+}
+
+.cct-falas h2{
+    text-align: center;
+    font-family: 'Manrope';
+}
+
+.cct-falas p {
+    max-width: 600px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.bolha{
+    
+}
+
+.cct-img {
+    max-width: 600px;
+    min-height: 600px;
+    border-radius: 2%;
+    border: 5px solid var(--misk-600);
+    border-right: none;
+    border-bottom: none;
+    padding: 1%;
+}
+
+.cct-btn{
+    
+}
+
+.cct-btn button{
+    background-color: var(--pastelgreen-300);
+    border-color: #5639c9;
+    border-radius: 2%;
+    width: 300px;
+    height: 40px;
+}
