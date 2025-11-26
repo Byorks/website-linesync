@@ -103,27 +103,43 @@ body {
 }
 
 .bolha{
-    
+    position: relative;
+    width: 100%;
+    max-width: 625px;
+    border-top: 3px solid #5A5CCF;
+    border-left: 3px solid #5A5CCF;
+    overflow: hidden;
 }
 
 .cct-img {
     max-width: 600px;
     min-height: 600px;
     border-radius: 2%;
-    border: 5px solid var(--misk-600);
-    border-right: none;
-    border-bottom: none;
     padding: 1%;
+    margin-top: 1%;
+    margin-left: 1%;
 }
 
 .cct-btn{
-    
-}
-
-.cct-btn button{
     background-color: var(--pastelgreen-300);
     border-color: #5639c9;
     border-radius: 2%;
     width: 300px;
-    height: 40px;
+    height: 50px;
+    margin-top: 5%;
+    margin-left: 25%;
+    cursor: pointer;
+
+}
+
+.duvidas{
+    margin-top: 2%;
+}
+
+.duvidas h1{
+
+}
+
+.duvi-content{
+    display: flex;
 }
