@@ -79,7 +79,7 @@
     }
 
     .title-h2 {
-        @apply text-3xl md:text-4xl font-title font-semibold text-misk-950
+        @apply text-3xl md:text-4xl font-title font-semibold text-misk-900
     }
 
     /* Buttons */
@@ -125,15 +125,23 @@
         @apply hidden;
     }
 
+    /* Feature card */
     .feature-card {
-        @apply  shadow-md bg-misk-50 col-span-4 rounded-lg p-4 flex flex-col gap-6
-            
+        @apply  shadow-md bg-misk-50 col-span-4 rounded-lg p-4 flex flex-col gap-6       
     }
 
     .feature-card .icon {
         @apply p-1 bg-misk-200 text-misk-900 aspect-square w-12 flex justify-center items-center rounded-md
     }
-}
+
+    .feature-card .text-card h3 {
+        @apply font-title font-bold text-base pb-2 text-misk-950
+    }
+
+    .feature-card .text-card p {
+        @apply text-sm text-misk-900
+    }
+}   
 
 @font-face {
     font-family: "Manrope";
