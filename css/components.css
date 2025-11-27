@@ -50,15 +50,43 @@
     bottom: 10px !important;
 }
 
+.swiper-cases .swiper-pagination {
+    bottom: 0;
+}
 
-.swiper-cases {
+
+#cases {
     & .swiper-button-next {
+        padding: 12px;
         color: var(--color-misk-50)
     }
 
     & .swiper-button-prev {
+        padding: 12px;
         color: var(--color-misk-50)
     }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    position: relative !important;
+    left: 0 !important;
+    top: 0 !important;
+    transition: all 0.3s ease;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    transform: scale(1.1);
+}
+
+/* ← AQUI VOCÊ CUSTOMIZA O SVG (espessura, cor, tamanho) → */
+.swiper-button-prev svg,
+.swiper-button-next svg {
+    stroke-width: 4px !important;
+    /* ← espessura que você quiser */
+
+    /* cor da seta (ou use fill/currentColor) */
 }
 
 /* ============================================
@@ -150,6 +178,12 @@ input[type="checkbox"] {
     filter: invert(12%) sepia(55%) saturate(1236%) hue-rotate(221deg) brightness(91%) contrast(101%);
 }
 
+
+/* Cases Home */
+
+.case-img {
+    box-shadow: 5px 7px 23.799999237060547px 0px rgba(0, 0, 0, 25%);
+}
 
 @media only screen and (max-width: 600px) {
     .wrapper {

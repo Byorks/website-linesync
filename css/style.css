@@ -67,7 +67,7 @@
 
 @layer utilities {
     .link-nav {
-        @apply text-misk-900 transition ease-in-out duration-300 font-medium hover:font-semibold font-body hover:text-misk-950/75;
+        @apply text-misk-900 font-body transition ease-in-out duration-300 font-medium hover:font-semibold hover:text-misk-950/75;
     }
 
     .link-hover-underline {
@@ -84,7 +84,7 @@
 
     /* Buttons */
     .nav-btn {
-        @apply w-11 h-11 border border-bluebell-900 hover:border-misk-400 bg-bluebell-900 rounded-md [&>svg]:text-pastelgreen-400 hover:[&>svg]:text-misk-300 hover:[&>svg]:transition hover:[&>svg]:ease-in-out hover:[&>svg]:duration-300 transition ease-out duration-300 cursor-pointer
+        @apply w-11 h-11 border border-bluebell-900 hover:border-misk-400 bg-bluebell-900 rounded-md [&>svg]:text-pastelgreen-300 hover:[&>svg]:text-misk-300 hover:[&>svg]:transition hover:[&>svg]:ease-in-out hover:[&>svg]:duration-300 transition ease-out duration-300 cursor-pointer
     }
 
     .btn-secondary {
@@ -95,7 +95,7 @@
         @apply py-2 px-9 text-base text-bluebell-50 border bg-misk-900 hover:bg-misk-800 hover:border hover:border-pastelgreen-300 transition ease-in-out duration-300 rounded-[5px] cursor-pointer active:bg-misk-100 active:text-misk-950
     }
 
-    .card-btn {
+    .card-btn-icon {
         @apply py-2 pl-4 pr-2 flex self-end items-center text-[#1E1E1E] text-sm font-bold gap-3 bg-pastelgreen-300 rounded-md cursor-pointer border border-pastelgreen-300 hover:bg-pastelgreen-200 hover:border hover:border-pastelgreen-600 transition ease-in-out duration-300 active:bg-pastelgreen-600 active:text-pastelgreen-50 active:border active:stroke-pastelgreen-200 active:duration-150
     }
 
