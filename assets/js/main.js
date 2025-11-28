@@ -169,7 +169,7 @@ const countdown = () => {
 
   // Janeiro é 0 porque os anos são contados em um array
   // primeiro param é o ano, segundo é o mês e o terceiro é o dia
-  const targetDate = new Date(actualYear, 11, 2);
+  const targetDate = new Date(actualYear, 11, 28);
 
   const timeLeft = targetDate - now; // retorna a data em milissegundos
 

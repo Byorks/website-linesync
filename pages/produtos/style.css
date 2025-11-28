@@ -1,9 +1,3 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 .container-grid {
     max-width: 1620px;
     width: 80vw;
@@ -15,20 +9,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
     font-family: "Montserrat";
     margin-bottom: 80px;
 }
 
 .alinhamentocards {
-
     margin: 10px;
     display: flex;
     flex-direction: row;
     gap: 50px;
     justify-content: space-between;
-
-
 }
 
 .produtoscard {
@@ -51,13 +41,13 @@
 }
 
 .imgcard {
-    width: 60px;   
+    width: 60px;
     height: 60px;
 }
 
 .produtoscard button {
     height: 40px;
-    width: 120px;   
+    width: 120px;
     background-color: #82C952;
     color: #2B491E;
 
@@ -124,7 +114,7 @@
     height: 800px;
     display: flex;
     flex-direction: column;
-    align-items:  center;
+    align-items: center;
     margin-top: 100px;
 }
 

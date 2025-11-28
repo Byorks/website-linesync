@@ -1,10 +1,15 @@
 @import "tailwindcss";
 @import "flowbite/src/themes/default";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
+/* 
+  1. Fontes e Plugins 
+*/
 @plugin "flowbite/plugin";
 @source "../node_modules/flowbite";
 
+/* 
+  2. Tema Personalizado (Design System)
+*/
 @theme {
 
     /* 🎨 Pastel Green */
@@ -47,7 +52,7 @@
     --color-bluebell-950: #322d48;
 
     /* Tipografia */
-    --font-title: "Manrope";
+    --font-title: "Manrope", sans-serif;
     --font-body: "Inter", sans-serif, i-sans-serif, system-ui, ;
 
     /* Animações */
@@ -65,53 +70,106 @@
 
 }
 
-@layer utilities {
+/* 
+  3. Camada Base 
+  Estilos globais para tags HTML puras.
+*/
+@layer base {
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-title);
+    }
+    
+    body, p, a, span, div { 
+        font-family: var(--font-body);
+    }
+}
+
+/* 
+  4. Camada de Componentes
+  Use @layer components para classes que podem ser 
+  sobrescritas por utilitários (ex: mt-4, text-red-500).
+*/
+
+@layer components {
+    
+    /* Se o arquivo components.css tiver classes como .card, .btn, etc, 
+       importe ele AQUI, não em utilities. */
+    @import "./components.css"; 
+
+    /* --- Tipografia & Links --- */
+    .title-h2 {
+        @apply text-3xl md:text-4xl font-title font-semibold text-misk-900;
+    }
+
     .link-nav {
         @apply text-misk-900 font-body transition ease-in-out duration-300 font-medium hover:font-semibold hover:text-misk-950/75;
     }
 
     .link-hover-underline {
-        @apply relative text-bluebell-900 font-medium after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-bluebell-900 after:transition-all after:duration-300 hover:after:w-full
+        @apply relative text-bluebell-900 font-medium after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-bluebell-900 after:transition-all after:duration-300 hover:after:w-full;
     }
 
     .link-hover-zoom {
-        @apply inline-block transition-transform duration-300 ease-in-out hover:scale-105
+        @apply inline-block transition-transform duration-300 ease-in-out hover:scale-105;
     }
 
-    .title-h2 {
-        @apply text-3xl md:text-4xl font-title font-semibold text-misk-900
-    }
-
-    /* Buttons */
+    /* --- Botões --- */
     .nav-btn {
-        @apply w-11 h-11 border border-bluebell-900 hover:border-misk-400 bg-bluebell-900 rounded-md [&>svg]:text-pastelgreen-300 hover:[&>svg]:text-misk-300 hover:[&>svg]:transition hover:[&>svg]:ease-in-out hover:[&>svg]:duration-300 transition ease-out duration-300 cursor-pointer
+        @apply w-11 h-11 border border-bluebell-900 hover:border-misk-400 bg-bluebell-900 rounded-md 
+               [&>svg]:text-pastelgreen-300 hover:[&>svg]:text-misk-300 
+               hover:[&>svg]:transition hover:[&>svg]:ease-in-out hover:[&>svg]:duration-300 
+               transition ease-out duration-300 cursor-pointer flex items-center justify-center;
     }
 
     .btn-secondary {
-        @apply py-2 px-9 text-base text-bluebell-50 border bg-transparent border-pastelgreen-300 hover:border hover:border-pastelgreen-300 hover:bg-pastelgreen-300 transition ease-in-out duration-300 rounded-[5px] cursor-pointer active:bg-misk-100 active:text-misk-950
+        @apply py-2 px-9 text-base text-bluebell-50 border bg-transparent border-pastelgreen-300 
+               hover:border hover:border-pastelgreen-300 hover:bg-pastelgreen-300 
+               transition ease-in-out duration-300 rounded-[5px] cursor-pointer 
+               active:bg-misk-100 active:text-misk-950;
     }
 
     .btn-tertiary {
-        @apply py-2 px-9 text-base text-bluebell-50 border bg-misk-900 hover:bg-misk-800 hover:border hover:border-pastelgreen-300 transition ease-in-out duration-300 rounded-[5px] cursor-pointer active:bg-misk-100 active:text-misk-950
+        @apply py-2 px-9 text-base text-bluebell-50 border bg-misk-900 
+               hover:bg-misk-800 hover:border hover:border-pastelgreen-300 
+               transition ease-in-out duration-300 rounded-[5px] cursor-pointer 
+               active:bg-misk-100 active:text-misk-950;
     }
 
     .card-btn-icon {
-        @apply py-2 pl-4 pr-2 flex self-end items-center text-[#1E1E1E] text-sm font-bold gap-3 bg-pastelgreen-300 rounded-md cursor-pointer border border-pastelgreen-300 hover:bg-pastelgreen-200 hover:border hover:border-pastelgreen-600 transition ease-in-out duration-300 active:bg-pastelgreen-600 active:text-pastelgreen-50 active:border active:stroke-pastelgreen-200 active:duration-150
+        @apply py-2 pl-4 pr-2 flex self-end items-center text-[#1E1E1E] text-sm font-bold gap-3 
+               bg-pastelgreen-300 rounded-md cursor-pointer border border-pastelgreen-300 
+               hover:bg-pastelgreen-200 hover:border hover:border-pastelgreen-600 
+               transition ease-in-out duration-300 
+               active:bg-pastelgreen-600 active:text-pastelgreen-50 active:border active:stroke-pastelgreen-200 active:duration-150;
     }
 
+    /* --- Elementos de UI --- */
     .cases-bullet {
-        @apply max-w-fit h-auto font-semibold bg-pastelgreen-300 text-[#1E1E1E] py-1 px-6 rounded-3xl
-    }
-
-    p {
-        @apply font-body text-base text-left
+        @apply max-w-fit h-auto font-semibold bg-pastelgreen-300 text-[#1E1E1E] py-1 px-6 rounded-3xl;
     }
 
     .form-label {
-        @apply font-medium text-misk-800 font-body
+        @apply font-medium text-misk-800 font-body;
     }
 
-    /* Swiper Custom Styles */
+    /* Cards */
+    .feature-card {
+        @apply shadow-md bg-misk-50 col-span-4 rounded-lg p-4 flex flex-col gap-6;
+    }
+    
+    .feature-card .icon {
+        @apply p-1 bg-misk-200 text-misk-900 aspect-square w-12 flex justify-center items-center rounded-md;
+    }
+    
+    .feature-card .text-card h3 {
+        @apply font-title font-bold text-base pb-2 text-misk-950;
+    }
+    
+    .feature-card .text-card p {
+        @apply text-sm text-misk-900;
+    }
+
+    /* --- Swiper Custom Overrides --- */
     .swiper-pagination-2 .swiper-pagination-bullet {
         @apply w-3 h-3 bg-misk-600 opacity-50 transition-opacity duration-300;
     }
@@ -124,31 +182,29 @@
     .swiper-button-next-2::after {
         @apply hidden;
     }
+}
 
-    /* Feature card */
-    .feature-card {
-        @apply  shadow-md bg-misk-50 col-span-4 rounded-lg p-4 flex flex-col gap-6       
-    }
+/* 
+  5. Utility Layer 
+  Use isso raramente, apenas para criar novas micro-classes utilitárias
+  que você quer usar junto com o HTML.
+*/
+@layer utilities {
+    /* Exemplo: .text-shadow-sm { ... } */
+}
 
-    .feature-card .icon {
-        @apply p-1 bg-misk-200 text-misk-900 aspect-square w-12 flex justify-center items-center rounded-md
-    }
-
-    .feature-card .text-card h3 {
-        @apply font-title font-bold text-base pb-2 text-misk-950
-    }
-
-    .feature-card .text-card p {
-        @apply text-sm text-misk-900
-    }
-}   
-
+/* 
+  6. Definição de Fontes Locais 
+  Certifique-se de que os arquivos .ttf estão realmente nesse caminho
+*/
 @font-face {
     font-family: "Manrope";
     src: url("../assets/fonts/Manrope/Manrope-VariableFont_wght.ttf") format("truetype");
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Inter";
     src: url("../assets/fonts/Inter/Inter-variable.ttf") format("truetype");
+    font-display: swap;
 }
