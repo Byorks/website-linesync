@@ -6,14 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linesync Home</title>
     <link rel="shortcut icon" href="./assets/img/icons/favicon-32x32.png" type="image/x-icon">
-    
-    <!-- Link Swiper's CSS -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
-    <link rel="stylesheet" href="./assets/libs/swiper/swiper-bundle.min.css" />
-    
-        <!-- Styles CSS -->
-        <link href="./css/output.css" rel="stylesheet">
-    
+
+    <!-- Styles CSS -->
+    <link href="./css/output.css" rel="stylesheet">
+
     <!-- Lucide Icones -->
     <!-- Development version -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
@@ -23,6 +19,9 @@
 
     <!-- Flowbite -->
     <script src="./assets/libs/flowbite/flowbite.min.js"></script>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="./assets/libs/swiper/swiper-bundle.min.css" />
 
 </head>
 
@@ -353,8 +352,7 @@
                     </div>
                     <!-- Card 3 -->
                     <div class="feature-card">
-                        <div
-                            class="icon">
+                        <div class="icon">
                             <i data-lucide="square-mouse-pointer"></i>
                         </div>
                         <div class="text-card">
@@ -377,7 +375,7 @@
         </section>
 
 
-        <section
+        <section id="cases"
             class="w-full flex justify-center flex-col items-center my-10 pt-10 overflow-hidden bg-[url(/assets/img/ui/pattern.png)] bg-center bg-repeat bg-misk-50">
             <h2 class="pb-4 title-h2">
                 Quem já faz parte
@@ -416,18 +414,19 @@
 
                         <div class="relative flex justify-between items-center">
                             <!-- Swiper -->
-                            <div class="swiper-button-prev"></div>
+                            <div class="hidden md:block swiper-button-prev"></div>
 
                             <div class="swiper swiper-cases">
+                                <div class="md:hidden absolute swiper-button-prev"></div>
                                 <div class="swiper-wrapper rounded-lg">
                                     <div class="swiper-slide">
-                                        <div class="h-fit px-6 py-6 grid grid-cols-8 gap-6">
+                                        <div class="h-fit p-2 md:p-6  grid grid-cols-4 md:grid-cols-8 gap-6">
                                             <div class="flex flex-col col-span-4 gap-6 justify-evenly">
                                                 <div class="logo w-40 h-auto">
                                                     <img src="assets/img/logos-parceiras/Hersheys LabWare LIMS.png"
                                                         alt="">
                                                 </div>
-                                                <div class="description text-misk-50">
+                                                <div class="description text-misk-900">
                                                     <p>
                                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                                                         eiusmod
@@ -461,14 +460,14 @@
                                     </div>
 
                                     <div class="swiper-slide">
-                                        <div class="px-6 py-6 grid grid-cols-8">
+                                        <div class="p-2 md:p-6 grid grid-cols-4 md:grid-cols-8 gap-6">
                                             <div class="flex flex-col col-span-4 gap-6 justify-evenly">
                                                 <div class="logo w-40 h-auto">
                                                     <img src="assets/img/logos-parceiras/Goodyear Uses LabWare.png"
                                                         alt="">
                                                 </div>
                                                 <div class="description">
-                                                    <p>
+                                                    <p class="text-misk-900">
                                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                                                         eiusmod
                                                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -498,11 +497,13 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="swiper-button-next md:hidden absolute"></div>
 
                                 </div>
                                 <!-- <div class="swiper-pagination"></div> -->
                             </div>
-                            <div class="swiper-button-next md: ml-6!"></div>
+                            <div class="swiper-button-next hidden md:block  md:ml-6!"></div>
+
                         </div>
 
 
@@ -541,23 +542,24 @@
         </section>
     </main>
 
+
     <footer class="w-full">
-        <img class="w-full hidden md:block pointer-events-none" src="assets/img/ui/footer-4.svg" alt="Imagem">
-        <img class="w-full md:hidden pointer-events-none" src="assets/img/ui/footer-4-mobile-2.svg" alt="Imagem">
+        <img class="w-full hidden md:block pointer-events-none" src="/assets/img/ui/footer-4.svg" alt="Imagem">
+        <img class="w-full md:hidden pointer-events-none" src="/assets/img/ui/footer-4-mobile-2.svg" alt="Imagem">
 
         <div class="w-full bg-misk-200 md:pb-20">
             <div class="bg-misk-200 px-4 md:container md:mx-auto md:grid md:grid-cols-12 md:gap-6">
 
                 <div id="links-footer"
                     class="link bg-misk-200 pt-6 md:col-span-4 md:col-start-6   md:pt-0 order-1 md:order-2">
-                    <h2 class="font-title font-semibold text-xl text-misk-900">
+                    <h2 class="font-title font-bold text-xl text-misk-900">
                         Navegue pelo site
                     </h2>
                     <ul class="grid gap-3 py-3">
-                        <li><a href="" class="link-hover-underline">Página Inicial</a></li>
+                        <li><a href="index.html" class="link-hover-underline">Página Inicial</a></li>
                         <li><a href="" class="link-hover-underline">Sobre</a></li>
                         <li><a href="pages/trainee-promo.html" class="link-hover-underline">Carreiras</a></li>
-                        <li><a href="./pages/produtos" class="link-hover-underline">Produtos</a></li>
+                        <li><a href="pages/produtos" class="link-hover-underline">Serviços</a></li>
                         <li><a href="" class="link-hover-underline">Contato</a></li>
                         <li><a href="" class="link-hover-underline transition duration-300 ease-in-out">Setores</a></li>
                     </ul>
@@ -565,7 +567,7 @@
                 </div>
 
                 <div id="social-midia" class="md:col-span-3 md:col-start-10 order-2 md:order-3">
-                    <h2 class="font-title font-semibold text-xl text-misk-900">
+                    <h2 class="font-title font-bold text-xl text-misk-900">
                         Conheça nossas mídias
                     </h2>
 
@@ -585,7 +587,8 @@
                     class="bg-misk-200  pt-3 pb-6  grid grid-cols-4 gap-6 md:pb-0 md:pt-0 md:col-span-4 md:col-start-1 order-3 md:order-1">
                     <!-- Logotipo -->
                     <div class="col-span-2 col-start-1 md:col-span-2 text-misk-950 ">
-                        <img src="assets/img/ui/logo-negativo.svg" alt="LineSync" class="w-full h-auto svg-misk">
+                        <img src="../assets/img/ui/logo-negativo.svg" alt="LineSync" class="w-full h-auto svg-misk">
+
                     </div>
                     <div class="col-span-4 col-start-1 md:col-span-3">
                         <p>
@@ -609,7 +612,6 @@
 
 
 </body>
-
 
 
 <!-- Swiper JS -->

@@ -75,12 +75,21 @@
   Estilos globais para tags HTML puras.
 */
 @layer base {
-    h1, h2, h3, h4, h5, h6 {
-        font-family: var(--font-title);
+    html {
+        scroll-behavior: smooth;
     }
     
-    body, p, a, span, div { 
+    h1,h2,h3,h4,h5,h6 {
+        font-family: var(--font-title);
+    }
+
+    body,
+    p,
+    a,
+    span,
+    div {
         font-family: var(--font-body);
+        text-align: left;
     }
 }
 
@@ -91,10 +100,10 @@
 */
 
 @layer components {
-    
+
     /* Se o arquivo components.css tiver classes como .card, .btn, etc, 
        importe ele AQUI, não em utilities. */
-    @import "./components.css"; 
+    @import "./components.css";
 
     /* --- Tipografia & Links --- */
     .title-h2 {
@@ -115,32 +124,19 @@
 
     /* --- Botões --- */
     .nav-btn {
-        @apply w-11 h-11 border border-bluebell-900 hover:border-misk-400 bg-bluebell-900 rounded-md 
-               [&>svg]:text-pastelgreen-300 hover:[&>svg]:text-misk-300 
-               hover:[&>svg]:transition hover:[&>svg]:ease-in-out hover:[&>svg]:duration-300 
-               transition ease-out duration-300 cursor-pointer flex items-center justify-center;
+        @apply w-11 h-11 border border-bluebell-900 hover:border-misk-400 bg-bluebell-900 rounded-md [&>svg]:text-pastelgreen-300 hover:[&>svg]:text-misk-300 hover:[&>svg]:transition hover:[&>svg]:ease-in-out hover:[&>svg]:duration-300 transition ease-out duration-300 cursor-pointer flex items-center justify-center;
     }
 
     .btn-secondary {
-        @apply py-2 px-9 text-base text-bluebell-50 border bg-transparent border-pastelgreen-300 
-               hover:border hover:border-pastelgreen-300 hover:bg-pastelgreen-300 
-               transition ease-in-out duration-300 rounded-[5px] cursor-pointer 
-               active:bg-misk-100 active:text-misk-950;
+        @apply py-2 px-9 text-base text-bluebell-50 border bg-transparent border-pastelgreen-300 hover:border hover:border-pastelgreen-300 hover:bg-pastelgreen-300 transition ease-in-out duration-300 rounded-[5px] cursor-pointer active:bg-misk-100 active:text-misk-950;
     }
 
     .btn-tertiary {
-        @apply py-2 px-9 text-base text-bluebell-50 border bg-misk-900 
-               hover:bg-misk-800 hover:border hover:border-pastelgreen-300 
-               transition ease-in-out duration-300 rounded-[5px] cursor-pointer 
-               active:bg-misk-100 active:text-misk-950;
+        @apply py-2 px-9 text-base text-bluebell-50 border bg-misk-900 hover:bg-misk-800 hover:border hover:border-pastelgreen-300 transition ease-in-out duration-300 rounded-[5px] cursor-pointer active:bg-misk-100 active:text-misk-950;
     }
 
     .card-btn-icon {
-        @apply py-2 pl-4 pr-2 flex self-end items-center text-[#1E1E1E] text-sm font-bold gap-3 
-               bg-pastelgreen-300 rounded-md cursor-pointer border border-pastelgreen-300 
-               hover:bg-pastelgreen-200 hover:border hover:border-pastelgreen-600 
-               transition ease-in-out duration-300 
-               active:bg-pastelgreen-600 active:text-pastelgreen-50 active:border active:stroke-pastelgreen-200 active:duration-150;
+        @apply py-2 pl-4 pr-2 flex self-end items-center text-[#1E1E1E] text-sm font-bold gap-3 bg-pastelgreen-300 rounded-md cursor-pointer border border-pastelgreen-300 hover:bg-pastelgreen-200 hover:border hover:border-pastelgreen-600 transition ease-in-out duration-300 active:bg-pastelgreen-600 active:text-pastelgreen-50 active:border active:stroke-pastelgreen-200 active:duration-150;
     }
 
     /* --- Elementos de UI --- */
@@ -156,17 +152,21 @@
     .feature-card {
         @apply shadow-md bg-misk-50 col-span-4 rounded-lg p-4 flex flex-col gap-6;
     }
-    
+
     .feature-card .icon {
-        @apply p-1 bg-misk-200 text-misk-900 aspect-square w-12 flex justify-center items-center rounded-md;
+        @apply p-3 bg-misk-200 text-misk-900 aspect-square w-13 h-13 flex justify-center items-center rounded-md;
     }
-    
+
+    .feature-card .icon svg { 
+        @apply w-full h-full;
+    }
+
     .feature-card .text-card h3 {
-        @apply font-title font-bold text-base pb-2 text-misk-950;
+        @apply font-title font-bold text-lg pb-2 text-misk-950;
     }
-    
+
     .feature-card .text-card p {
-        @apply text-sm text-misk-900;
+        @apply text-sm text-misk-950;
     }
 
     /* --- Swiper Custom Overrides --- */
@@ -182,6 +182,28 @@
     .swiper-button-next-2::after {
         @apply hidden;
     }
+
+    /* Página produtos */
+    .produtosopcoescard h3 {
+        @apply text-3xl font-bold text-misk-900
+    }
+
+    /* Efeito de revel */
+    .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease-out;
+        will-change: opacity, transform; /* Otimização para o navegador */
+    }
+
+    .reveal.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Opcional: Delay para elementos em sequência (ex: cards) */
+    .reveal.delay-200 { transition-delay: 200ms; }
+    .reveal.delay-400 { transition-delay: 400ms; }
 }
 
 /* 
@@ -200,6 +222,8 @@
 @font-face {
     font-family: "Manrope";
     src: url("../assets/fonts/Manrope/Manrope-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 900;
+    font-size: normal;
     font-display: swap;
 }
 
@@ -207,4 +231,6 @@
     font-family: "Inter";
     src: url("../assets/fonts/Inter/Inter-variable.ttf") format("truetype");
     font-display: swap;
+    font-weight: 100 900;
+    font-size: normal;
 }

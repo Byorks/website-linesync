@@ -4,12 +4,15 @@
     margin: 0 auto;
 }
 
+p { 
+    font-family: var(--font-body);
+}
+
 #produtos1 {
-    margin-top: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: "Montserrat";
+    /* font-family: "Montserrat"; */
     margin-bottom: 80px;
 }
 
@@ -23,10 +26,10 @@
 
 .produtoscard {
     background-color: #EEF0FF;
-    border-radius: 10px;
+    border-radius: 16px;
     box-shadow: 5px 5px 5px gray;
 
-    height: 340px;
+    height: auto;
     width: 80%px;
     padding: 20px;
 
@@ -67,17 +70,15 @@
     flex-direction: column;
     padding: 40px;
 
-    font-family: "Montserrat";
+    /* font-family: "Montserrat"; */
 }
 
 .produtosparagrafo1 {
-    font-family: "Montserrat";
+    /* font-family: "Montserrat"; */
 
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 40pxs;
-
 }
 
 .produtosparagrafo1 img {
@@ -91,7 +92,7 @@
 }
 
 .produtosparagrafo2 {
-    font-family: "Montserrat";
+    /* font-family: "Montserrat"; */
 
     display: flex;
     justify-content: space-around;
@@ -110,50 +111,166 @@
     width: 50%;
 }
 
-.opcoes {
+/* .opcoes {
     height: 800px;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 100px;
-}
+} */
 
-.produtosopcoescard1 {
-    background-color: #CECEE4;
-
-    width: 40%;
+.produtosopcoescard {
+    width: 100%;
     height: 200px;
 
     border-radius: 10px;
     padding: 20px;
 }
 
-.produtosopcoescard2 {
-    background-color: #B4B1D4;
 
-    width: 40%;
-    height: 200px;
-
-    border-radius: 10px;
-    padding: 20px;
+/* Stacking Cards*/
+:root {
+    --card-height: 40vh;
+    /* Ajustei para garantir altura visual */
+    --card-margin: 4vw;
+    --card-top-offset: 1em;
 }
 
-.produtosopcoescard3 {
-    background-color: #9690C1;
+#cards {
+    /* Define a timeline baseada no scroll deste elemento no corpo */
+    view-timeline-name: --cards-element-scrolls-in-body;
 
-    width: 40%;
-    height: 200px;
+    /* Espaço extra no fundo para permitir o scroll completo */
+    padding-bottom: calc(var(--numcards) * var(--card-top-offset));
+    margin-bottom: var(--card-margin);
 
-    border-radius: 10px;
-    padding: 20px;
+    /* Define o número de cards aqui para o cálculo funcionar */
+    --numcards: 4;
+
+    /* Removemos os bullets da lista */
+    list-style: none;
+    padding-left: 0;
 }
 
-.produtosopcoescard4 {
-    background-color: #8277B0;
+.card {
+    position: sticky;
+    top: 10%;
+    /* Onde o card trava na tela */
+    padding-top: calc(var(--index) * var(--card-top-offset));
 
-    width: 40%;
-    height: 200px;
+    /* Cálculos de índice (estavam duplicados no seu código) */
+    --index0: calc(var(--index) - 1);
+    --reverse-index: calc(var(--numcards) - var(--index0));
+    --reverse-index0: calc(var(--reverse-index) - 1);
+    z-index: var(--index);
+}
 
-    border-radius: 10px;
-    padding: 20px;
+.card__content {
+    transform-origin: 50% 0%;
+    will-change: transform;
+
+    /* Definição dos intervalos da animação */
+    --start-range: calc(var(--index0) / var(--numcards) * 100%);
+    --end-range: calc(var(--index) / var(--numcards) * 100%);
+
+    animation: linear scale forwards;
+
+    /* A mágica do Scroll Driven Animation */
+    animation-timeline: --cards-element-scrolls-in-body;
+    animation-range: exit-crossing var(--start-range) exit-crossing var(--end-range);
+
+    /* Evita serrilhados e piscas durante a transformação */
+    backface-visibility: hidden;
+
+    /* Força o navegador a tratar isso como uma camada separada desde o início */
+    transform: translateZ(0);
+}
+
+/* IDs individuais para definir o índice */
+#card_1 {
+    --index: 1;
+}
+
+#card_2 {
+    --index: 2;
+}
+
+#card_3 {
+    --index: 3;
+}
+
+#card_4 {
+    --index: 4;
+}
+
+@keyframes scale {
+    to {
+        /* A lógica de escala: diminui conforme sobe */
+        transform: scale(calc(1.1 - calc(0.1 * var(--reverse-index))));
+    }
+}
+
+/* 
+  ========================================
+  sm (Small) - Telas a partir de 640px
+  Geralmente: Celulares grandes em modo paisagem ou Tablets pequenos
+  ========================================
+*/
+@media (max-width: 640px) {
+
+    /* Seus estilos para 'sm:' aqui */
+    .produtosparagrafo1 p {
+        width: 90%;
+    }
+
+    .produtosparagrafo1 img,
+    .produtosparagrafo2 img {
+        width: 90%;
+        height: auto;
+    }
+
+}
+
+
+/* 
+  ========================================
+  md (Medium) - Telas a partir de 768px
+  Geralmente: Tablets (iPad) em modo retrato
+  ========================================
+*/
+@media (max-width: 768px) {
+    /* Seus estilos para 'md:' aqui */
+}
+
+
+/* 
+  ========================================
+  lg (Large) - Telas a partir de 1024px
+  Geralmente: Tablets em modo paisagem e Laptops pequenos
+  ========================================
+*/
+@media (max-width: 1024px) {
+    /* Seus estilos para 'lg:' aqui */
+}
+
+
+/* 
+  ========================================
+  xl (Extra Large) - Telas a partir de 1280px
+  Geralmente: Monitores Desktop padrão e Laptops grandes
+  ========================================
+*/
+@media (max-width: 1280px) {
+    /* Seus estilos para 'xl:' aqui */
+}
+
+
+/* 
+  ========================================
+  2xl (2x Extra Large) - Telas a partir de 1536px
+  Geralmente: Monitores Widescreen grandes
+  ========================================
+*/
+@media (max-width: 1536px) {
+    /* Seus estilos para '2xl:' aqui */
 }

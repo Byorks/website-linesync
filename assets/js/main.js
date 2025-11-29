@@ -86,7 +86,13 @@ const swiperCulture = new Swiper(".swiper-culture", {
 });
 
 // Lucide
-lucide.createIcons();
+console.log('tentando criar lucide');
+console.log(lucide);
+lucide.createIcons({
+  attrs: {
+    "stroke-width": 2.2 // padrão é 2px
+  }
+});
 
 // =========================================
 // Nav Menu
@@ -185,3 +191,28 @@ const countdown = () => {
 
 // Executando de 1 em 1 segundo
 setInterval(countdown, 1000);
+
+
+
+// Efeito de reveal on scroll
+
+const observerOptions = {
+  root: null,
+  rootMargin: '0px', 
+  threshold: .1 // 10% do elemento precisa estar visível para disparar
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+
+      // para animar apenas em um scroll
+      // observer.unobserve(entry.target);
+    }
+  })
+}, observerOptions);
+
+document.querySelectorAll('.reveal').forEach((el) => {
+  observer.observe(el);
+});
