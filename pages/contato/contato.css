@@ -54,18 +54,12 @@
     src: url(assets/fonts/Inter-Italic-VariableFont_opsz\,wght.ttf);
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body {
     font-family: 'Inter';
 }
 
 .container-grid {
-    max-width: 1620px;
+    max-width: 1152px;
     width: 80vw;
     margin: 0 auto;
 }
@@ -78,20 +72,21 @@ body {
 }
 
 .cct-content {
-    margin-top: 40px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
 
 .cct-falas {
+    display: flex;
     flex-direction: column;
-    padding-left: 200px;
+    align-items: center;
+    gap: calc(var(--spacing) * 6);/*  24px */
 }
 
-.cct-falas h2{
+.cct-falas h2 {
     text-align: center;
     font-family: 'Manrope';
 }
@@ -102,25 +97,31 @@ body {
     text-align: center;
 }
 
-.bolha{
+.bolha {
     position: relative;
     width: 100%;
-    max-width: 625px;
+    max-width: 40%;
     border-top: 3px solid #5A5CCF;
     border-left: 3px solid #5A5CCF;
     overflow: hidden;
+    padding: 48px;
+
+    & .cct-img {
+        width: 100%;
+        height: auto;
+        max-width: 600px;
+        border-radius: 8px;
+    }
+
 }
 
-.cct-img {
-    max-width: 600px;
-    min-height: 600px;
-    border-radius: 2%;
-    padding: 1%;
-    margin-top: 1%;
-    margin-left: 1%;
+.cct-bolhinha {
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 
-.cct-btn{
+.cct-btn {
     background-color: var(--pastelgreen-300);
     border-color: #5639c9;
     border-radius: 2%;
@@ -132,14 +133,67 @@ body {
 
 }
 
-.duvidas{
+.duvidas {
     margin-top: 2%;
 }
 
-.duvidas h1{
+.duvidas h1 {}
 
+.duvi-content {
+    display: flex;
 }
 
-.duvi-content{
-    display: flex;
+
+
+/* 
+  ========================================
+  md (Medium) - Telas a partir de 768px
+  Geralmente: Tablets (iPad) em modo retrato
+  ========================================
+*/
+@media (max-width: 768px) {
+    /* Seus estilos para 'md:' aqui */
+
+    .bolha {
+        max-width: unset;
+        padding: 32px;
+    }
+
+    .cct-falas p {
+    max-width: unset;
+    text-align: left;
+}
+}
+
+
+/* 
+  ========================================
+  lg (Large) - Telas a partir de 1024px
+  Geralmente: Tablets em modo paisagem e Laptops pequenos
+  ========================================
+*/
+@media (max-width: 1024px) {
+    /* Seus estilos para 'lg:' aqui */
+}
+
+
+/* 
+  ========================================
+  xl (Extra Large) - Telas a partir de 1280px
+  Geralmente: Monitores Desktop padrão e Laptops grandes
+  ========================================
+*/
+@media (max-width: 1280px) {
+    /* Seus estilos para 'xl:' aqui */
+}
+
+
+/* 
+  ========================================
+  2xl (2x Extra Large) - Telas a partir de 1536px
+  Geralmente: Monitores Widescreen grandes
+  ========================================
+*/
+@media (max-width: 1536px) {
+    /* Seus estilos para '2xl:' aqui */
 }

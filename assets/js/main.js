@@ -50,9 +50,13 @@ const swiperServices = new Swiper(".swiper-services", {
 const swiperCases = new Swiper(".swiper-cases", {
   slidesPerView: 1,
   spaceBetween: 20,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-button-next-cases",
+    prevEl: ".swiper-button-prev-cases",
   },
   pagination: { el: ".swiper-pagination", clickable: true, type: "bullets" }, // ou fraction
   // breakpoints: {
@@ -61,6 +65,16 @@ const swiperCases = new Swiper(".swiper-cases", {
   // },
   mousewheel: false,
   keyboard: true,
+});
+
+const swiper = new Swiper(".myTextSwiper", {
+  direction: "vertical", // Faz subir
+  loop: true, // Infinito
+  autoplay: {
+    delay: 2500, // Tempo entre as trocas (2.5s)
+    disableOnInteraction: false,
+  },
+  allowTouchMove: false, // Impede o usuário de arrastar (opcional)
 });
 
 // Página de estágio Cultura
@@ -86,21 +100,33 @@ const swiperCulture = new Swiper(".swiper-culture", {
 });
 
 // Lucide
-console.log('tentando criar lucide');
+console.log("tentando criar lucide");
 console.log(lucide);
 lucide.createIcons({
   attrs: {
-    "stroke-width": 2.2 // padrão é 2px
-  }
+    "stroke-width": 2.2, // padrão é 2px
+  },
+});
+
+// =========================================
+// Splitting
+// =========================================
+document.addEventListener("DOMContentLoaded", () => {
+  Splitting();
 });
 
 // =========================================
 // Nav Menu
 // =========================================
 
+// TO-DO
+// [ ] - Ajustar para eu não ter que mudar na mão cada vez que eu alterar o tamanho do menu no HTML
+// [ ] - Páginas fora home clicar fora do menu não o fecha
+
 const menu = document.getElementById("menu");
 const navBtn = document.getElementById("nav-btn");
 const overlay = document.getElementById("menu-overlay");
+const navHiddenDistance = "-100dvh";
 
 // Troca o ícone do lucide
 const updateIcon = (isOpen) => {
@@ -112,7 +138,7 @@ const updateIcon = (isOpen) => {
 
 const closeMobileMenu = () => {
   menu.classList.remove("top-[66px]");
-  menu.classList.add("top-[-300%]");
+  menu.classList.add(`top-[${navHiddenDistance}]`);
   overlay.classList.remove("opacity-100", "pointer-events-auto");
   overlay.classList.add("opacity-0", "pointer-events-none");
   menu.dataset.state = "closed";
@@ -121,7 +147,7 @@ const closeMobileMenu = () => {
 
 const openMobileMenu = () => {
   menu.classList.add("top-[66px]");
-  menu.classList.remove("top-[-300%]");
+  menu.classList.remove(`top-[${navHiddenDistance}]`);
   overlay.classList.remove("opacity-0", "pointer-events-none");
   overlay.classList.add("opacity-100", "pointer-events-auto");
   menu.dataset.state = "open";
@@ -129,7 +155,7 @@ const openMobileMenu = () => {
 };
 
 navBtn.addEventListener("click", (e) => {
-  e.stopPropagation();
+  e.stopPropagation(); // Para eventos que estão sendo propagados de outros eventlisteners
   menu.dataset.state === "open" ? closeMobileMenu() : openMobileMenu();
 
   // tamanho do navbar
@@ -138,6 +164,7 @@ navBtn.addEventListener("click", (e) => {
 
 // Fechar quando clica fora do menu
 document.addEventListener("click", (e) => {
+  console.log("log de clique")
   const clickedInside = navBtn.contains(e.target) || menu.contains(e.target);
   if (!clickedInside && menu.dataset.state === "open") {
     closeMobileMenu();
@@ -175,7 +202,7 @@ const countdown = () => {
 
   // Janeiro é 0 porque os anos são contados em um array
   // primeiro param é o ano, segundo é o mês e o terceiro é o dia
-  const targetDate = new Date(actualYear, 11, 28);
+  const targetDate = new Date(actualYear, 11, 5);
 
   const timeLeft = targetDate - now; // retorna a data em milissegundos
 
@@ -189,30 +216,48 @@ const countdown = () => {
   render(days, hours, minutes, seconds);
 };
 
-// Executando de 1 em 1 segundo
-setInterval(countdown, 1000);
+// Usando Guard Clause para não rodar o countdown caso não tenha um component com id countdow na página
+const initCountdown = () => {
+  const countdownContainer = document.getElementById("countdown");
 
+  if (!countdownContainer) {
+    return;
+  }
 
+  console.log("Countdown iniciado!");
+
+  // Executando de 1 em 1 segundo
+  setInterval(countdown, 1000);
+};
+
+initCountdown();
 
 // Efeito de reveal on scroll
-
 const observerOptions = {
   root: null,
-  rootMargin: '0px', 
-  threshold: .1 // 10% do elemento precisa estar visível para disparar
+  rootMargin: "0px",
+  threshold: 0.1, // 10% do elemento precisa estar visível para disparar
 };
 
 const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
+  entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.add("show");
 
       // para animar apenas em um scroll
       // observer.unobserve(entry.target);
     }
-  })
+  });
 }, observerOptions);
 
-document.querySelectorAll('.reveal').forEach((el) => {
+document.querySelectorAll(".reveal").forEach((el) => {
   observer.observe(el);
+});
+
+// Animation On Scroll
+AOS.init({
+  // Configs opcionais
+  duration: 800, // Duração da animação (ms)
+  once: false, // Se true, anima apenas na primeira vez que rola a página
+  offset: 100, // Distância em px do topo para disparar a animação
 });

@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @import "flowbite/src/themes/default";
-
+@import "./components.css";
 /* 
   1. Fontes e Plugins 
 */
@@ -78,19 +78,24 @@
     html {
         scroll-behavior: smooth;
     }
-    
-    h1,h2,h3,h4,h5,h6 {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         font-family: var(--font-title);
     }
 
     body,
     p,
     a,
-    span,
-    div {
-        font-family: var(--font-body);
-        text-align: left;
-    }
+    span
+    {
+    font-family: var(--font-body);
+    text-align: left;
+}
 }
 
 /* 
@@ -100,10 +105,6 @@
 */
 
 @layer components {
-
-    /* Se o arquivo components.css tiver classes como .card, .btn, etc, 
-       importe ele AQUI, não em utilities. */
-    @import "./components.css";
 
     /* --- Tipografia & Links --- */
     .title-h2 {
@@ -127,12 +128,16 @@
         @apply w-11 h-11 border border-bluebell-900 hover:border-misk-400 bg-bluebell-900 rounded-md [&>svg]:text-pastelgreen-300 hover:[&>svg]:text-misk-300 hover:[&>svg]:transition hover:[&>svg]:ease-in-out hover:[&>svg]:duration-300 transition ease-out duration-300 cursor-pointer flex items-center justify-center;
     }
 
+     .btn-primary {
+        @apply py-2 px-9 text-base text-bluebell-50 border bg-misk-900 hover:bg-misk-800 hover:border hover:border-pastelgreen-300 transition ease-in-out duration-300 rounded-[5px] cursor-pointer active:bg-misk-100 active:text-misk-950;
+    }
+
     .btn-secondary {
-        @apply py-2 px-9 text-base text-bluebell-50 border bg-transparent border-pastelgreen-300 hover:border hover:border-pastelgreen-300 hover:bg-pastelgreen-300 transition ease-in-out duration-300 rounded-[5px] cursor-pointer active:bg-misk-100 active:text-misk-950;
+        @apply py-2 px-9 text-base border-pastelgreen-300 text-pastelgreen-950 border bg-pastelgreen-300 hover:bg-pastelgreen-200 hover:border hover:border-pastelgreen-600 transition-all ease-in-out duration-300 rounded-[5px] cursor-pointer active:bg-pastelgreen-600 active:text-pastelgreen-50;
     }
 
     .btn-tertiary {
-        @apply py-2 px-9 text-base text-bluebell-50 border bg-misk-900 hover:bg-misk-800 hover:border hover:border-pastelgreen-300 transition ease-in-out duration-300 rounded-[5px] cursor-pointer active:bg-misk-100 active:text-misk-950;
+        @apply py-2 px-9 text-base text-bluebell-50 border bg-transparent border-pastelgreen-300 hover:border hover:border-pastelgreen-300 hover:bg-pastelgreen-300 transition ease-in-out duration-300 rounded-[5px] cursor-pointer active:bg-misk-100 active:text-misk-950;
     }
 
     .card-btn-icon {
@@ -157,7 +162,7 @@
         @apply p-3 bg-misk-200 text-misk-900 aspect-square w-13 h-13 flex justify-center items-center rounded-md;
     }
 
-    .feature-card .icon svg { 
+    .feature-card .icon svg {
         @apply w-full h-full;
     }
 
@@ -193,7 +198,8 @@
         opacity: 0;
         transform: translateY(30px);
         transition: all 0.8s ease-out;
-        will-change: opacity, transform; /* Otimização para o navegador */
+        will-change: opacity, transform;
+        /* Otimização para o navegador */
     }
 
     .reveal.show {
@@ -202,8 +208,44 @@
     }
 
     /* Opcional: Delay para elementos em sequência (ex: cards) */
-    .reveal.delay-200 { transition-delay: 200ms; }
-    .reveal.delay-400 { transition-delay: 400ms; }
+    .reveal.delay-200 {
+        transition-delay: 200ms;
+    }
+
+    .reveal.delay-400 {
+        transition-delay: 400ms;
+    }
+
+    /* Splitting */
+    .slide-text .char {
+        opacity: 0;
+        transform: translateY(100%);
+        /* Começa de baixo */
+        transition: transform 0.5s cubic-bezier(0.5, 0, 0, 1), opacity 0.5s ease;
+    }
+
+    /* 
+           Estado ATIVO (Quando o Swiper coloca a classe .swiper-slide-active)
+           As letras sobem para a posição original (0)
+        */
+    .swiper-slide-active .slide-text .char {
+        opacity: 1;
+        transform: translateY(0);
+        /* 
+               A mágica: atraso baseado no índice da letra.
+               --char-index é uma variável criada automaticamente pelo Splitting.js
+            */
+
+        /* Rápido */
+        /* transition-delay: calc(0.03s * var(--char-index)); */
+
+        /* Lento */
+        transition-delay: calc(0.07s * var(--char-index));
+    }
+
+    .gradient-purple .char {
+        background-image: linear-gradient(to right, #c084fc, #f472b6);
+    }
 }
 
 /* 
@@ -223,7 +265,7 @@
     font-family: "Manrope";
     src: url("../assets/fonts/Manrope/Manrope-VariableFont_wght.ttf") format("truetype");
     font-weight: 100 900;
-    font-size: normal;
+    font-style: normal;
     font-display: swap;
 }
 
@@ -232,5 +274,5 @@
     src: url("../assets/fonts/Inter/Inter-variable.ttf") format("truetype");
     font-display: swap;
     font-weight: 100 900;
-    font-size: normal;
+    font-style: normal;
 }

@@ -7,6 +7,12 @@
     <title>Linesync Home</title>
     <link rel="shortcut icon" href="./assets/img/icons/favicon-32x32.png" type="image/x-icon">
 
+    <!-- AOS -->
+    <link rel="stylesheet" href="./assets/libs/aos/aos.css">
+
+    <!-- Splitting -->
+    <link rel="stylesheet" href="./assets/libs/splitting/splitting.css">
+
     <!-- Styles CSS -->
     <link href="./css/output.css" rel="stylesheet">
 
@@ -40,10 +46,10 @@
             </div>
 
             <div id="menu" data-state="closed"
-                class="w-full duration-300 grow flex justify-center md:relative md:top-[inherit] top-[-300%] absolute left-0 z-40 bg-misk-200/90 backdrop-blur-sm md:bg-transparent sm:backdrop-blur-none">
+                class="w-full h-dvh md:h-full duration-300 grow flex justify-center md:relative md:top-[inherit] top-[-100dvh] absolute left-0 z-40 bg-transparent">
                 <nav aria-label="Global">
                     <ul
-                        class="py-6 w-[80%] md:w-full flex items-center gap-6 text-md md:text-sm flex-col md:flex-row absolute md:relative bg-misk-200 md:bg-transparent rounded-b-sm  right-0">
+                        class="py-12 md:py-6 w-full h-fit md:h-full flex items-center gap-12 md:gap-6 text-lg md:text-sm flex-col md:flex-row absolute md:relative bg-misk-200 md:bg-transparent rounded-b-sm  right-0">
                         <li>
                             <a class="link-nav" href="#"> Sobre </a>
                         </li>
@@ -58,6 +64,9 @@
 
                         <li>
                             <a class="link-nav" href="#"> Setores de atuação </a>
+                        </li>
+                        <li>
+                            <a class="link-nav" href="./pages/contato/contato.html">Contato</a>
                         </li>
                     </ul>
                 </nav>
@@ -80,8 +89,6 @@
                 </div>
 
             </div>
-
-
         </div>
 
         </div>
@@ -89,9 +96,10 @@
     <div id="menu-overlay"
         class="fixed inset-0 bg-black/40 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-300 z-30">
     </div>
+    
     <main>
         <section class="mx-auto px-0">
-            <div class="pb-10 mx-auto">
+            <div class="pb-8 mx-auto">
                 <div id="main-banner">
                     <!-- Swiper -->
                     <div class="swiper swiper-banner">
@@ -111,27 +119,55 @@
                     </div>
                 </div>
             </div>
-
-            <div id="slogan" class="flex justify-center py-6 ">
-                <p class="font-bold font-title text-3xl">“Frase de impacto“</p>
+ 
+            <!-- Precisa ter altura definida -->
+            <div id="slogan" class="flex flex-col items-center justify-center h-[20vh] md:h-[15dvh] px-4 md:px-12">
+                <p class="text-gray-400 mb-2 text-sm font-medium uppercase tracking-wider">
+                    Nós somos especialistas em
+                </p>
+                <!-- Swiper Container -->
+                <div class="swiper myTextSwiper h-16 md:h-12 overflow-hidden">
+                    <div class="swiper-wrapper">
+                        <!-- Frase 1 -->
+                        <div class="swiper-slide flex items-center justify-center">
+                            <p class="slide-text text-center text-3xl font-bold   bg-clip-text text-misk-900"
+                                data-splitting>
+                                Soluções para laboratórios
+                            </p>
+                        </div>
+                        <!-- Frase 2 -->
+                        <div class="swiper-slide flex items-center justify-center">
+                            <p class="slide-text text-center text-3xl font-bold   bg-clip-text text-misk-900"
+                                data-splitting>
+                                LIMS
+                            </p>
+                        </div>
+                        <!-- Frase 3 -->
+                        <div class="swiper-slide flex items-center justify-center">
+                            <p class="slide-text text-center text-3xl font-bold   bg-clip-text text-misk-900" data-splitting="">
+                               ELN
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </section>
 
-        <section class="my-24 px-4 md:px-12 xl:px-0 mx-auto bg-misk-50">
+        <section class="my-16 px-4 md:px-12 xl:px-0 mx-auto bg-misk-50">
             <div class="max-w-6xl py-10 mx-auto ">
                 <!-- Swiper -->
                 <div class="swiper swiper-services">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div
-                                class="w-full flex flex-col-reverse sm:grid sm:grid-cols-4 md:grid-cols-12 gap-5 items-center justify-center">
+                                class="w-full flex flex-col sm:grid sm:grid-cols-4 md:grid-cols-12 gap-5 items-center justify-center">
                                 <div class=" col-span-4 md:col-start-1 md:col-span-6 h-3/4">
                                     <img src="https://unsplash.it/640/?image=10" class="rounded-lg h-full"
                                         alt="imagem ilustrativa">
                                 </div>
                                 <div class="col-span-4 md:col-span-5 md:col-end-13">
-                                    <h2 class="pb-8 title-h2">
+                                    <h2 class="pb-8 title-h2 text-center">
                                         ELN
                                     </h2>
                                     <p class="mb-8 md:mb-12">
@@ -414,10 +450,10 @@
 
                         <div class="relative flex justify-between items-center">
                             <!-- Swiper -->
-                            <div class="hidden md:block swiper-button-prev"></div>
+                            <div class="hidden md:block swiper-button-prev-cases"></div>
 
                             <div class="swiper swiper-cases">
-                                <div class="md:hidden absolute swiper-button-prev"></div>
+                                <div class="md:hidden absolute swiper-button-prev-cases"></div>
                                 <div class="swiper-wrapper rounded-lg">
                                     <div class="swiper-slide">
                                         <div class="h-fit p-2 md:p-6  grid grid-cols-4 md:grid-cols-8 gap-6">
@@ -497,12 +533,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="swiper-button-next md:hidden absolute"></div>
+                                    <div class="swiper-button-next-cases md:hidden absolute"></div>
 
                                 </div>
                                 <!-- <div class="swiper-pagination"></div> -->
                             </div>
-                            <div class="swiper-button-next hidden md:block  md:ml-6!"></div>
+                            <div class="swiper-button-next-cases hidden md:block  md:ml-6!"></div>
 
                         </div>
 
@@ -541,13 +577,13 @@
             </div>
         </section>
     </main>
-
-
+    
     <footer class="w-full">
-        <img class="w-full hidden md:block pointer-events-none" src="/assets/img/ui/footer-4.svg" alt="Imagem">
+        <img class="w-full hidden md:block pointer-events-none" src="/assets/img/ui/footer-4.svg" alt="Imagem"
+            data-aos="fade-right">
         <img class="w-full md:hidden pointer-events-none" src="/assets/img/ui/footer-4-mobile-2.svg" alt="Imagem">
 
-        <div class="w-full bg-misk-200 md:pb-20">
+        <div class="w-full bg-misk-200 md:pb-20 -mt-0.5">
             <div class="bg-misk-200 px-4 md:container md:mx-auto md:grid md:grid-cols-12 md:gap-6">
 
                 <div id="links-footer"
@@ -612,11 +648,13 @@
 
 
 </body>
-
-
+<!-- Splitting -->
+<script src="./assets/libs/splitting/splitting.min.js"></script>
+<!-- AOS -->
+<script src="./assets/libs/aos/aos.js"></script>
 <!-- Swiper JS -->
 <script src="./assets/libs/swiper/swiper-bundle.min.js"></script>
-<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+<!-- Main -->
 <script src="assets/js/main.js"></script>
 
 
