@@ -25,10 +25,10 @@ const swiperServices = new Swiper(".swiper-services", {
   spaceBetween: 30,
   loop: true,
   speed: 800,
-  autoplay: {
-    delay: 6000,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 6000,
+  //   disableOnInteraction: false,
+  // },
   // É possível estilizar quantos slides vão aparecer por breakpoint
   // breakpoints: {
   //   640: { slidesPerView: 2 },
@@ -58,7 +58,7 @@ const swiperCases = new Swiper(".swiper-cases", {
     nextEl: ".swiper-button-next-cases",
     prevEl: ".swiper-button-prev-cases",
   },
-  pagination: { el: ".swiper-pagination", clickable: true, type: "bullets" }, // ou fraction
+  pagination: { el: ".swiper-pagination-cases", clickable: true, type: "bullets" }, // ou fraction
   // breakpoints: {
   //   768: { slidesPerView: 2 },
   //   1024: { slidesPerView: 3 },
