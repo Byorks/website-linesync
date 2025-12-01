@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indústrias - LabWare Clone</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Configurações de fonte similares ao site original (Roboto/Sans-serif) */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Cor personalizada aproximada do Azul LabWare */
+        .bg-labware-blue {
+            background-color: #004B87;
+        }
+        .text-labware-blue {
+            color: #004B87;
+        }
+        .hover-labware-red:hover {
+            color: #D31245;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Navbar Simples (Para contexto) -->
+    <nav class="bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <!-- Logo Placeholder -->
+                    <div class="flex-shrink-0 flex items-center">
+                        <span class="text-2xl font-bold text-labware-blue">LABWARE</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-600 hover:text-labware-blue font-medium">Produtos</a>
+                    <a href="#" class="text-labware-blue font-bold">Indústrias</a>
+                    <a href="#" class="text-gray-600 hover:text-labware-blue font-medium">Serviços</a>
+                    <a href="#" class="bg-labware-blue text-white px-5 py-2 rounded-md font-medium hover:bg-blue-800 transition">Solicite uma Demo</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative bg-labware-blue text-white overflow-hidden">
+        <!-- Overlay/Background decoration placeholder -->
+        <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-6">
+                Soluções LabWare Configuradas para Sua Indústria
+            </h1>
+            <p class="mt-4 max-w-3xl mx-auto text-xl text-blue-100 font-light">
+                Empresas de uma variedade de indústrias confiam nas soluções LabWare para automação laboratorial. Nossas soluções específicas automatizam fluxos de trabalho complexos em qualquer ambiente de teste.
+            </p>
+        </div>
+    </div>
+
+    <!-- Section: Industries Grid -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">Descubra as Soluções LabWare</h2>
+                <div class="w-24 h-1 bg-labware-blue mx-auto mt-4"></div>
+            </div>
+
+            <!-- Grid Container -->
+            <!-- Responsividade: 1 coluna (mobile), 2 colunas (tablet), 3 colunas (desktop) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Card 1: Farmacêutica -->
+                <div class="group bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden flex flex-col">
+                    <div class="h-48 bg-gray-200 overflow-hidden relative">
+                        <!-- Placeholder para Imagem -->
+                        <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Farmacêutica" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
+                        <h3 class="absolute bottom-4 left-4 text-white text-2xl font-bold">Farmacêutica</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <p class="text-gray-600 mb-4 text-base leading-relaxed">
+                            QA/QC LIMS para fabricação farmacêutica e laboratórios de pesquisa e desenvolvimento. Garanta conformidade e eficiência.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-labware-blue font-semibold hover:text-red-600 transition-colors">
+                            Saiba Mais 
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Alimentos e Bebidas -->
+                <div class="group bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden flex flex-col">
+                    <div class="h-48 bg-gray-200 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Alimentos e Bebidas" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
+                        <h3 class="absolute bottom-4 left-4 text-white text-2xl font-bold">Alimentos e Bebidas</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <p class="text-gray-600 mb-4 text-base leading-relaxed">
+                            Automatize os fluxos de trabalho na qualidade e segurança de produtos alimentícios e bebidas. Rastreabilidade total do campo à mesa.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-labware-blue font-semibold hover:text-red-600 transition-colors">
+                            Saiba Mais 
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Química e Processos -->
+                <div class="group bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden flex flex-col">
+                    <div class="h-48 bg-gray-200 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Química e Processos" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
+                        <h3 class="absolute bottom-4 left-4 text-white text-2xl font-bold">Química e Processos</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <p class="text-gray-600 mb-4 text-base leading-relaxed">
+                            Automação laboratorial para plantas industriais, químicas e petroquímicas. Otimize processos contínuos e orientados a lotes.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-labware-blue font-semibold hover:text-red-600 transition-colors">
+                            Saiba Mais 
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 4: Petróleo & Gás -->
+                <div class="group bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden flex flex-col">
+                    <div class="h-48 bg-gray-200 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Petróleo & Gás" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
+                        <h3 class="absolute bottom-4 left-4 text-white text-2xl font-bold">Petróleo & Gás</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <p class="text-gray-600 mb-4 text-base leading-relaxed">
+                            Automação LIMS para pesquisa e desenvolvimento, refinaria, GNL, GTL, GOSP e plantas NGL.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-labware-blue font-semibold hover:text-red-600 transition-colors">
+                            Saiba Mais 
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 5: Biobanco & Pesquisa Clínica -->
+                <div class="group bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden flex flex-col">
+                    <div class="h-48 bg-gray-200 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1579165466741-7f35a4755657?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Biobanco" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
+                        <h3 class="absolute bottom-4 left-4 text-white text-2xl font-bold">Biobanco & Pesquisa</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <p class="text-gray-600 mb-4 text-base leading-relaxed">
+                            Soluções LIMS para biobancos, biorepositórios, pesquisa clínica e bioanálise com gestão segura de amostras.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-labware-blue font-semibold hover:text-red-600 transition-colors">
+                            Saiba Mais 
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 6: Ambiental -->
+                <div class="group bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden flex flex-col">
+                    <div class="h-48 bg-gray-200 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1444491741275-3747c53c99b4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Ambiental" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
+                        <h3 class="absolute bottom-4 left-4 text-white text-2xl font-bold">Ambiental</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <p class="text-gray-600 mb-4 text-base leading-relaxed">
+                            Automação laboratorial para testes de água, solo e ar. Gestão eficiente de amostras ambientais e conformidade regulatória.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-labware-blue font-semibold hover:text-red-600 transition-colors">
+                            Saiba Mais 
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 7: Laboratórios de Contratos -->
+                <div class="group bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden flex flex-col">
+                    <div class="h-48 bg-gray-200 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Laboratórios de Contratos" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
+                        <h3 class="absolute bottom-4 left-4 text-white text-2xl font-bold">Lab. de Contratos</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <p class="text-gray-600 mb-4 text-base leading-relaxed">
+                            Soluções LIMS QA/QC para fabricação sob contrato e laboratórios de pesquisa. Gerencie múltiplos clientes e projetos com facilidade.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-labware-blue font-semibold hover:text-red-600 transition-colors">
+                            Saiba Mais 
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 8: Forense -->
+                <div class="group bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden flex flex-col">
+                    <div class="h-48 bg-gray-200 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Forense" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
+                        <h3 class="absolute bottom-4 left-4 text-white text-2xl font-bold">Forense</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <p class="text-gray-600 mb-4 text-base leading-relaxed">
+                            Gestão de evidências e automação de fluxo de trabalho para laboratórios criminais e de segurança. Cadeia de custódia inquebrável.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-labware-blue font-semibold hover:text-red-600 transition-colors">
+                            Saiba Mais 
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 9: CBD/THC -->
+                <div class="group bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden flex flex-col">
+                    <div class="h-48 bg-gray-200 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1603909223429-69bb7101f420?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="CBD/THC" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
+                        <h3 class="absolute bottom-4 left-4 text-white text-2xl font-bold">CBD & Cannabis</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <p class="text-gray-600 mb-4 text-base leading-relaxed">
+                            Soluções SaaS LIMS baseadas em nuvem projetadas especificamente para laboratórios de testes de cannabis e cânhamo.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-labware-blue font-semibold hover:text-red-600 transition-colors">
+                            Saiba Mais 
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom CTA / Footer Snippet -->
+    <section class="bg-gray-100 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Pronto para transformar seu laboratório?</h3>
+            <p class="text-gray-600 mb-8">98% dos Laboratórios Recomendam a LabWare.</p>
+            <div class="flex justify-center gap-4">
+                <a href="#" class="bg-labware-blue text-white px-8 py-3 rounded-md font-bold text-lg hover:bg-blue-800 transition shadow-lg">Solicite uma Demo</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

@@ -20,7 +20,6 @@
     <!-- Development version -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 
-
     <!-- Flowbite -->
     <script src="../../assets/libs/flowbite/flowbite.min.js"></script>
 
@@ -32,10 +31,10 @@
 </head>
 
 <body>
-    <header class="w-full h-[66px] bg-misk-200 border-b-[1.3px] border-pastelgreen-300 sticky top-0 z-100">
+     <header class="w-full h-[66px] bg-misk-200 border-b-[1.3px] border-pastelgreen-300 sticky top-0 z-100">
         <div class="w-full h-full px-6 flex items-center justify-between">
             <div class="logo">
-                <a class="block text-misk-700 font-bold text-lg" href="/">
+                <a class="block text-misk-700 font-bold text-lg" href="../../">
                     <img src="../../assets/img/ui/linesync-header-logo.svg" alt="LineSync" class="h-12">
                 </a>
             </div>
@@ -46,24 +45,27 @@
             </div>
 
             <div id="menu" data-state="closed"
-                class="w-full duration-300 grow flex justify-center md:relative md:top-[inherit] top-[-300%] absolute left-0 z-40 bg-misk-200/90 backdrop-blur-sm sm:backdrop-blur-none md:bg-transparent">
+                class="w-full h-dvh md:h-full duration-300 grow flex justify-center md:relative md:top-[inherit] top-[-100dvh] absolute left-0 z-40 bg-transparent">
                 <nav aria-label="Global">
                     <ul
-                        class="py-6 w-[80%] md:w-full flex items-center gap-6 text-md md:text-sm flex-col md:flex-row absolute md:relative bg-misk-200 md:bg-transparent rounded-b-sm  right-0">
+                        class="py-12 md:py-6 w-full h-fit md:h-full flex items-center gap-12 md:gap-6 text-lg md:text-sm flex-col md:flex-row absolute md:relative bg-misk-200 md:bg-transparent rounded-b-sm  right-0">
                         <li>
-                            <a class="link-nav" href="#"> Sobre </a>
+                            <a class="link-nav" href="../about"> Sobre </a>
                         </li>
 
                         <li>
-                            <a class="link-nav" href="#"> Carreiras </a>
+                            <a class="link-nav" href="../trainee-promo.html"> Carreiras </a>
                         </li>
 
                         <li>
-                            <a class="link-nav" href="/pages/produtos">Serviços</a>
+                            <a class="link-nav" href="../produtos"> Serviços</a>
                         </li>
 
                         <li>
-                            <a class="link-nav" href="#"> Setores de atuação </a>
+                            <a class="link-nav" href="../setores/setores.html"> Setores de atuação </a>
+                        </li>
+                        <li>
+                            <a class="link-nav" href="../contato/contato.html">Contato</a>
                         </li>
                     </ul>
                 </nav>
@@ -86,8 +88,6 @@
                 </div>
 
             </div>
-
-
         </div>
 
         </div>
@@ -214,39 +214,13 @@
                         mais <i class="text-pastelgreen" data-lucide="chevron-right"></i>
                     </button>
                 </div>
-                <div class="produtoscard col-span-4 rounded-lg p-4 flex flex-col gap-6">
-                    <img class="imgcard" src="./imgs/icones-cience.png" alt="">
-                    <h2>Titulo Card</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                        ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    </p>
-                    <button>Saiba mais ></button>
-                </div>
-                <div class="produtoscard col-span-4 rounded-lg p-4 flex flex-col gap-6">
-                    <img class="imgcard" src="./imgs/icones-cience.png" alt="">
-                    <h2>Titulo Card</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                        ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    </p>
-                    <button>Saiba mais ></button>
-                </div>
-                <div class="produtoscard col-span-4 rounded-lg p-4 flex flex-col gap-6">
-                    <img class="imgcard" src="./imgs/icones-cience.png" alt="">
-                    <h2>Titulo Card</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                        ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    </p>
-                    <button>Saiba mais ></button>
-                </div>
+ 
+                <!-- 
+                    Estilo visual: harmonização do ícone do titulo,texto e botão
+                    Codificação: Formatação simples, padronização responsiva, semântica HTML
+                    Seguir paleta de cores, estilo visual e indentação do código 
+
+                -->
             </div>
         </div>
 
@@ -375,12 +349,12 @@
                         Navegue pelo site
                     </h2>
                     <ul class="grid gap-3 py-3">
-                        <li><a href="" class="link-hover-underline">Página Inicial</a></li>
-                        <li><a href="" class="link-hover-underline">Sobre</a></li>
+                        <li><a href="../../" class="link-hover-underline">Página Inicial</a></li>
+                        <li><a href="../about" class="link-hover-underline">Sobre</a></li>
                         <li><a href="../../pages/trainee-promo.html" class="link-hover-underline">Carreiras</a></li>
-                        <li><a href="../produtos/index.html" class="link-hover-underline">Produtos</a></li>
-                        <li><a href="" class="link-hover-underline">Contato</a></li>
-                        <li><a href="" class="link-hover-underline transition duration-300 ease-in-out">Setores</a></li>
+                        <li><a href="../produtos" class="link-hover-underline">Produtos</a></li>
+                        <li><a href="../contato/contato.html" class="link-hover-underline">Contato</a></li>
+                        <li><a href="../setores/setores.html" class="link-hover-underline transition duration-300 ease-in-out">Setores</a></li>
                     </ul>
                     <div class="divisor w-1/2 h-0.5 md:hidden mb-3 bg-bluebell-900 rounded-2xl "></div>
                 </div>
@@ -391,8 +365,10 @@
                     </h2>
 
                     <div class="flex gap-1">
-                        <img class="hover:bg-misk-600/50 rounded transition duration-300 ease-in-out cursor-pointer"
-                            src="../../assets/img/icons/square-instagram-brands-solid-full.svg" alt="">
+                          <a class="rounded" target="_blank" href="https://www.instagram.com/linesync_tech">
+                            <img class="hover:bg-misk-600/50 active:bg-misk-100 rounded transition duration-300 ease-in-out cursor-pointer"
+                                src="../../assets/img/icons/square-instagram-brands-solid-full.svg" alt="">
+                        </a>
                         <img class="hover:bg-misk-600/50 rounded transition duration-300 ease-in-out cursor-pointer"
                             src="../../assets/img/icons/square-linkedin-brands-solid-full.svg" alt="">
                         <img class="hover:bg-misk-600/50 rounded transition duration-300 ease-in-out cursor-pointer"
