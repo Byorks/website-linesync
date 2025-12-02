@@ -1,212 +1,544 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LabWare Industries - Figma Implementation</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        // Configuração para imitar os "Tokens" do Figma
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        // Cores extraídas do Brand Guide da LabWare (aproximadas)
-                        labware: {
-                            blue: '#004B87',      // Primary
-                            dark: '#002a4d',      // Darker Hover
-                            light: '#E6F0F9',     // Background accents
-                            accent: '#D31245',    // Red accent/buttons
-                        },
-                        neutral: {
-                            50: '#F9FAFB',
-                            100: '#F3F4F6',
-                            800: '#1F2937',
-                            900: '#111827',
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Roboto', 'Inter', 'sans-serif'], // Fontes comuns em UI
-                    },
-                    boxShadow: {
-                        'card': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-                        'card-hover': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
-                    }
-                }
-            }
-        }
-    </script>
-    <!-- Fonte Roboto para fidelidade visual -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Roboto', sans-serif; }
-    </style>
+    <title>Sobre a LineSync</title>
+    <link rel="shortcut icon" href="../../assets/img/icons/favicon-32x32.png" type="image/x-icon">
+
+    <!-- Tailwind CSS 4.1 -->
+    <link rel="stylesheet" href="../../css/components.css">
+    <link href="../../css/output.css" rel="stylesheet">
+
+    <!-- Lucide Ícones -->
+    <!-- Development version -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <!-- Flowbite -->
+    <script src="../../assets/libs/flowbite/flowbite.min.js"></script>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="../../assets/libs/swiper/swiper-bundle.min.css" />
+
+    <!-- Polyfill -->
+    <script src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js"></script>
+
 </head>
-<body class="bg-neutral-50 antialiased text-neutral-800">
 
-    <!-- Header Section (Hero) -->
-    <section class="relative bg-labware-blue text-white pt-20 pb-24 px-4 overflow-hidden">
-        <!-- Padrão de fundo decorativo (Opcional, comum no Figma) -->
-        <div class="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-white opacity-5 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-0 left-0 -mb-20 -ml-20 w-80 h-80 bg-labware-accent opacity-10 rounded-full blur-3xl"></div>
+<body class="bg-misk-50">
+    <header class="w-full h-[66px] bg-misk-200 border-b-[1.3px] border-pastelgreen-300 sticky top-0 z-100">
+        <div class="w-full h-full px-6 flex items-center justify-between">
+            <div class="logo">
+                <a class="block text-misk-700 font-bold text-lg" href="../../index.html">
+                    <img src="../../assets/img/ui/linesync-header-logo.svg" alt="LineSync" class="h-12">
+                </a>
+            </div>
 
-        <div class="relative max-w-7xl mx-auto text-center">
-            <span class="uppercase tracking-widest text-sm font-semibold text-blue-200 mb-2 block">Soluções por Setor</span>
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
-                Transformando Laboratórios
-            </h1>
-            <p class="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto font-light leading-relaxed">
-                Nossas soluções são configuradas para atender aos requisitos exatos de conformidade e fluxo de trabalho da sua indústria.
+            <!-- Opção 1 Menu -->
+            <div id="nav-btn" class="nav-btn flex items-center justify-center md:hidden z-50">
+                <i data-lucide="menu" class="w-7 h-7"></i>
+            </div>
+
+            <div id="menu" data-state="closed"
+                class="w-full h-dvh md:h-full duration-300 grow flex justify-center md:relative md:top-[inherit] top-[-100dvh] absolute left-0 z-40 bg-transparent">
+                <nav aria-label="Global">
+                    <ul
+                        class="py-12 md:py-6 w-full h-fit md:h-full flex items-center gap-12 md:gap-6 text-lg md:text-sm flex-col md:flex-row absolute md:relative bg-misk-200 md:bg-transparent rounded-b-sm  right-0">
+                        <li>
+                            <a class="link-nav" href="../about/">Sobre </a>
+                        </li>
+
+                        <li>
+                            <a class="link-nav" href="../trainee-promo.html">Carreiras </a>
+                        </li>
+
+                        <li>
+                            <a class="link-nav" href="../produtos">Serviços</a>
+                        </li>
+
+                        <li>
+                            <a class="link-nav" href="../setores/setores.html">Setores de atuação </a>
+                        </li>
+                        <li>
+                            <a class="link-nav" href="../contato/contato.html">Contato</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="hidden md:flex gap-6">
+                <div class="nav-btn flex items-center justify-center">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M9.02055 18C6.49813 18 4.36394 17.127 2.61796 15.3811C0.872654 13.6358 0 11.502 0 8.97964C0 6.67444 0.751712 4.67392 2.25514 2.9781C3.75856 1.28294 5.6796 0.29337 8.01826 0.0093962C8.43588 -0.0407169 8.76162 0.109622 8.99549 0.460414C9.22935 0.811206 9.221 1.1787 8.97043 1.5629C8.68645 1.99722 8.4733 2.45659 8.33098 2.94101C8.18932 3.42544 8.11849 3.93492 8.11849 4.46946C8.11849 5.97286 8.64469 7.25074 9.69709 8.30311C10.7495 9.35549 12.0274 9.88168 13.5308 9.88168C14.0487 9.88168 14.5625 9.80651 15.0723 9.65617C15.5815 9.50583 16.0365 9.29702 16.4374 9.02975C16.7882 8.79589 17.1474 8.7832 17.5149 8.99167C17.8824 9.20081 18.0411 9.53089 17.991 9.9819C17.7571 12.2871 16.7759 14.1998 15.0473 15.7199C13.318 17.24 11.3091 18 9.02055 18Z"
+                            fill="currentColor" />
+                    </svg>
+
+                </div>
+                <div class="nav-btn flex items-center justify-center">
+                    <svg width="17.5" height="21.88" viewBox="0 0 21 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M10.5 12.0833C13.8469 12.0833 16.5577 9.37969 16.5577 6.04167C16.5577 2.70365 13.8469 0 10.5 0C7.15312 0 4.44231 2.70365 4.44231 6.04167C4.44231 9.37969 7.15312 12.0833 10.5 12.0833ZM9.00072 14.9028C4.02836 14.9028 0 18.9205 0 23.8797C0 24.7054 0.671394 25.375 1.49928 25.375H19.5007C20.3286 25.375 21 24.7054 21 23.8797C21 18.9205 16.9716 14.9028 11.9993 14.9028H9.00072Z"
+                            fill="currentColor" />
+                    </svg>
+                </div>
+
+            </div>
+        </div>
+
+        </div>
+    </header>
+
+    <div id="menu-overlay"
+        class="fixed inset-0 bg-black/40 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-300 z-30">
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="w-full bg-linear-to-b from-misk-200 to-misk-100 py-8 md:py-16 px-4 md:px-6 ">
+
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <!-- Hero Content -->
+                <div class="flex flex-col gap-6 items-center">
+                    <h1 class="title-h2 text-4xl md:text-5xl leading-heading-none">Conheça a LineSync</h1>
+                    <p class="text-base md:text-lg text-misk-800">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempore incididunt ut
+                        labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                        ut
+                        aliquip ex ea commodo consequat.
+                    </p>
+                    <button class="btn-secondary w-fit">Comece</button>
+                </div>
+
+                <!-- Hero Image Placeholder -->
+                <div class="w-full h-64 md:h-80 bg-bluebell-200 rounded-lg flex items-center justify-center">
+                    <span class="text-bluebell-600 font-semibold">Imagem Hero</span>
+                </div>
+            </div>
+        </section>
+
+      
+
+         <!-- Por que a LineSync Section -->
+        <section class="w-full bg-misk-50 py-12 md:py-20 px-4 md:px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="title-h2 text-center mb-12">Nossos valores</h2>
+
+                <div class="grid grid-cols-4 md:grid-cols-12 md:gap-6 content-start">
+
+                    <div class="grid col-span-6 gap-6">
+                        <div class="col-span-6">
+                            <h3 class="text-4xl text-center font-medium  pb-6 md:pt-0 hidd en md:block">Valor 1</h3>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </div>
+                        <div class="col-span-6">
+                            <h3 class="text-4xl text-center font-medium  pb-6 md:pt-0 hidd en md:block">Valor 2</h3>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </div>
+                        <div class="col-span-6">
+                            <h3 class="text-4xl text-center font-medium  pb-6 md:pt-0 hidd en md:block">Valor 3</h3>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="grid col-span-6 content-start">
+                        <div class="col-span-6">
+                            <h3 class="text-4xl font-medium text-center mb-12 pt-6 md:pt-0 w-full">Cultura</h3>
+                        </div>
+                        <div class="col-span-4 md:col-span-6 overflow-hidden">
+                            <!-- Swiper Container -->
+
+                            <div class="swiper-culture">
+                                <div class="swiper-wrapper">
+                                    <!-- Slide 1 -->
+                                    <div class="swiper-slide">
+                                        <div class="flex flex-col gap-4 p-8 bg-misk-200 rounded-lg text-white min-h-80">
+                                            <h3 class="font-title font-semibold text-2xl">Inovação</h3>
+                                            <p class="text-sm md:text-base">Lorem ipsum dolor sit amet, consectetur
+                                                adipiscing
+                                                elit,
+                                                sed
+                                                do eiusmod tempore incididunt ut labore et dolore magna aliqua. Ut enim
+                                                ad
+                                                minim
+                                                veniam,
+                                                quis nostrud exercitation.</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide 2 -->
+                                    <div class="swiper-slide">
+                                        <div class="flex flex-col gap-4 p-8 bg-misk-200 rounded-lg text-white min-h-80">
+                                            <h3 class="font-title font-semibold text-2xl">Inovação</h3>
+                                            <p class="text-sm md:text-base">Lorem ipsum dolor sit amet, consectetur
+                                                adipiscing
+                                                elit,
+                                                sed
+                                                do eiusmod tempore incididunt ut labore et dolore magna aliqua. Ut enim
+                                                ad
+                                                minim
+                                                veniam,
+                                                quis nostrud exercitation.</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide 3 -->
+                                    <div class="swiper-slide">
+                                        <div class="flex flex-col gap-4 p-8 bg-misk-200 rounded-lg text-white min-h-80">
+                                            <h3 class="font-title font-semibold text-2xl">Inovação</h3>
+                                            <p class="text-sm md:text-base">Lorem ipsum dolor sit amet, consectetur
+                                                adipiscing
+                                                elit,
+                                                sed
+                                                do eiusmod tempore incididunt ut labore et dolore magna aliqua. Ut enim
+                                                ad
+                                                minim
+                                                veniam,
+                                                quis nostrud exercitation.</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide 4 -->
+                                    <div class="swiper-slide">
+                                        <div class="flex flex-col gap-4 p-8 bg-misk-200 rounded-lg text-white min-h-80">
+                                            <h3 class="font-title font-semibold text-2xl">Inovação</h3>
+                                            <p class="text-sm md:text-base">Lorem ipsum dolor sit amet, consectetur
+                                                adipiscing
+                                                elit,
+                                                sed
+                                                do eiusmod tempore incididunt ut labore et dolore magna aliqua. Ut enim
+                                                ad
+                                                minim
+                                                veniam,
+                                                quis nostrud exercitation.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Pagination -->
+                                <div class="swiper-pagination mt-6 gap-2"></div>
+
+                                <!-- Navigation -->
+                                <div class="flex justify-center gap-4 mt-6">
+                                    <button type="button" aria-label="previous slid" title="previous slide"
+                                        class="swiper-button-prev-2 w-10 h-10 bg-misk-600 text-white rounded-lg flex items-center justify-center hover:bg-misk-700 cursor-pointer">
+                                        <svg data-lucide="chevron-left" width="20" height="20"></svg>
+                                    </button>
+                                    <button type="button" aria-label="next slide" title="next slide"
+                                        class="swiper-button-next-2 w-10 h-10 bg-misk-600 text-white rounded-lg flex items-center justify-center hover:bg-misk-700 cursor-pointer">
+                                        <svg data-lucide="chevron-right" width="20" height="20"></svg>
+                                    </button>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </section>
+
+        
+        <!-- Como a LineSync muda tudo Section -->
+        <section class="relative bg-linear-to-b from-bluebell-50 to-misk-200
+   
+            after:content-[''] 
+            after:absolute 
+            after:inset-0 
+            after:bg-[url('../../assets/img/ui/bubbles-horizontal-2.svg')] 
+            after:bg-no-repeat
+            
+            
+            after:bg-bottom
+            after:bg-contain  
+            
+            /* Importante: para não bloquear cliques no texto */
+            after:pointer-events-none
+            ">
+            <div class="max-w-6xl mx-auto">
+         
+              
+                <div class="max-w-6xl mx-auto grid grid-cols-4 md:grid-cols-12 gap-8 md:gap-12 py-4 md:py-8">
+                    <div class="col-span-4 md:col-span-12">
+                        <h3 class="title-h2 text-center">Cultura da Linesync</h3>
+                    </div>
+                    <div class="col-span-4 md:col-span-12 overflow-hidden">
+                        <!-- Swiper Container -->
+
+                        <div class="swiper-culture-2">
+                            <div class="swiper-wrapper">
+                                <!-- Slide 1 -->
+                                <div class="swiper-slide">
+                                    <div class="flex flex-col gap-4 p-8 bg-misk-500 rounded-lg text-white min-h-80">
+                                        <h3 class="font-title font-semibold text-2xl">Inovação</h3>
+                                        <p class="text-sm md:text-base">Lorem ipsum dolor sit amet, consectetur
+                                            adipiscing
+                                            elit,
+                                            sed
+                                            do eiusmod tempore incididunt ut labore et dolore magna aliqua. Ut enim
+                                            ad
+                                            minim
+                                            veniam,
+                                            quis nostrud exercitation.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 2 -->
+                                <div class="swiper-slide">
+                                    <div class="flex flex-col gap-4 p-8 bg-misk-500 rounded-lg text-white min-h-80">
+                                        <h3 class="font-title font-semibold text-2xl">Inovação</h3>
+                                        <p class="text-sm md:text-base">Lorem ipsum dolor sit amet, consectetur
+                                            adipiscing
+                                            elit,
+                                            sed
+                                            do eiusmod tempore incididunt ut labore et dolore magna aliqua. Ut enim
+                                            ad
+                                            minim
+                                            veniam,
+                                            quis nostrud exercitation.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 3 -->
+                                <div class="swiper-slide">
+                                    <div class="flex flex-col gap-4 p-8 bg-misk-500 rounded-lg text-white min-h-80">
+                                        <h3 class="font-title font-semibold text-2xl">Inovação</h3>
+                                        <p class="text-sm md:text-base">Lorem ipsum dolor sit amet, consectetur
+                                            adipiscing
+                                            elit,
+                                            sed
+                                            do eiusmod tempore incididunt ut labore et dolore magna aliqua. Ut enim
+                                            ad
+                                            minim
+                                            veniam,
+                                            quis nostrud exercitation.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 4 -->
+                                <div class="swiper-slide">
+                                    <div class="flex flex-col gap-4 p-8 bg-misk-500 rounded-lg text-white min-h-80">
+                                        <h3 class="font-title font-semibold text-2xl">Inovação</h3>
+                                        <p class="text-sm md:text-base">Lorem ipsum dolor sit amet, consectetur
+                                            adipiscing
+                                            elit,
+                                            sed
+                                            do eiusmod tempore incididunt ut labore et dolore magna aliqua. Ut enim
+                                            ad
+                                            minim
+                                            veniam,
+                                            quis nostrud exercitation.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Pagination -->
+                            <div class="swiper-pagination mt-6 gap-2"></div>
+
+                            <!-- Navigation -->
+                            <div class="flex justify-center gap-4 mt-6">
+                                <button type="button" aria-label="previous slid" title="previous slide"
+                                    class="swiper-button-prev-2 w-10 h-10 bg-misk-600 text-white rounded-lg flex items-center justify-center hover:bg-misk-700 cursor-pointer">
+                                    <svg data-lucide="chevron-left" width="20" height="20"></svg>
+                                </button>
+                                <button type="button" aria-label="next slide" title="next slide"
+                                    class="swiper-button-next-2 w-10 h-10 bg-misk-600 text-white rounded-lg flex items-center justify-center hover:bg-misk-700 cursor-pointer">
+                                    <svg data-lucide="chevron-right" width="20" height="20"></svg>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+        </section>
+
+
+        <!-- Colaboradores -->
+        <section class="w-full bg-misk-50 py-4 md:py-20 px-4 md:px-6">
+            <div class="max-w-6xl mx-auto grid grid-cols-4 md:grid-cols-12 gap-8 md:gap-12">
+                <div class="col-span-4 md:col-span-12">
+                    <h3 class="title-h2 text-center">Nossos colaboradores</h3>
+                </div>
+                <div class="col-span-4 md:col-span-12 overflow-hidden">
+                    <!-- Swiper Container -->
+                    <div class="swiper-collaborators">
+                        <div class="swiper-wrapper">
+                            <!-- Slide 1 -->
+                            <div class="swiper-slide">
+                                <div class="flex flex-col gap-4 p-8 bg-misk-200 rounded-lg text-white min-h-80">
+                                    <div class="w-auto h-3/5"><img class="w-full aspect-square rounded-md"
+                                            src="../../assets/img/collaborators/AnaLuiza-edit.jpg" alt=""></div>
+                                    <div class="flex flex-col align-baseline">
+                                        <p class="text-xs md:text-base text-misk-600 font-medium">Configuration
+                                            Developer</p>
+                                        <h3 class="font-title font-semibold text-2xl  text-misk-800 text-left">Ana Luiza
+                                            Massae</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="swiper-slide">
+                                <div class="flex flex-col gap-4 p-8 bg-misk-200 rounded-lg text-white min-h-80">
+                                    <div class="w-auto h-3/5"><img class="w-full aspect-square rounded-md"
+                                            src="../../assets/img/collaborators/GabrielEmídioVenâncio-edit.jpg" alt="">
+                                    </div>
+                                    <div class="flex flex-col align-baseline">
+                                        <p class="text-xs md:text-base text-misk-600 font-medium">Associate LIMS
+                                            Consultant</p>
+                                        <h3 class="font-title font-semibold text-2xl  text-misk-800 text-left">Gabriel
+                                            Emídio Venâncio</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 3 -->
+                            <div class="swiper-slide">
+                                <div class="flex flex-col gap-4 p-8 bg-misk-200 rounded-lg text-white min-h-80">
+                                    <div class="w-auto h-3/5"><img class="w-full aspect-square rounded-md"
+                                            src="../../assets/img/collaborators/LucasS.Mendes-edit.jpg" alt=""></div>
+                                    <div class="flex flex-col align-baseline">
+                                        <p class="text-xs md:text-base text-misk-600 font-medium">LIMS Technical
+                                            Specialist</p>
+                                        <h3 class="font-title font-semibold text-2xl  text-misk-800 text-left">Lucas
+                                            S.Mendes </h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 4 -->
+                            <div class="swiper-slide">
+                                <div class="flex flex-col gap-4 p-8 bg-misk-200 rounded-lg text-white min-h-80">
+                                    <div class="w-auto h-3/5"><img class="w-full aspect-square rounded-md"
+                                            src="../../assets/img/collaborators/AnaLuiza-edit.jpg" alt=""></div>
+                                    <div class="flex flex-col align-baseline">
+                                        <p class="text-xs md:text-base text-misk-600 font-medium">Consultant</p>
+                                        <h3 class="font-title font-semibold text-2xl  text-misk-800 text-left">Guilherme
+                                            Rodrigues Ribeiro</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Pagination -->
+                        <div class="swiper-pagination mt-6 gap-2"></div>
+
+                        <!-- Navigation -->
+                        <div class="flex justify-center gap-4 mt-6">
+                            <button type="button" aria-label="previous slid" title="previous slide"
+                                class="swiper-button-prev-2 w-10 h-10 bg-misk-600 text-white rounded-lg flex items-center justify-center hover:bg-misk-700 cursor-pointer">
+                                <svg data-lucide="chevron-left" width="20" height="20"></svg>
+                            </button>
+                            <button type="button" aria-label="next slide" title="next slide"
+                                class="swiper-button-next-2 w-10 h-10 bg-misk-600 text-white rounded-lg flex items-center justify-center hover:bg-misk-700 cursor-pointer">
+                                <svg data-lucide="chevron-right" width="20" height="20"></svg>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+        </section>
+
+        <!-- Deseja fazer parte? -->
+        <section class="w-full  py-12 md:py-20 px-4 md:px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="flex justify-center items-center flex-col">
+                    <h2 class="title-h2 text-center mb-4">Deseja fazer parte?</h2>
+                    <p class="text-center text-misk-700 mb-12">Jogar a gamificação é intencional</p>
+
+                    <a href="../trainee-promo.html"> <button class="btn-secondary">Inicie sua carreira</button></a>
+
+                    <div class="-m-3.5"><img src="../../assets/img/ui/bubbles-horizontal-1.svg" alt=""></div>
+                </div>
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="w-full">
+        <img class="w-full hidden md:block pointer-events-none" src="../../assets/img/ui/footer-4.svg" alt="Imagem">
+        <img class="w-full md:hidden pointer-events-none" src="../../assets/img/ui/footer-4-mobile-2.svg" alt="Imagem">
+
+        <div class="w-full bg-misk-200 md:pb-20">
+            <div class="bg-misk-200 px-4 md:container md:mx-auto md:grid md:grid-cols-12 md:gap-6">
+
+                <div id="links-footer"
+                    class="link bg-misk-200 pt-6 md:col-span-4 md:col-start-6   md:pt-0 order-1 md:order-2">
+                    <h2 class="font-title font-bold text-xl text-misk-900">
+                        Navegue pelo site
+                    </h2>
+                    <ul class="grid gap-3 py-3">
+                        <li><a href="../" class="link-hover-underline">Página Inicial</a></li>
+                        <li><a href="../about" class="link-hover-underline">Sobre</a></li>
+                        <li><a href="../trainee-promo.html" class="link-hover-underline">Carreiras</a></li>
+                        <li><a href="../produtos" class="link-hover-underline">Serviços</a></li>
+                        <li><a href="../contato/contato.html" class="link-hover-underline">Contato</a></li>
+                        <li><a href="../setores/setores.html"
+                                class="link-hover-underline transition duration-300 ease-in-out">Setores</a></li>
+                    </ul>
+                    <div class="divisor w-1/2 h-0.5 md:hidden mb-3 bg-bluebell-900 rounded-2xl "></div>
+                </div>
+
+                <div id="social-midia" class="md:col-span-3 md:col-start-10 order-2 md:order-3">
+                    <h2 class="font-title font-bold text-xl text-misk-900">
+                        Conheça nossas mídias
+                    </h2>
+
+                    <div class="flex gap-1">
+                        <a class="rounded" target="_blank" href="https://www.instagram.com/linesync_tech">
+                            <img class="hover:bg-misk-600/50 active:bg-misk-100 rounded transition duration-300 ease-in-out cursor-pointer"
+                                src="../../assets/img/icons/square-instagram-brands-solid-full.svg" alt="">
+                        </a>
+                        <img class="hover:bg-misk-600/50 rounded transition duration-300 ease-in-out cursor-pointer"
+                            src="../../assets/img/icons/square-linkedin-brands-solid-full.svg" alt="">
+                        <img class="hover:bg-misk-600/50 rounded transition duration-300 ease-in-out cursor-pointer"
+                            src="../../assets/img/icons/square-youtube-brands-solid-full.svg" alt="">
+                    </div>
+                    <div class="divisor w-1/2 h-0.5 my-3 md:hidden bg-bluebell-900 rounded-2xl"></div>
+
+                </div>
+
+                <div id="logo-footer"
+                    class="bg-misk-200  pt-3 pb-6  grid grid-cols-4 gap-6 md:pb-0 md:pt-0 md:col-span-4 md:col-start-1 order-3 md:order-1">
+                    <!-- Logotipo -->
+                    <div class="col-span-2 col-start-1 md:col-span-2 text-misk-950 ">
+                        <img src="../../assets/img/ui/logo-negativo.svg" alt="LineSync" class="w-full h-auto svg-misk">
+                    </div>
+                    <div class="col-span-4 col-start-1 md:col-span-3">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="py-3 px-4 bg-bluebell-900">
+            <p class="text-xs text-misk-50">
+                2025 Linesync ® 
             </p>
         </div>
-    </section>
 
-    <!-- Grid de Indústrias -->
-    <section class="py-20 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto">
-            
-            <!-- Cabeçalho da Seção -->
-            <div class="flex flex-col md:flex-row justify-between items-end mb-12 border-b border-gray-200 pb-4">
-                <div class="max-w-2xl">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-2">Indústrias Atendidas</h2>
-                    <p class="text-gray-500">Selecione seu setor para ver como podemos ajudar.</p>
-                </div>
-                <!-- Botão de "Ver todos" se houver no design -->
-                <div class="hidden md:block mt-4 md:mt-0">
-                    <a href="#" class="text-labware-blue font-medium hover:text-labware-accent transition text-sm">Ver todas as soluções &rarr;</a>
-                </div>
-            </div>
-
-            <!-- Grid Layout -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10">
-
-                <!-- Componente Card (Repetível) -->
-                <!-- Item 1 -->
-                <article class="group bg-white rounded-xl shadow-card hover:shadow-card-hover transition-all duration-300 ease-in-out hover:-translate-y-1 overflow-hidden border border-gray-100 cursor-pointer flex flex-col h-full">
-                    <!-- Wrapper da Imagem com Aspect Ratio fixo -->
-                    <div class="relative w-full h-56 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80" 
-                             alt="Farmacêutica" 
-                             class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
-                        <!-- Overlay Gradiente (para texto sobre imagem, se necessário) -->
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    </div>
-                    
-                    <div class="p-6 flex flex-col flex-grow">
-                        <!-- Categoria ou Tag pequena -->
-                        <span class="text-xs font-bold text-labware-blue uppercase tracking-wider mb-2">Ciências da Vida</span>
-                        
-                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-labware-blue transition-colors">
-                            Farmacêutica
-                        </h3>
-                        
-                        <!-- Line-clamp limita o texto a 3 linhas para manter altura igual -->
-                        <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3 flex-grow">
-                            Soluções completas de QA/QC LIMS para fabricação e P&D. Garanta a integridade dos dados e conformidade com regulamentações globais rigorosas.
-                        </p>
-                        
-                        <div class="pt-4 border-t border-gray-50 mt-auto flex items-center text-labware-blue font-semibold text-sm group-hover:text-labware-accent transition-colors">
-                            Explorar Solução
-                            <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                            </svg>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Item 2 -->
-                <article class="group bg-white rounded-xl shadow-card hover:shadow-card-hover transition-all duration-300 ease-in-out hover:-translate-y-1 overflow-hidden border border-gray-100 cursor-pointer flex flex-col h-full">
-                    <div class="relative w-full h-56 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&w=800&q=80" alt="Alimentos e Bebidas" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <span class="text-xs font-bold text-labware-blue uppercase tracking-wider mb-2">Consumo</span>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-labware-blue transition-colors">Alimentos e Bebidas</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3 flex-grow">
-                            Controle de qualidade do campo à mesa. Gerencie a segurança alimentar, HACCP e conformidade regulatória com eficiência.
-                        </p>
-                        <div class="pt-4 border-t border-gray-50 mt-auto flex items-center text-labware-blue font-semibold text-sm group-hover:text-labware-accent transition-colors">
-                            Explorar Solução
-                            <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Item 3 -->
-                <article class="group bg-white rounded-xl shadow-card hover:shadow-card-hover transition-all duration-300 ease-in-out hover:-translate-y-1 overflow-hidden border border-gray-100 cursor-pointer flex flex-col h-full">
-                    <div class="relative w-full h-56 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=800&q=80" alt="Química" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <span class="text-xs font-bold text-labware-blue uppercase tracking-wider mb-2">Industrial</span>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-labware-blue transition-colors">Química e Processos</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3 flex-grow">
-                            Otimize processos contínuos e de lote. Integre seu laboratório diretamente com sistemas de chão de fábrica e ERP.
-                        </p>
-                        <div class="pt-4 border-t border-gray-50 mt-auto flex items-center text-labware-blue font-semibold text-sm group-hover:text-labware-accent transition-colors">
-                            Explorar Solução
-                            <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Item 4 -->
-                <article class="group bg-white rounded-xl shadow-card hover:shadow-card-hover transition-all duration-300 ease-in-out hover:-translate-y-1 overflow-hidden border border-gray-100 cursor-pointer flex flex-col h-full">
-                    <div class="relative w-full h-56 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=800&q=80" alt="Petróleo e Gás" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <span class="text-xs font-bold text-labware-blue uppercase tracking-wider mb-2">Energia</span>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-labware-blue transition-colors">Petróleo e Gás</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3 flex-grow">
-                            Da exploração ao refino. Soluções robustas para lidar com amostras complexas e relatórios de conformidade ambiental rigorosos.
-                        </p>
-                        <div class="pt-4 border-t border-gray-50 mt-auto flex items-center text-labware-blue font-semibold text-sm group-hover:text-labware-accent transition-colors">
-                            Explorar Solução
-                            <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                        </div>
-                    </div>
-                </article>
-                
-                <!-- Item 5 -->
-                <article class="group bg-white rounded-xl shadow-card hover:shadow-card-hover transition-all duration-300 ease-in-out hover:-translate-y-1 overflow-hidden border border-gray-100 cursor-pointer flex flex-col h-full">
-                    <div class="relative w-full h-56 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1579165466741-7f35a4755657?auto=format&fit=crop&w=800&q=80" alt="Biobanco" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <span class="text-xs font-bold text-labware-blue uppercase tracking-wider mb-2">Pesquisa Clínica</span>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-labware-blue transition-colors">Biobanco & Pesquisa</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3 flex-grow">
-                            Gestão avançada de inventário de amostras biológicas com rastreabilidade completa e conformidade com HIPAA/GDPR.
-                        </p>
-                        <div class="pt-4 border-t border-gray-50 mt-auto flex items-center text-labware-blue font-semibold text-sm group-hover:text-labware-accent transition-colors">
-                            Explorar Solução
-                            <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Item 6 -->
-                <article class="group bg-white rounded-xl shadow-card hover:shadow-card-hover transition-all duration-300 ease-in-out hover:-translate-y-1 overflow-hidden border border-gray-100 cursor-pointer flex flex-col h-full">
-                    <div class="relative w-full h-56 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1444491741275-3747c53c99b4?auto=format&fit=crop&w=800&q=80" alt="Ambiental" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <span class="text-xs font-bold text-labware-blue uppercase tracking-wider mb-2">Meio Ambiente</span>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-labware-blue transition-colors">Ambiental</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3 flex-grow">
-                            Análises de água, solo e ar. Ferramentas especializadas para coleta de campo e relatórios regulatórios automatizados.
-                        </p>
-                        <div class="pt-4 border-t border-gray-50 mt-auto flex items-center text-labware-blue font-semibold text-sm group-hover:text-labware-accent transition-colors">
-                            Explorar Solução
-                            <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                        </div>
-                    </div>
-                </article>
-
-            </div>
-        </div>
-    </section>
-
+    </footer>
 </body>
+<!-- Lucide JS -->
+<script src="../../assets/libs/lucide/lucide.min.js"></script>
+
+<!-- Swiper JS -->
+<script src="../../assets/libs/swiper/swiper-bundle.min.js"></script>
+
+<script src="../../assets/js/main.js"></script>
+
 </html>

@@ -99,6 +99,52 @@ const swiperCulture = new Swiper(".swiper-culture", {
   },
 });
 
+// Página Sobre
+const swiperColab = new Swiper(".swiper-collaborators", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+  speed: 800,
+  autoplay: {
+    delay: 6000,
+    disableOnInteraction: false,
+  },
+  // É possível estilizar quantos slides vão aparecer por breakpoint
+  breakpoints: {
+    640: { slidesPerView: 1.2 },
+    768: { slidesPerView: 3.2 },
+  },
+
+  navigation: {
+    nextEl: ".swiper-button-next-2",
+    prevEl: ".swiper-button-prev-2",
+  },
+});
+
+
+// Página de estágio Cultura
+const swiperCultureAbout = new Swiper(".swiper-culture-2", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+  speed: 800,
+  autoplay: {
+    delay: 6000,
+    disableOnInteraction: false,
+  },
+  // É possível estilizar quantos slides vão aparecer por breakpoint
+  breakpoints: {
+    640: { slidesPerView: 1 },
+    768: { slidesPerView: 3 },
+  },
+
+  navigation: {
+    nextEl: ".swiper-button-next-2",
+    prevEl: ".swiper-button-prev-2",
+  },
+});
+
+
 // Lucide
 console.log("tentando criar lucide");
 console.log(lucide);
@@ -261,3 +307,33 @@ AOS.init({
   once: false, // Se true, anima apenas na primeira vez que rola a página
   offset: 100, // Distância em px do topo para disparar a animação
 });
+
+
+// ============================================
+// SCROLL TO TOP BUTTON (Optional)
+// ============================================
+
+const scrollToTopBtn = document.createElement("button");
+scrollToTopBtn.innerHTML = '<svg data-lucide="arrow-up" width="20" height="20"></svg>';
+scrollToTopBtn.className =
+  "fixed bottom-6 right-6 w-12 h-12 bg-misk-600 text-white rounded-full flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300 hover:bg-misk-700 z-40";
+scrollToTopBtn.id = "scroll-to-top";
+document.body.appendChild(scrollToTopBtn);
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    scrollToTopBtn.classList.remove("opacity-0", "pointer-events-none");
+  } else {
+    scrollToTopBtn.classList.add("opacity-0", "pointer-events-none");
+  }
+});
+
+scrollToTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
+
+// Initialize Lucide icons for dynamically added elements
+lucide.createIcons();

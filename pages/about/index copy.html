@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LabWare Industries - Figma Implementation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Configuração para imitar os "Tokens" do Figma
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Cores extraídas do Brand Guide da LabWare (aproximadas)
+                        labware: {
+                            blue: '#004B87',      // Primary
+                            dark: '#002a4d',      // Darker Hover
+                            light: '#E6F0F9',     // Background accents
+                            accent: '#D31245',    // Red accent/buttons
+                        },
+                        neutral: {
+                            50: '#F9FAFB',
+                            100: '#F3F4F6',
+                            800: '#1F2937',
+                            900: '#111827',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Roboto', 'Inter', 'sans-serif'], // Fontes comuns em UI
+                    },
+                    boxShadow: {
+                        'card': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+                        'card-hover': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Fonte Roboto para fidelidade visual -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Roboto', sans-serif; }
+    </style>
+</head>
+<body class="bg-neutral-50 antialiased text-neutral-800">
+
+    <!-- Header Section (Hero) -->
+    <section class="relative bg-labware-blue text-white pt-20 pb-24 px-4 overflow-hidden">
+        <!-- Padrão de fundo decorativo (Opcional, comum no Figma) -->
+        <div class="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-white opacity-5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -mb-20 -ml-20 w-80 h-80 bg-labware-accent opacity-10 rounded-full blur-3xl"></div>
+
+        <div class="relative max-w-7xl mx-auto text-center">
+            <span class="uppercase tracking-widest text-sm font-semibold text-blue-200 mb-2 block">Soluções por Setor</span>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
+                Transformando Laboratórios
+            </h1>
+            <p class="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto font-light leading-relaxed">
+                Nossas soluções são configuradas para atender aos requisitos exatos de conformidade e fluxo de trabalho da sua indústria.
+            </p>
+        </div>
+    </section>
+
+    <!-- Grid de Indústrias -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            
+            <!-- Cabeçalho da Seção -->
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 border-b border-gray-200 pb-4">
+                <div class="max-w-2xl">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-2">Indústrias Atendidas</h2>
+                    <p class="text-gray-500">Selecione seu setor para ver como podemos ajudar.</p>
+                </div>
+                <!-- Botão de "Ver todos" se houver no design -->
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <a href="#" class="text-labware-blue font-medium hover:text-labware-accent transition text-sm">Ver todas as soluções &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Grid Layout -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10">
+
+                <!-- Componente Card (Repetível) -->
+                <!-- Item 1 -->
+                <article class="group bg-white rounded-xl shadow-card hover:shadow-card-hover transition-all duration-300 ease-in-out hover:-translate-y-1 overflow-hidden border border-gray-100 cursor-pointer flex flex-col h-full">
+                    <!-- Wrapper da Imagem com Aspect Ratio fixo -->
+                    <div class="relative w-full h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80" 
+                             alt="Farmacêutica" 
+                             class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        <!-- Overlay Gradiente (para texto sobre imagem, se necessário) -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    
+                    <div class="p-6 flex flex-col flex-grow">
+                        <!-- Categoria ou Tag pequena -->
+                        <span class="text-xs font-bold text-labware-blue uppercase tracking-wider mb-2">Ciências da Vida</span>
+                        
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-labware-blue transition-colors">
+                            Farmacêutica
+                        </h3>
+                        
+                        <!-- Line-clamp limita o texto a 3 linhas para manter altura igual -->
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3 flex-grow">
+                            Soluções completas de QA/QC LIMS para fabricação e P&D. Garanta a integridade dos dados e conformidade com regulamentações globais rigorosas.
+                        </p>
+                        
+                        <div class="pt-4 border-t border-gray-50 mt-auto flex items-center text-labware-blue font-semibold text-sm group-hover:text-labware-accent transition-colors">
+                            Explorar Solução
+                            <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Item 2 -->
+                <article class="group bg-white rounded-xl shadow-card hover:shadow-card-hover transition-all duration-300 ease-in-out hover:-translate-y-1 overflow-hidden border border-gray-100 cursor-pointer flex flex-col h-full">
+                    <div class="relative w-full h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&w=800&q=80" alt="Alimentos e Bebidas" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="text-xs font-bold text-labware-blue uppercase tracking-wider mb-2">Consumo</span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-labware-blue transition-colors">Alimentos e Bebidas</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3 flex-grow">
+                            Controle de qualidade do campo à mesa. Gerencie a segurança alimentar, HACCP e conformidade regulatória com eficiência.
+                        </p>
+                        <div class="pt-4 border-t border-gray-50 mt-auto flex items-center text-labware-blue font-semibold text-sm group-hover:text-labware-accent transition-colors">
+                            Explorar Solução
+                            <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Item 3 -->
+                <article class="group bg-white rounded-xl shadow-card hover:shadow-card-hover transition-all duration-300 ease-in-out hover:-translate-y-1 overflow-hidden border border-gray-100 cursor-pointer flex flex-col h-full">
+                    <div class="relative w-full h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=800&q=80" alt="Química" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="text-xs font-bold text-labware-blue uppercase tracking-wider mb-2">Industrial</span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-labware-blue transition-colors">Química e Processos</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3 flex-grow">
+                            Otimize processos contínuos e de lote. Integre seu laboratório diretamente com sistemas de chão de fábrica e ERP.
+                        </p>
+                        <div class="pt-4 border-t border-gray-50 mt-auto flex items-center text-labware-blue font-semibold text-sm group-hover:text-labware-accent transition-colors">
+                            Explorar Solução
+                            <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Item 4 -->
+                <article class="group bg-white rounded-xl shadow-card hover:shadow-card-hover transition-all duration-300 ease-in-out hover:-translate-y-1 overflow-hidden border border-gray-100 cursor-pointer flex flex-col h-full">
+                    <div class="relative w-full h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=800&q=80" alt="Petróleo e Gás" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="text-xs font-bold text-labware-blue uppercase tracking-wider mb-2">Energia</span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-labware-blue transition-colors">Petróleo e Gás</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3 flex-grow">
+                            Da exploração ao refino. Soluções robustas para lidar com amostras complexas e relatórios de conformidade ambiental rigorosos.
+                        </p>
+                        <div class="pt-4 border-t border-gray-50 mt-auto flex items-center text-labware-blue font-semibold text-sm group-hover:text-labware-accent transition-colors">
+                            Explorar Solução
+                            <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Item 5 -->
+                <article class="group bg-white rounded-xl shadow-card hover:shadow-card-hover transition-all duration-300 ease-in-out hover:-translate-y-1 overflow-hidden border border-gray-100 cursor-pointer flex flex-col h-full">
+                    <div class="relative w-full h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1579165466741-7f35a4755657?auto=format&fit=crop&w=800&q=80" alt="Biobanco" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="text-xs font-bold text-labware-blue uppercase tracking-wider mb-2">Pesquisa Clínica</span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-labware-blue transition-colors">Biobanco & Pesquisa</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3 flex-grow">
+                            Gestão avançada de inventário de amostras biológicas com rastreabilidade completa e conformidade com HIPAA/GDPR.
+                        </p>
+                        <div class="pt-4 border-t border-gray-50 mt-auto flex items-center text-labware-blue font-semibold text-sm group-hover:text-labware-accent transition-colors">
+                            Explorar Solução
+                            <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Item 6 -->
+                <article class="group bg-white rounded-xl shadow-card hover:shadow-card-hover transition-all duration-300 ease-in-out hover:-translate-y-1 overflow-hidden border border-gray-100 cursor-pointer flex flex-col h-full">
+                    <div class="relative w-full h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1444491741275-3747c53c99b4?auto=format&fit=crop&w=800&q=80" alt="Ambiental" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="text-xs font-bold text-labware-blue uppercase tracking-wider mb-2">Meio Ambiente</span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-labware-blue transition-colors">Ambiental</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3 flex-grow">
+                            Análises de água, solo e ar. Ferramentas especializadas para coleta de campo e relatórios regulatórios automatizados.
+                        </p>
+                        <div class="pt-4 border-t border-gray-50 mt-auto flex items-center text-labware-blue font-semibold text-sm group-hover:text-labware-accent transition-colors">
+                            Explorar Solução
+                            <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

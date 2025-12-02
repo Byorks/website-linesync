@@ -133,7 +133,7 @@
     }
 
     .btn-secondary {
-        @apply py-2 px-9 text-base border-pastelgreen-300 text-pastelgreen-950 border bg-pastelgreen-300 hover:bg-pastelgreen-200 hover:border hover:border-pastelgreen-600 transition-all ease-in-out duration-300 rounded-[5px] cursor-pointer active:bg-pastelgreen-600 active:text-pastelgreen-50;
+        @apply w-fit py-2 px-9 text-base border-pastelgreen-300 text-pastelgreen-950 font-semibold border bg-pastelgreen-300 hover:bg-pastelgreen-200 hover:border hover:border-pastelgreen-600 transition-all ease-in-out duration-300 rounded-[5px] cursor-pointer active:bg-pastelgreen-600 active:text-pastelgreen-50;
     }
 
     .btn-tertiary {

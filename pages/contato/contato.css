@@ -75,11 +75,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: calc(var(--spacing) * 6);
     flex-wrap: wrap;
 }
 
 
 .cct-falas {
+    width: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -92,7 +94,6 @@ body {
 }
 
 .cct-falas p {
-    max-width: 600px;
     margin-top: 20px;
     text-align: center;
 }
@@ -172,8 +173,12 @@ body {
   Geralmente: Tablets em modo paisagem e Laptops pequenos
   ========================================
 */
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
     /* Seus estilos para 'lg:' aqui */
+
+    .cct-content {
+        flex-wrap: nowrap;
+    }
 }
 
 

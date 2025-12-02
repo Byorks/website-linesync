@@ -274,7 +274,7 @@ if (phoneInput) {
 const scrollToTopBtn = document.createElement("button");
 scrollToTopBtn.innerHTML = '<svg data-lucide="arrow-up" width="20" height="20"></svg>';
 scrollToTopBtn.className =
-  "fixed bottom-6 right-6 w-12 h-12 bg-misk-600 text-white rounded-full flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300 hover:bg-misk-700 z-40";
+  "fixed bottom-6 right-6 w-12 h-12 bg-misk-600 text-white rounded-full flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300 hover:bg-misk-700 z-145";
 scrollToTopBtn.id = "scroll-to-top";
 document.body.appendChild(scrollToTopBtn);
 
