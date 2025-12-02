@@ -1,71 +1,71 @@
 :root {
-    /* 🎨 Pastel Green */
-    --pastelgreen-50: #f3faeb;
-    --pastelgreen-100: #e2f4d3;
-    --pastelgreen-200: #c6eaac;
-    --pastelgreen-300: #82c952;
-    --pastelgreen-400: #63ae34;
-    --pastelgreen-500: #63ae34;
-    --pastelgreen-600: #4a8b25;
-    --pastelgreen-700: #3b6a21;
-    --pastelgreen-800: #31551f;
-    --pastelgreen-900: #2b491e;
-    --pastelgreen-950: #14270c;
+  /* 🎨 Pastel Green */
+  --pastelgreen-50: #f3faeb;
+  --pastelgreen-100: #e2f4d3;
+  --pastelgreen-200: #c6eaac;
+  --pastelgreen-300: #82c952;
+  --pastelgreen-400: #63ae34;
+  --pastelgreen-500: #63ae34;
+  --pastelgreen-600: #4a8b25;
+  --pastelgreen-700: #3b6a21;
+  --pastelgreen-800: #31551f;
+  --pastelgreen-900: #2b491e;
+  --pastelgreen-950: #14270c;
 
-    /* 🎨 Misk */
-    --misk-50: #eef0ff;
-    --misk-100: #e0e3ff;
-    --misk-200: #c8cbfd;
-    --misk-300: #a6aaff;
-    --misk-400: #8682f7;
-    --misk-500: #7364f0;
-    --misk-600: #6448e3;
-    --misk-700: #5639c9;
-    --misk-800: #4631a2;
-    --misk-900: #362a73;
-    --misk-950: #241b4b;
+  /* 🎨 Misk */
+  --misk-50: #eef0ff;
+  --misk-100: #e0e3ff;
+  --misk-200: #c8cbfd;
+  --misk-300: #a6aaff;
+  --misk-400: #8682f7;
+  --misk-500: #7364f0;
+  --misk-600: #6448e3;
+  --misk-700: #5639c9;
+  --misk-800: #4631a2;
+  --misk-900: #362a73;
+  --misk-950: #241b4b;
 
-    /* 🎨 BlueBell */
-    --bluebell-50: #eef0ff;
-    --bluebell-100: #f0f0f7;
-    --bluebell-200: #e4e4f0;
-    --bluebell-300: #cecee4;
-    --bluebell-400: #b4b1d4;
-    --bluebell-500: #9690c1;
-    --bluebell-600: #8277b0;
-    --bluebell-700: #70659c;
-    --bluebell-800: #5d5483;
-    --bluebell-900: #4e466c;
-    --bluebell-950: #322d48;
+  /* 🎨 BlueBell */
+  --bluebell-50: #eef0ff;
+  --bluebell-100: #f0f0f7;
+  --bluebell-200: #e4e4f0;
+  --bluebell-300: #cecee4;
+  --bluebell-400: #b4b1d4;
+  --bluebell-500: #9690c1;
+  --bluebell-600: #8277b0;
+  --bluebell-700: #70659c;
+  --bluebell-800: #5d5483;
+  --bluebell-900: #4e466c;
+  --bluebell-950: #322d48;
 }
 
 @font-face {
-    font-family: 'Manrope';
-    src: url(assets/fonts/Manrope-VariableFont_wght.ttf);
+  font-family: 'Manrope';
+  src: url(assets/fonts/Manrope-VariableFont_wght.ttf);
 }
 
 @font-face {
-    font-family: 'Inter';
-    src: url(assets/fonts/Inter-VariableFont_opsz\,wght.ttf);
+  font-family: 'Inter';
+  src: url(assets/fonts/Inter-VariableFont_opsz\,wght.ttf);
 }
 
 @font-face {
-    font-family: 'Inttalic';
-    src: url(assets/fonts/Inter-Italic-VariableFont_opsz\,wght.ttf);
+  font-family: 'Inttalic';
+  src: url(assets/fonts/Inter-Italic-VariableFont_opsz\,wght.ttf);
 }
 
-body{
-    font-family: 'Inter';
+body {
+  font-family: 'Inter';
 }
 
-.container-grid{
-    max-width: 1620px;
-    width: 80vw;
-    margin: 0 auto;
+.container-grid {
+  max-width: 1620px;
+  width: 80vw;
+  margin: 0 auto;
 }
 
 h1 {
-    font-family: 'Manrope';
+  font-family: 'Manrope';
 }
 
 .areas-section {
@@ -113,12 +113,13 @@ h1 {
   flex-direction: column;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  margin-bottom: 3%;
 }
 
 
 .area-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
 .card-nome {
@@ -131,8 +132,12 @@ h1 {
 
 .card-img {
   width: 100%;
-  height: 180px;
+  height: 200px;
   background: #cccccc;
+}
+
+.ronaldo {
+  width: 100%;
 }
 
 .card-content {
@@ -158,4 +163,163 @@ h1 {
 
 .area-card:hover .card-seta {
   transform: translateX(4px);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: #4C3C77;
+  color: #fff;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 720px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.modal-image {
+  width: 100%;
+  height: 240px;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.modal-text {
+  padding: 2.5rem 2rem;
+  font-size: 1.15rem;
+  line-height: 1.75rem;
+}
+
+
+.modal-header {
+  background: #4C3C77;
+  padding: 16px 20px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#modal-close {
+  cursor: pointer;
+  font-size: 22px;
+}
+
+
+.modal-text {
+  padding: 20px;
+}
+
+/* Resp */
+
+@media (max-width: 992px) {
+
+  .areas-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 16px;
+  }
+
+  .cards-container {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .area-card {
+    flex: 1 1 calc(50% - 20px);
+    max-width: 420px;
+  }
+
+  .setores-intro p {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .areas-section {
+    gap: 30px;
+  }
+
+  .setores-intro h2 {
+    font-size: 1.9rem;
+    text-align: center;
+  }
+
+  .setores-intro p {
+    font-size: 1rem;
+    max-width: 95%;
+  }
+
+  .area-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .card-content p {
+    max-width: 75%;
+  }
+
+  /* Modal mais fluido */
+  .modal-content {
+    width: 88%;
+    max-width: 500px;
+  }
+
+  .modal-image {
+    height: 180px;
+  }
+
+  .modal-text {
+    font-size: 1rem;
+    padding: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .setores-intro h2 {
+    font-size: 1.6rem;
+  }
+
+  .setores-intro p {
+    font-size: 0.9rem;
+  }
+
+  .card-nome {
+    font-size: 1.1rem;
+    padding: 14px 16px;
+  }
+
+  .card-content {
+    padding: 16px;
+  }
+
+  .card-seta {
+    font-size: 1.3rem;
+  }
+
+  .modal-content {
+    width: 94%;
+  }
+
+  .modal-image {
+    height: 150px;
+  }
+
+  .modal-text {
+    font-size: 0.95rem;
+    line-height: 1.5rem;
+  }
 }

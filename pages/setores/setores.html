@@ -2,62 +2,116 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="setores.css">
-    <script src="setores.js" defer></script>
-    
-    <title>Setores</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="setores.css">
+  <script src="setores.js" defer></script>
+
+  <title>Setores</title>
 </head>
 
 <body class="container-grid">
-    <section class="areas-section">
-  <div class="setores-intro">
-    <h2>Áreas de Atuação</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-      incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-      nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    </p>
+  <section class="areas-section">
+    <div class="setores-intro">
+      <h2>Áreas de Atuação</h2>
+      <p>
+        Descubra como a LineSync impulsiona eficiência e qualidade ao integrar pessoas, processos e dados, oferecendo
+        automação e rastreabilidade para diferentes setores da indústria. </p>
+    </div>
+
+    <div class="cards-container">
+
+      <div class="area-card">
+        <div class="card-nome">Farmacêutica</div>
+        <div class="card-img"> <img
+            src="assets/imagens/farmaceutica-jovem-hispanica-sorrindo-confiante-em-pe-com-gesto-de-bracos-cruzados-na-farmacia.jpg"
+            alt="" class="ronaldo"> </div>
+        <div class="card-content">
+          <p>
+            LIMS para fabricação farmacêutica e laboratórios de P&D
+          </p>
+          <div class="card-seta">↗</div>
+        </div>
+      </div>
+
+      <div class="area-card">
+        <div class="card-nome">Alimentos e Bebidas</div>
+        <div class="card-img"> <img src="assets/imagens/corkscrew-e-uva-perto-de-garrafas-e-copos-de-vinho.jpg" alt=""
+            class="ronaldo">
+        </div>
+        <div class="card-content">
+          <p>
+            Automatize os fluxos de trabalho e qualidade de produtos alimentícios
+          </p>
+          <div class="card-seta">↗</div>
+        </div>
+      </div>
+
+      <div class="area-card">
+        <div class="card-nome">Química e Processos</div>
+        <div class="card-img"> <img src="assets/imagens/close-up-cientista-usando-mascara-facial.jpg" alt=""
+            class="ronaldo"> </div>
+        <div class="card-content">
+          <p>
+            Automação laboratorial para plantas industriais, clínicas e petroquímicas
+          </p>
+          <div class="card-seta">↗</div>
+        </div>
+      </div>
+
+      <div class="area-card">
+        <div class="card-nome">Ambiental</div>
+        <div class="card-img"> <img src="assets/imagens/pexels-mediocrememories-954584.jpg" alt="" class="ronaldo">
+        </div>
+        <div class="card-content">
+          <p>
+            Automação para testes de água e laboratórios ambientais
+          </p>
+          <div class="card-seta">↗</div>
+        </div>
+      </div>
+
+      <div class="area-card">
+        <div class="card-nome">Assistência Médica</div>
+        <div class="card-img"> <img src="assets/imagens/mika-baumeister--kW1TvBKk1s-unsplash.jpg" alt=""
+            class="ronaldo"> </div>
+        <div class="card-content">
+          <p>
+            Automação para hospitais, laboratórios de saúde pública e patologia
+          </p>
+          <div class="card-seta">↗</div>
+        </div>
+      </div>
+
+      <div class="area-card">
+        <div class="card-nome">Mineração e Metais</div>
+        <div class="card-img"> <img src="assets/imagens/dominik-vanyi-Mk2ls9UBO2E-unsplash.jpg" alt="" class="ronaldo">
+        </div>
+        <div class="card-content">
+          <p>
+            Controle analítico, automação e suporte decisório com mineração e metais
+          </p>
+          <div class="card-seta">↗</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h2 id="modal-title"></h2>
+        <span id="modal-close">✕</span>
+      </div>
+
+      <div class="modal-image"></div>
+
+      <div class="modal-text">
+        <p id="modal-description"></p>
+      </div>
+    </div>
   </div>
-
-  <div class="cards-container">
-
-    <div class="area-card">
-      <div class="card-nome">Farmacêutica</div>
-      <div class="card-img"></div>
-      <div class="card-content">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
-        </p>
-        <div class="card-seta">↗</div>
-      </div>
-    </div>
-
-    <div class="area-card">
-      <div class="card-nome">Alimentos e Bebidas</div>
-      <div class="card-img"></div>
-      <div class="card-content">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
-        </p>
-        <div class="card-seta">↗</div>
-      </div>
-    </div>
-
-    <div class="area-card">
-      <div class="card-nome">Química e Processos</div>
-      <div class="card-img"></div>
-      <div class="card-content">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
-        </p>
-        <div class="card-seta">↗</div>
-      </div>
-    </div>
-
-  </div>
-</section>
 </body>
 
 </html>
