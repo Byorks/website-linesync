@@ -976,6 +976,9 @@
   .col-span-6 {
     grid-column: span 6 / span 6;
   }
+  .col-span-6\! {
+    grid-column: span 6 / span 6 !important;
+  }
   .col-span-12 {
     grid-column: span 12 / span 12;
   }
@@ -1035,6 +1038,9 @@
   }
   .mt-6 {
     margin-top: calc(var(--spacing) * 6);
+  }
+  .mt-8 {
+    margin-top: calc(var(--spacing) * 8);
   }
   .mt-auto {
     margin-top: auto;
@@ -1538,6 +1544,9 @@
   .h-auto {
     height: auto;
   }
+  .h-auto\! {
+    height: auto !important;
+  }
   .h-dvh {
     height: 100dvh;
   }
@@ -1549,6 +1558,24 @@
   }
   .h-full\! {
     height: 100% !important;
+  }
+  .max-h-1 {
+    max-height: calc(var(--spacing) * 1);
+  }
+  .max-h-1\/4 {
+    max-height: calc(1/4 * 100%);
+  }
+  .max-h-1\/6 {
+    max-height: calc(1/6 * 100%);
+  }
+  .max-h-1\/6\! {
+    max-height: calc(1/6 * 100%) !important;
+  }
+  .max-h-3 {
+    max-height: calc(var(--spacing) * 3);
+  }
+  .max-h-3\/4 {
+    max-height: calc(3/4 * 100%);
   }
   .max-h-5 {
     max-height: calc(var(--spacing) * 5);
@@ -1710,6 +1737,9 @@
   }
   .max-w-7xl {
     max-width: var(--container-7xl);
+  }
+  .max-w-full {
+    max-width: 100%;
   }
   .datatable-input {
     .datatable-wrapper .datatable-search & {
@@ -2412,6 +2442,12 @@
   .object-cover {
     object-fit: cover;
   }
+  .object-scale-down {
+    object-fit: scale-down;
+  }
+  .object-scale-down\! {
+    object-fit: scale-down !important;
+  }
   .apexcharts-legend {
     .apexcharts-canvas & {
       padding: 0 !important;
@@ -2445,6 +2481,9 @@
   }
   .p-8 {
     padding: calc(var(--spacing) * 8);
+  }
+  .p-12 {
+    padding: calc(var(--spacing) * 12);
   }
   .px-0 {
     padding-inline: calc(var(--spacing) * 0);
@@ -3280,6 +3319,16 @@
       display: grid;
     }
   }
+  .sm\:max-h-\[30dvh\] {
+    @media (width >= 40rem) {
+      max-height: 30dvh;
+    }
+  }
+  .sm\:max-h-\[55dvh\] {
+    @media (width >= 40rem) {
+      max-height: 55dvh;
+    }
+  }
   .sm\:grid-cols-2 {
     @media (width >= 40rem) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -3456,6 +3505,11 @@
       height: calc(var(--spacing) * 12);
     }
   }
+  .md\:h-64 {
+    @media (width >= 48rem) {
+      height: calc(var(--spacing) * 64);
+    }
+  }
   .md\:h-80 {
     @media (width >= 48rem) {
       height: calc(var(--spacing) * 80);
@@ -3474,6 +3528,26 @@
   .md\:h-full {
     @media (width >= 48rem) {
       height: 100%;
+    }
+  }
+  .md\:max-h-\[30dvh\] {
+    @media (width >= 48rem) {
+      max-height: 30dvh;
+    }
+  }
+  .md\:max-h-\[55dvh\] {
+    @media (width >= 48rem) {
+      max-height: 55dvh;
+    }
+  }
+  .md\:max-h-\[60dvh\] {
+    @media (width >= 48rem) {
+      max-height: 60dvh;
+    }
+  }
+  .md\:max-h-\[70dvh\] {
+    @media (width >= 48rem) {
+      max-height: 70dvh;
     }
   }
   .md\:max-h-\[75dvh\] {
@@ -3696,9 +3770,19 @@
       line-height: var(--tw-leading, var(--text-6xl--line-height));
     }
   }
+  .xl\:max-h-\[75dvh\] {
+    @media (width >= 80rem) {
+      max-height: 75dvh;
+    }
+  }
   .xl\:px-0 {
     @media (width >= 80rem) {
       padding-inline: calc(var(--spacing) * 0);
+    }
+  }
+  .\32 xl\:max-h-\[75dvh\] {
+    @media (width >= 96rem) {
+      max-height: 75dvh;
     }
   }
   .\32 xl\:max-w-none {
