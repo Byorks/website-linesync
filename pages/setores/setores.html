@@ -8,110 +8,274 @@
   <script src="setores.js" defer></script>
 
   <title>Setores</title>
+
+  <!-- Tailwind CSS 4.1 -->
+  <link rel="stylesheet" href="../../css/components.css">
+  <link href="../../css/output.css" rel="stylesheet">
+
+  <!-- Lucide Ícones -->
+  <!-- Development version -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+  <!-- Flowbite -->
+  <script src="../../assets/libs/flowbite/flowbite.min.js"></script>
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="../../assets/libs/swiper/swiper-bundle.min.css" />
+
+  <!-- Polyfill -->
+  <script src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js"></script>
 </head>
 
-<body class="container-grid">
-  <section class="areas-section">
-    <div class="setores-intro">
-      <h2>Áreas de Atuação</h2>
-      <p>
-        Descubra como a LineSync impulsiona eficiência e qualidade ao integrar pessoas, processos e dados, oferecendo
-        automação e rastreabilidade para diferentes setores da indústria. </p>
-    </div>
-
-    <div class="cards-container">
-
-      <div class="area-card">
-        <div class="card-nome">Farmacêutica</div>
-        <div class="card-img"> <img
-            src="assets/imagens/farmaceutica-jovem-hispanica-sorrindo-confiante-em-pe-com-gesto-de-bracos-cruzados-na-farmacia.jpg"
-            alt="" class="ronaldo"> </div>
-        <div class="card-content">
-          <p>
-            LIMS para fabricação farmacêutica e laboratórios de P&D
-          </p>
-          <div class="card-seta">↗</div>
-        </div>
+<body>
+  <header class="w-full h-[66px] bg-misk-200 border-b-[1.3px] border-pastelgreen-300 sticky top-0 z-100">
+    <div class="w-full h-full px-6 flex items-center justify-between">
+      <div class="logo">
+        <a class="block text-misk-700 font-bold text-lg" href="./">
+          <img src="../../assets/img/ui/linesync-header-logo.svg" alt="LineSync" class="h-12">
+        </a>
       </div>
 
-      <div class="area-card">
-        <div class="card-nome">Alimentos e Bebidas</div>
-        <div class="card-img"> <img src="assets/imagens/corkscrew-e-uva-perto-de-garrafas-e-copos-de-vinho.jpg" alt=""
-            class="ronaldo">
-        </div>
-        <div class="card-content">
-          <p>
-            Automatize os fluxos de trabalho e qualidade de produtos alimentícios
-          </p>
-          <div class="card-seta">↗</div>
-        </div>
+
+      <!-- Opção 1 Menu -->
+      <div id="nav-btn" class="nav-btn flex items-center justify-center md:hidden z-50">
+        <i data-lucide="menu" class="w-7 h-7"></i>
       </div>
 
-      <div class="area-card">
-        <div class="card-nome">Química e Processos</div>
-        <div class="card-img"> <img src="assets/imagens/close-up-cientista-usando-mascara-facial.jpg" alt=""
-            class="ronaldo"> </div>
-        <div class="card-content">
-          <p>
-            Automação laboratorial para plantas industriais, clínicas e petroquímicas
-          </p>
-          <div class="card-seta">↗</div>
-        </div>
-      </div>
+      <div id="menu" data-state="closed"
+        class="w-full h-dvh md:h-full duration-300 grow flex justify-center md:relative md:top-[inherit] top-[-100dvh] absolute left-0 z-40 bg-transparent">
+        <nav aria-label="Global">
+          <ul
+            class="py-12 md:py-6 w-full h-fit md:h-full flex items-center gap-12 md:gap-6 text-lg md:text-sm flex-col md:flex-row absolute md:relative bg-misk-200 md:bg-transparent rounded-b-sm  right-0">
+            <li>
+              <a class="link-nav" href="../about.html"> Sobre </a>
+            </li>
 
-      <div class="area-card">
-        <div class="card-nome">Ambiental</div>
-        <div class="card-img"> <img src="assets/imagens/pexels-mediocrememories-954584.jpg" alt="" class="ronaldo">
-        </div>
-        <div class="card-content">
-          <p>
-            Automação para testes de água e laboratórios ambientais
-          </p>
-          <div class="card-seta">↗</div>
-        </div>
-      </div>
+            <li>
+              <a class="link-nav" href="../trainee-promo.html"> Carreiras </a>
+            </li>
 
-      <div class="area-card">
-        <div class="card-nome">Assistência Médica</div>
-        <div class="card-img"> <img src="assets/imagens/mika-baumeister--kW1TvBKk1s-unsplash.jpg" alt=""
-            class="ronaldo"> </div>
-        <div class="card-content">
-          <p>
-            Automação para hospitais, laboratórios de saúde pública e patologia
-          </p>
-          <div class="card-seta">↗</div>
-        </div>
-      </div>
+            <li>
+              <a class="link-nav" href="../produtos"> Serviços</a>
+            </li>
 
-      <div class="area-card">
-        <div class="card-nome">Mineração e Metais</div>
-        <div class="card-img"> <img src="assets/imagens/dominik-vanyi-Mk2ls9UBO2E-unsplash.jpg" alt="" class="ronaldo">
+            <li>
+              <a class="link-nav" href="../setores/setores.html"> Setores de atuação </a>
+            </li>
+            <li>
+              <a class="link-nav" href="./contato/contato.html">Contato</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="hidden md:flex gap-6">
+        <div class="nav-btn flex items-center justify-center">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M9.02055 18C6.49813 18 4.36394 17.127 2.61796 15.3811C0.872654 13.6358 0 11.502 0 8.97964C0 6.67444 0.751712 4.67392 2.25514 2.9781C3.75856 1.28294 5.6796 0.29337 8.01826 0.0093962C8.43588 -0.0407169 8.76162 0.109622 8.99549 0.460414C9.22935 0.811206 9.221 1.1787 8.97043 1.5629C8.68645 1.99722 8.4733 2.45659 8.33098 2.94101C8.18932 3.42544 8.11849 3.93492 8.11849 4.46946C8.11849 5.97286 8.64469 7.25074 9.69709 8.30311C10.7495 9.35549 12.0274 9.88168 13.5308 9.88168C14.0487 9.88168 14.5625 9.80651 15.0723 9.65617C15.5815 9.50583 16.0365 9.29702 16.4374 9.02975C16.7882 8.79589 17.1474 8.7832 17.5149 8.99167C17.8824 9.20081 18.0411 9.53089 17.991 9.9819C17.7571 12.2871 16.7759 14.1998 15.0473 15.7199C13.318 17.24 11.3091 18 9.02055 18Z"
+              fill="currentColor" />
+          </svg>
+
         </div>
-        <div class="card-content">
-          <p>
-            Controle analítico, automação e suporte decisório com mineração e metais
-          </p>
-          <div class="card-seta">↗</div>
+        <div class="nav-btn flex items-center justify-center">
+          <svg width="17.5" height="21.88" viewBox="0 0 21 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M10.5 12.0833C13.8469 12.0833 16.5577 9.37969 16.5577 6.04167C16.5577 2.70365 13.8469 0 10.5 0C7.15312 0 4.44231 2.70365 4.44231 6.04167C4.44231 9.37969 7.15312 12.0833 10.5 12.0833ZM9.00072 14.9028C4.02836 14.9028 0 18.9205 0 23.8797C0 24.7054 0.671394 25.375 1.49928 25.375H19.5007C20.3286 25.375 21 24.7054 21 23.8797C21 18.9205 16.9716 14.9028 11.9993 14.9028H9.00072Z"
+              fill="currentColor" />
+          </svg>
         </div>
+
       </div>
     </div>
-  </section>
 
-  <div id="modal" class="modal">
-    <div class="modal-content">
-
-      <div class="modal-header">
-        <h2 id="modal-title"></h2>
-        <span id="modal-close">✕</span>
-      </div>
-
-      <div class="modal-image"></div>
-
-      <div class="modal-text">
-        <p id="modal-description"></p>
-      </div>
     </div>
+  </header>
+  <div id="menu-overlay"
+    class="fixed inset-0 bg-black/40 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-300 z-30">
   </div>
+  <main class="container-grid">
+    <section class="areas-section">
+      <div class="setores-intro">
+        <h2>Áreas de Atuação</h2>
+        <p>
+          Descubra como a LineSync impulsiona eficiência e qualidade ao integrar pessoas, processos e dados, oferecendo
+          automação e rastreabilidade para diferentes setores da indústria. </p>
+      </div>
+
+      <div class="cards-container">
+
+        <div class="area-card">
+          <div class="card-nome">Farmacêutica</div>
+          <div class="card-img"> <img
+              src="assets/imagens/farmaceutica-jovem-hispanica-sorrindo-confiante-em-pe-com-gesto-de-bracos-cruzados-na-farmacia.jpg"
+              alt="" class="ronaldo"> </div>
+          <div class="card-content">
+            <p>
+              LIMS para fabricação farmacêutica e laboratórios de P&D
+            </p>
+            <div class="card-seta">↗</div>
+          </div>
+        </div>
+
+        <div class="area-card">
+          <div class="card-nome">Alimentos e Bebidas</div>
+          <div class="card-img"> <img src="assets/imagens/corkscrew-e-uva-perto-de-garrafas-e-copos-de-vinho.jpg" alt=""
+              class="ronaldo">
+          </div>
+          <div class="card-content">
+            <p>
+              Automatize os fluxos de trabalho e qualidade de produtos alimentícios
+            </p>
+            <div class="card-seta">↗</div>
+          </div>
+        </div>
+
+        <div class="area-card">
+          <div class="card-nome">Química e Processos</div>
+          <div class="card-img"> <img src="assets/imagens/close-up-cientista-usando-mascara-facial.jpg" alt=""
+              class="ronaldo"> </div>
+          <div class="card-content">
+            <p>
+              Automação laboratorial para plantas industriais, clínicas e petroquímicas
+            </p>
+            <div class="card-seta">↗</div>
+          </div>
+        </div>
+
+        <div class="area-card">
+          <div class="card-nome">Ambiental</div>
+          <div class="card-img"> <img src="assets/imagens/pexels-mediocrememories-954584.jpg" alt="" class="ronaldo">
+          </div>
+          <div class="card-content">
+            <p>
+              Automação para testes de água e laboratórios ambientais
+            </p>
+            <div class="card-seta">↗</div>
+          </div>
+        </div>
+
+        <div class="area-card">
+          <div class="card-nome">Assistência Médica</div>
+          <div class="card-img"> <img src="assets/imagens/mika-baumeister--kW1TvBKk1s-unsplash.jpg" alt=""
+              class="ronaldo"> </div>
+          <div class="card-content">
+            <p>
+              Automação para hospitais, laboratórios de saúde pública e patologia
+            </p>
+            <div class="card-seta">↗</div>
+          </div>
+        </div>
+
+        <div class="area-card">
+          <div class="card-nome">Mineração e Metais</div>
+          <div class="card-img"> <img src="assets/imagens/dominik-vanyi-Mk2ls9UBO2E-unsplash.jpg" alt=""
+              class="ronaldo">
+          </div>
+          <div class="card-content">
+            <p>
+              Controle analítico, automação e suporte decisório com mineração e metais
+            </p>
+            <div class="card-seta">↗</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h2 id="modal-title"></h2>
+          <span id="modal-close">✕</span>
+        </div>
+
+        <div class="modal-image"></div>
+
+        <div class="modal-text">
+          <p id="modal-description"></p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+    <footer class="w-full">
+      <img class="w-full hidden md:block pointer-events-none" src="../../assets/img/ui/footer-4.svg" alt="Imagem">
+      <img class="w-full md:hidden pointer-events-none" src="../../assets/img/ui/footer-4-mobile-2.svg" alt="Imagem">
+
+      <div class="w-full bg-misk-200 md:pb-20">
+        <div class="bg-misk-200 px-4 md:container md:mx-auto md:grid md:grid-cols-12 md:gap-6">
+
+          <div id="links-footer"
+            class="link bg-misk-200 pt-6 md:col-span-4 md:col-start-6   md:pt-0 order-1 md:order-2">
+            <h2 class="font-title font-semibold text-xl text-misk-900 antialiased">
+              Navegue pelo site
+            </h2>
+            <ul class="grid gap-3 py-3">
+              <li><a href="../../" class="link-hover-underline">Página Inicial</a></li>
+              <li><a href="../about" class="link-hover-underline">Sobre</a></li>
+              <li><a href="../../pages/trainee-promo.html" class="link-hover-underline">Carreiras</a></li>
+              <li><a href="../produtos" class="link-hover-underline">Produtos</a></li>
+              <li><a href="../contato/contato.html" class="link-hover-underline">Contato</a></li>
+              <li><a href="../setores/setores.html"
+                  class="link-hover-underline transition duration-300 ease-in-out">Setores</a></li>
+            </ul>
+            <div class="divisor w-1/2 h-0.5 md:hidden mb-3 bg-bluebell-900 rounded-2xl "></div>
+          </div>
+
+          <div id="social-midia" class="md:col-span-3 md:col-start-10 order-2 md:order-3">
+            <h2 class="font-title font-semibold text-xl text-misk-900">
+              Conheça nossas mídias
+            </h2>
+
+            <div class="flex gap-1">
+              <a class="rounded" target="_blank" href="https://www.instagram.com/linesync_tech">
+                <img
+                  class="hover:bg-misk-600/50 active:bg-misk-100 rounded transition duration-300 ease-in-out cursor-pointer"
+                  src="../../assets/img/icons/square-instagram-brands-solid-full.svg" alt="">
+              </a>
+              <img class="hover:bg-misk-600/50 rounded transition duration-300 ease-in-out cursor-pointer"
+                src="../../assets/img/icons/square-linkedin-brands-solid-full.svg" alt="">
+              <img class="hover:bg-misk-600/50 rounded transition duration-300 ease-in-out cursor-pointer"
+                src="../../assets/img/icons/square-youtube-brands-solid-full.svg" alt="">
+            </div>
+            <div class="divisor w-1/2 h-0.5 my-3 md:hidden bg-bluebell-900 rounded-2xl"></div>
+
+          </div>
+
+          <div id="logo-footer"
+            class="bg-misk-200  pt-3 pb-6  grid grid-cols-4 gap-6 md:pb-0 md:pt-0 md:col-span-4 md:col-start-1 order-3 md:order-1">
+            <!-- Logotipo -->
+            <div class="col-span-2 col-start-1 md:col-span-2 text-misk-950 ">
+              <img src="../../assets/img/ui/logo-negativo.svg" alt="LineSync" class="w-full h-auto svg-misk">
+            </div>
+            <div class="col-span-4 col-start-1 md:col-span-3">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="py-3 px-4 bg-bluebell-900">
+        <p class="text-xs text-misk-50">
+          2025 Linesync ® 
+        </p>
+      </div>
+
+    </footer>
+  
 </body>
+
+<!-- Lucide JS -->
+<script src="../../assets/libs/lucide/lucide.min.js"></script>
+
+<!-- Swiper JS -->
+<script src="../../assets/libs/swiper/swiper-bundle.min.js"></script>
+
+<script src="../../assets/js/main.js"></script>
 
 </html>
