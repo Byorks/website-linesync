@@ -155,7 +155,7 @@
 
     /* Cards */
     .feature-card {
-        @apply shadow-md bg-misk-50 col-span-4 rounded-lg p-4 flex flex-col gap-6;
+        @apply shadow-md bg-misk-50 col-span-4 rounded-lg p-4 flex flex-col justify-between gap-4;
     }
 
     .feature-card .icon {

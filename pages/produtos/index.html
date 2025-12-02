@@ -12,13 +12,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 
-    <!-- Tailwind CSS 4.1 -->
-    <link rel="stylesheet" href="../../css/components.css">
-    <link href="../../css/output.css" rel="stylesheet">
+    <!-- AOS -->
+    <link rel="stylesheet" href="../../assets/libs/aos/aos.css">
 
-    <!-- Lucide Ícones -->
-    <!-- Development version -->
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <!-- Splitting -->
+    <link rel="stylesheet" href="../../assets/libs/splitting/splitting.css">
+
+    <!-- Tailwind 4.1 Styles CSS -->
+    <link href="../../css/output.css" rel="stylesheet">
 
     <!-- Flowbite -->
     <script src="../../assets/libs/flowbite/flowbite.min.js"></script>
@@ -92,7 +93,7 @@
 
         </div>
     </header>
-    
+
     <div id="menu-overlay"
         class="fixed inset-0 bg-black/40 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-300 z-30">
     </div>
@@ -103,23 +104,16 @@
             <div class="grid grid-cols-4 sm:grid-cols-8 lg:grid-cols-12 gap-4 md:gap-5">
 
                 <!-- Card 1 -->
-                <div class="feature-card">
+                <div data-aos="flip-right" data-aos-delay="200" class="feature-card" class="feature-card">
                     <div class="icon">
-                        <svg class="fill-current" width="21" height="28" viewBox="0 0 21 28" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M8.22519 11.1881C7.47744 11.1881 6.84186 10.9267 6.31844 10.4039C5.79502 9.8812 5.53331 9.24645 5.53331 8.49967C5.53331 7.7529 5.79502 7.11814 6.31844 6.5954C6.84186 6.07266 7.47744 5.81129 8.22519 5.81129C8.97293 5.81129 9.60851 6.07266 10.1319 6.5954C10.6554 7.11814 10.9171 7.7529 10.9171 8.49967C10.9171 9.24645 10.6554 9.8812 10.1319 10.4039C9.60851 10.9267 8.97293 11.1881 8.22519 11.1881ZM1.49549 27.9158C1.07177 27.9158 0.716339 27.7724 0.429206 27.4856C0.143069 27.1999 0 26.8454 0 26.4222C0 25.9991 0.143069 25.6446 0.429206 25.3588C0.716339 25.0721 1.07177 24.9287 1.49549 24.9287H7.47744V21.9416C5.40868 21.9416 3.6455 21.2132 2.1879 19.7565C0.7293 18.3008 0 16.5399 0 14.4739C0 12.9554 0.392317 11.6112 1.17695 10.4413C1.96258 9.27134 2.92867 8.41255 4.07521 7.86491C3.95058 8.46233 3.97551 9.02839 4.14998 9.56308C4.32446 10.0988 4.54878 10.5409 4.82295 10.8893C4.22476 11.3125 3.76963 11.8477 3.45757 12.4949C3.14651 13.1421 2.99098 13.8018 2.99098 14.4739C2.99098 15.7185 3.42716 16.7764 4.29953 17.6477C5.1719 18.5189 6.2312 18.9545 7.47744 18.9545H17.9459C18.3696 18.9545 18.7245 19.0974 19.0107 19.3832C19.2978 19.6699 19.4414 20.0249 19.4414 20.4481C19.4414 20.8712 19.2978 21.2257 19.0107 21.5115C18.7245 21.7982 18.3696 21.9416 17.9459 21.9416H11.9639V24.9287H19.4414C19.8651 24.9287 20.22 25.0721 20.5061 25.3588C20.7933 25.6446 20.9368 25.9991 20.9368 26.4222C20.9368 26.8454 20.7933 27.1999 20.5061 27.4856C20.22 27.7724 19.8651 27.9158 19.4414 27.9158H1.49549ZM14.8801 14.1005C14.5312 14.2249 14.1698 14.2249 13.7959 14.1005C13.422 13.976 13.1728 13.7146 13.0481 13.3164L13.0108 13.2043C12.612 13.3288 12.2196 13.3099 11.8338 13.1476C11.447 12.9863 11.1912 12.7065 11.0666 12.3082L10.8797 11.7481C11.2286 11.4743 11.5716 11.0571 11.9086 10.4965C12.2446 9.93696 12.4126 9.27134 12.4126 8.49967C12.4126 7.30483 11.9953 6.30914 11.1608 5.51258C10.3254 4.71602 9.32188 4.31774 8.15041 4.31774L7.96348 3.83234C7.789 3.38427 7.789 2.99197 7.96348 2.65542C8.13795 2.31987 8.41212 2.08986 8.786 1.9654L8.89816 1.92806V1.89072C8.69876 1.44266 8.69278 1.0628 8.88021 0.751147C9.06665 0.44049 9.3468 0.222929 9.72068 0.098467C10.0945 -0.0259953 10.456 -0.0324673 10.8049 0.0790509C11.1539 0.191565 11.428 0.459408 11.6274 0.88258L11.6648 0.957257C12.0636 0.832795 12.4564 0.851215 12.8433 1.01252C13.2291 1.17482 13.4843 1.45511 13.6089 1.85339L16.6747 10.2546C16.8492 10.7027 16.8427 11.1009 16.6553 11.4494C16.4688 11.7979 16.1887 12.0344 15.8148 12.1589H15.7774L15.8148 12.2709C15.9394 12.6194 15.921 12.9743 15.7595 13.3358C15.597 13.6962 15.3038 13.9511 14.8801 14.1005Z"
-                                fill="currentColor" />
-                        </svg>
+                        <i data-lucide="layout-dashboard"></i>
                     </div>
                     <div class="text-card">
                         <h3>
-                            Titulo card
+                            Fluxo de Trabalho Eficiente
                         </h3>
                         <p class="text-sm text-misk-950">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            Automatize processos manuais e reduza retrabalho com workflows inteligentes e integrados.
                         </p>
                     </div>
                     <button data-modal-target="default-modal" data-modal-toggle="default-modal" type="button"
@@ -178,18 +172,36 @@
                 </div>
 
                 <!-- Card 2 -->
-                <div class="feature-card">
+                <div data-aos="flip-right" data-aos-delay="400" class="feature-card">
                     <div class="icon">
                         <i data-lucide="target"></i>
                     </div>
                     <div class="text-card">
                         <h3>
-                            Titulo card
+                            Monitoramento em Tempo Real
                         </h3>
                         <p class="text-sm text-misk-950">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            Descrição: Acompanhe indicadores, resultados e status de amostras em dashboards atualizados
+                            automaticamente.
+                        </p>
+                    </div>
+                    <button type="button" class="card-btn-icon">
+                        Saiba
+                        mais <i class="notebook-pen" data-lucide="chevron-right"></i>
+                    </button>
+                </div>
+                <!-- Card 3 -->
+                <div data-aos="flip-right" data-aos-delay="600" class="feature-card">
+                    <div class="icon">
+                        <i data-lucide="shield-check"></i>
+                    </div>
+                    <div class="text-card">
+                        <h3>
+                            Conformidade Garantida
+                        </h3>
+                        <p class="text-sm text-misk-950">
+                            Atenda a normas regulatórias com auditoria integrada, rastreabilidade completa e relatórios
+                            automatizados.
                         </p>
                     </div>
                     <button type="button" class="card-btn-icon">
@@ -197,19 +209,56 @@
                         mais <i class="text-pastelgreen" data-lucide="chevron-right"></i>
                     </button>
                 </div>
-                <!-- Card 3 -->
-                <div class="feature-card">
+                <!-- Card 4 -->
+                <div data-aos="flip-right" data-aos-delay="800" class="feature-card">
                     <div class="icon">
-                        <i data-lucide="square-mouse-pointer"></i>
+                        <i data-lucide="circuit-board"></i>
                     </div>
                     <div class="text-card">
                         <h3>
-                            Titulo card
+                            Colaboração Multidisciplinar
                         </h3>
                         <p class="text-sm text-misk-950">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            Equipes interdisciplinares trabalham juntas em um único ambiente digital, com
+                            compartilhamento seguro de dados.
+                        </p>
+                    </div>
+                    <button type="button" class="card-btn-icon">
+                        Saiba
+                        mais <i class="text-pastelgreen" data-lucide="chevron-right"></i>
+                    </button>
+                </div>
+                <!-- Card 5 -->
+                <div data-aos="flip-right" data-aos-delay="1000" class="feature-card">
+                    <div class="icon">
+                        <i data-lucide="blocks"></i>
+                    </div>
+                    <div class="text-card">
+                        <h3>
+                            Sistema 100% Modular
+                        </h3>
+                        <p class="text-sm text-misk-950">
+                            Escolha apenas os módulos que seu laboratório precisa e expanda conforme cresce, sem
+                            comprometer a integração.
+                        </p>
+                    </div>
+                    <button type="button" class="card-btn-icon">
+                        Saiba
+                        mais <i class="text-pastelgreen" data-lucide="chevron-right"></i>
+                    </button>
+                </div>
+                <!-- Card 6 -->
+                <div data-aos="flip-right" data-aos-delay="1200" class="feature-card">
+                    <div class="icon">
+                        <i data-lucide="sliders-horizontal"></i>
+                    </div>
+                    <div class="text-card">
+                        <h3>
+                            Altamente Personalizável
+                        </h3>
+                        <p class="text-sm text-misk-950">
+                            Adapte workflows, relatórios e campos de dados às necessidades exclusivas do seu
+                            laboratório.
                         </p>
                     </div>
                     <button type="button" class="card-btn-icon">
@@ -243,29 +292,21 @@
             <div class="flex flex-col gap-8 pb-8 md:pb-16 reveal">
                 <h2 class="title-h2 flex justify-center">ELN</h2>
                 <div class="produtosparagrafo1 flex-col-reverse md:flex-row gap-8">
-                    <p class="text-right">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex
-                        sapien vitae
-                        pellentesque
-                        sem
-                        placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna
-                        tempor.
-                        Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada
-                        lacinia
-                        integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent
-                        per
-                        conubia nostra inceptos himenaeos.
-
-                        Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae
-                        pellentesque
-                        sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna
-                        tempor.
-                        Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada
-                        lacinia
-                        integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent
-                        per
-                        conubia nostra inceptos himenaeos.
-
-                    </p>
+                    <div class="flex flex-col gap-3">
+                        <p class="text-right">O Electronic Lab Notebook (ELN) da LineSync é a ferramenta essencial para
+                            registrar experimentos de forma digital e colaborativa. Com interface intuitiva, ele captura
+                            dados em tempo real, anexa arquivos multimídia e gera timestamps imutáveis, garantindo
+                            rastreabilidade total. Ideal para equipes que buscam agilidade sem perder o rigor
+                            científico.
+                        </p>
+                        <p class="text-right">
+                            Além disso, nosso ELN integra-se perfeitamente ao LIMS, criando um ecossistema unificado.
+                            Personalize templates para protocolos personalizados, compartilhe insights com permissões
+                            granulares e exporte relatórios em formatos regulados. É mais que um caderno: é o futuro do
+                            seu
+                            laboratório, acessível e inovador."
+                        </p>
+                    </div>
                     <img src="./imgs/ImagemELNLINS.JPG" alt="">
 
                 </div>
@@ -274,27 +315,20 @@
                 <h2 class="title-h2 flex justify-center">LINS</h2>
                 <div class="produtosparagrafo1 flex-col md:flex-row gap-8 ">
                     <img src="./imgs/ImagemELNLINS.JPG" alt="">
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae
-                        pellentesque
-                        sem
-                        placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna
-                        tempor.
-                        Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada
-                        lacinia
-                        integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent
-                        per
-                        conubia nostra inceptos himenaeos.
 
-                        Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae
-                        pellentesque
-                        sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna
-                        tempor.
-                        Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada
-                        lacinia
-                        integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent
-                        per
-                        conubia nostra inceptos himenaeos.
-
+                    <div class="flex flex-col gap-3">
+                        <p>O Laboratory Information Management System (LIMS) da LineSync organiza
+                            todo o fluxo de trabalho laboratorial, do recebimento de amostras à emissão de laudos. Com
+                            automação inteligente, ele rastreia status em tempo real, minimiza erros humanos e otimiza
+                            recursos – tudo alinhado a normas como ANVISA e FDA.
+                        </p>
+                        <p>
+                            Nossa solução é escalável para labs de qualquer porte, com dashboards personalizáveis e
+                            integrações via API. Monitore KPIs, gere alertas automáticos e melhore a eficiência
+                            operacional. LineSync: sincronizando sua linha de produção científica para resultados
+                            excepcionais. 
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -307,31 +341,31 @@
         <ul id="cards">
             <li class="card" id="card_1">
                 <div class="card__content">
-                    <div class="produtosopcoescard bg-bluebell-200 ">
-                        <h3>Titulo Card</h3>
-                        <p>Lorem Ipsum dolor sit amet consectetur adipscing elit.</p>
+                    <div class="produtosopcoescard bg-bluebell-200 grid  ">
+                        <h3>LIMS Personalizado para o Seu Fluxo de Trabalho</h3>
+                        <p>Cada laboratório tem sua própria lógica, prioridades e ritmo. Por isso, desenvolvemos um LIMS totalmente adaptável à sua operação — desde o cadastro de amostras até a entrega de resultados. Uma solução moldada para reduzir retrabalho, aumentar a precisão e oferecer a agilidade que sua equipe precisa.</p>
                     </div>
                 </div>
             </li>
 
             <li class="card" id="card_2">
-                <div class="produtosopcoescard bg-bluebell-300 card__content">
-                    <h3>Titulo Card</h3>
-                    <p>Lorem Ipsum dolor sit amet consectetur adipscing elit.</p>
+                <div class="produtosopcoescard bg-bluebell-300 card__content grid  ">
+                    <h3>Integrações Inteligentes com Equipamentos e Sistemas</h3>
+                    <p>A LineSync conecta seu laboratório ao que realmente importa. Integramos o LIMS a equipamentos analíticos, ERPs, CRMs e bancos de dados, garantindo um fluxo contínuo de informações. Menos tarefas manuais, mais segurança, rastreabilidade e automação real.</p>
                 </div>
             </li>
 
             <li class="card" id="card_3">
                 <div class="produtosopcoescard bg-bluebell-400 card__content">
-                    <h3>Titulo Card</h3>
-                    <p>Lorem Ipsum dolor sit amet consectetur adipscing elit.</p>
+                    <h3 class="text-misk-50">ELN Digital Sob Medida para Pesquisas e Registros</h3>
+                    <p class="text-misk-50">Torne seus experimentos mais organizados e auditáveis com nosso Caderno Eletrônico de Laboratório (ELN). Uma plataforma moderna que centraliza registros, anotações e evidências — tudo com assinatura digital, histórico completo e conformidade com as principais normas.</p>
                 </div>
             </li>
 
             <li class="card" id="card_4">
                 <div class="produtosopcoescard card__content bg-bluebell-500 ">
-                    <h3>Titulo Card</h3>
-                    <p>Lorem Ipsum dolor sit amet consectetur adipscing elit.</p>
+                    <h3 class="text-misk-50">Escalabilidade e Segurança de Nível Corporativo</h3>
+                    <p class="text-misk-50">Seu laboratório cresce, e o LineSync cresce junto. Oferecemos infraestrutura escalável, ambiente seguro, backups automáticos e controle avançado de permissões. Tecnologia estável, confiável e pensada para longos ciclos de operação.</p>
                 </div>
             </li>
         </ul>
@@ -410,6 +444,10 @@
 
 
 </body>
+<!-- Splitting -->
+<script src="../../assets/libs/splitting/splitting.min.js"></script>
+<!-- AOS -->
+<script src="../../assets/libs/aos/aos.js"></script>
 <!-- Lucide JS -->
 <script src="../../assets/libs/lucide/lucide.min.js"></script>
 
