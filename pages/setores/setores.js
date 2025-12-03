@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const dadosSetores = {
         "Farmacêutica": {
             texto: "A LineSync impulsiona a excelência no setor farmacêutico, garantindo rastreabilidade, conformidade regulatória e eficiência na gestão de dados laboratoriais. Transformamos processos complexos em fluxos inteligentes e auditeis",
-            imagem: "assets/imagens/siringa.jpg"
+            imagem: "assets/imagens/seringa.jpg"
         },
         "Alimentos e Bebidas": {
             texto: "Com foco em segurança, qualidade e controle, a LineSync otimiza a gestão analítica no setor de alimentos e bebidas, assegurando conformidade com normas e oferecendo total rastreabilidade desde a matéria-prima até o produto final.",
