@@ -47,7 +47,7 @@
                     <ul
                         class="py-12 md:py-6 w-full h-fit md:h-full flex items-center gap-12 md:gap-6 text-lg md:text-sm flex-col md:flex-row absolute md:relative bg-misk-200 md:bg-transparent rounded-b-sm  right-0">
                         <li>
-                            <a class="link-nav" href="./pages/about.html"> Sobre </a>
+                            <a class="link-nav" href="./pages/about/"> Sobre </a>
                         </li>
 
                         <li>
@@ -97,8 +97,9 @@
         <section class="mx-auto px-0">
             <div class="mx-auto">
                 <div id="main-banner">
-                    <!-- Swiper -->
-                    <div class="swiper swiper-banner">
+                    <!-- Swiper  Desktop-->
+                    <div class="swiper swiper-banner  hidden! md:inline-flex!">
+                        <!-- Desktop -->
                         <div class="swiper-wrapper">
                             <div class="swiper-slide h-full "><img src="./assets/img/banners/banner-1.png" srcset="
                                
@@ -113,11 +114,37 @@
                                     loading="lazy" alt="" class=" h-dvh max-h-dvh md:max-h-[75dvh] min-h-[60dvh]"></div>
 
                         </div>
+
+
+
                         <!-- <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div> -->
                         <div class="swiper-pagination"></div>
                     </div>
                 </div>
+                <!-- Swiper  Desktop-->
+                <div class="swiper swiper-banner md:hidden!">
+
+
+                    <!-- Mobile -->
+                    <div class="swiper-wrapper ">
+                        <div class="swiper-slide h-full ">
+                            <img src="./assets/img/banners/mobile-banner.png"
+                                class=" h-dvh max-h-dvh md:max-h-[60dvh] 2xl:max-h-[75dvh] min-h-[60dvh]"
+                                loading="eager">
+                        </div>
+
+
+                        <div class="swiper-slide h-full"><img src="./assets/img/banners/mobile-banner-2.png"
+                                loading="lazy" alt="" class=" h-dvh max-h-dvh md:max-h-[75dvh] min-h-[60dvh]"></div>
+
+                    </div>
+
+                    <!-- <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div> -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
             </div>
 
             <!-- Precisa ter altura definida -->
@@ -157,7 +184,7 @@
         </section>
 
         <section class="mb-16 px-4 md:px-12 xl:px-0 mx-auto bg-misk-50">
-            <div class="max-w-6xl py-10 mx-auto ">
+            <div class="max-w-6xl py-12 mx-auto ">
                 <!-- Swiper -->
                 <div class="swiper swiper-services">
                     <div class="swiper-wrapper">
@@ -248,9 +275,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-pagination-2 mx-auto"></div>
-
                 </div>
+                <div class="swiper-pagination-2 transform-none! mx-auto pt-8"></div>
             </div>
         </section>
 
@@ -262,7 +288,7 @@
                     </h2>
                 </div>
 
-                <div  class="grid grid-cols-4 sm:grid-cols-8 lg:grid-cols-12 gap-4 md:gap-5">
+                <div class="grid grid-cols-4 sm:grid-cols-8 lg:grid-cols-12 gap-4 md:gap-5">
                     <!-- Card 1 -->
                     <div data-aos="flip-right" data-aos-delay="200" class="feature-card">
                         <div class="icon">
@@ -496,7 +522,7 @@
                                                 <div
                                                     class="case-img w-full h-64 md:h-80 bg-bluebell-200 rounded-xs flex items-center justify-center">
                                                     <img src="./assets/img/banners/Banners LineSync-09.png" alt="">
-                                                  
+
                                                 </div>
                                                 <!-- <img class="w-full max-h-5/6 rounded-sm"
                                                     src="https://unsplash.it/640/?image=10" alt=""> -->
@@ -552,17 +578,18 @@
             <div class="bg-misk-200 px-4 md:container md:mx-auto md:grid md:grid-cols-12 md:gap-6">
 
                 <div id="links-footer"
-                    class="link bg-misk-200 pt-6 md:col-span-4 md:col-start-6   md:pt-0 order-1 md:order-2">
+                    class="link bg-misk-200 pt-6 md:col-span-4 md:col-start-6 md:pt-0 order-1 md:order-2">
                     <h2 class="font-title font-bold text-xl text-misk-900">
                         Navegue pelo site
                     </h2>
                     <ul class="grid gap-3 py-3">
                         <li><a href="./index.html" class="link-hover-underline">Página Inicial</a></li>
-                        <li><a href="" class="link-hover-underline">Sobre</a></li>
+                        <li><a href="./pages/about/" class="link-hover-underline">Sobre</a></li>
                         <li><a href="pages/trainee-promo.html" class="link-hover-underline">Carreiras</a></li>
                         <li><a href="pages/produtos" class="link-hover-underline">Serviços</a></li>
-                        <li><a href="" class="link-hover-underline">Contato</a></li>
-                        <li><a href="" class="link-hover-underline transition duration-300 ease-in-out">Setores</a></li>
+                        <li><a href="./pages/contato/contato.html" class="link-hover-underline">Contato</a></li>
+                        <li><a href="./pages/setores/setores.html"
+                                class="link-hover-underline transition duration-300 ease-in-out">Setores</a></li>
                     </ul>
                     <div class="divisor w-1/2 h-0.5 md:hidden mb-3 bg-bluebell-900 rounded-2xl "></div>
                 </div>

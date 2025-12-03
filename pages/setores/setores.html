@@ -13,10 +13,6 @@
   <link rel="stylesheet" href="../../css/components.css">
   <link href="../../css/output.css" rel="stylesheet">
 
-  <!-- Lucide Ícones -->
-  <!-- Development version -->
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-
   <!-- Flowbite -->
   <script src="../../assets/libs/flowbite/flowbite.min.js"></script>
 
@@ -48,7 +44,7 @@
           <ul
             class="py-12 md:py-6 w-full h-fit md:h-full flex items-center gap-12 md:gap-6 text-lg md:text-sm flex-col md:flex-row absolute md:relative bg-misk-200 md:bg-transparent rounded-b-sm  right-0">
             <li>
-              <a class="link-nav" href="../about.html"> Sobre </a>
+              <a class="link-nav" href="../about/"> Sobre </a>
             </li>
 
             <li>
@@ -63,7 +59,7 @@
               <a class="link-nav" href="../setores/setores.html"> Setores de atuação </a>
             </li>
             <li>
-              <a class="link-nav" href="./contato/contato.html">Contato</a>
+              <a class="link-nav" href="../contato/contato.html">Contato</a>
             </li>
           </ul>
         </nav>
@@ -202,7 +198,7 @@
       <img class="w-full hidden md:block pointer-events-none" src="../../assets/img/ui/footer-4.svg" alt="Imagem">
       <img class="w-full md:hidden pointer-events-none" src="../../assets/img/ui/footer-4-mobile-2.svg" alt="Imagem">
 
-      <div class="w-full bg-misk-200 md:pb-20">
+      <div class="w-full bg-misk-200 md:pb-20 -mt-0.5">
         <div class="bg-misk-200 px-4 md:container md:mx-auto md:grid md:grid-cols-12 md:gap-6">
 
           <div id="links-footer"
@@ -269,6 +265,11 @@
     </footer>
   
 </body>
+<!-- Splitting -->
+<script src="../../assets/libs/splitting/splitting.min.js"></script>
+
+<!-- AOS -->
+<script src="../../assets/libs/aos/aos.js"></script>
 
 <!-- Lucide JS -->
 <script src="../../assets/libs/lucide/lucide.min.js"></script>
@@ -276,6 +277,6 @@
 <!-- Swiper JS -->
 <script src="../../assets/libs/swiper/swiper-bundle.min.js"></script>
 
-<script src="../../assets/js/main.js"></script>
+<script defer src="../../assets/js/main.js"></script>
 
 </html>
