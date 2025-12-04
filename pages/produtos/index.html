@@ -104,7 +104,7 @@
             <div class="grid grid-cols-4 sm:grid-cols-8 lg:grid-cols-12 gap-4 md:gap-5">
 
                 <!-- Card 1 -->
-                <div data-aos="flip-right" data-aos-delay="200" class="feature-card" class="feature-card">
+                <div data-aos="flip-right" data-aos-delay="200" class="feature-card">
                     <div class="icon">
                         <i data-lucide="layout-dashboard"></i>
                     </div>
@@ -116,56 +116,66 @@
                             Automatize processos manuais e reduza retrabalho com workflows inteligentes e integrados.
                         </p>
                     </div>
-                    <button data-modal-target="default-modal" data-modal-toggle="default-modal" type="button"
+                    <button data-modal-target="modal-card-1" data-modal-toggle="modal-card-1" type="button"
                         class="card-btn-icon">
                         Saiba
                         mais <i class="text-pastelgreen" data-lucide="chevron-right"></i>
                     </button>
-                    <!-- Main modal -->
-                    <div id="default-modal" tabindex="-1" aria-hidden="true"
-                        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-                        <div class="relative p-4 w-full max-w-2xl max-h-full">
-                            <!-- Modal content -->
+                </div>
+
+                <!-- Main modal - Card 1 -->
+                <div id="modal-card-1" tabindex="-1" aria-hidden="true"
+                    class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                    <div class="relative p-4 w-full max-w-2xl max-h-full">
+                        <!-- Modal content -->
+                        <div
+                            class="relative bg-neutral-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
+                            <!-- Modal header -->
+                            <div class="flex items-center justify-between border-b border-default pb-4 md:pb-5">
+                                <h3 class="text-lg font-semibold text-heading">
+                                    Como Otimizamos o Fluxo de Trabalho do Seu Laboratório
+                                </h3>
+                                <button type="button"
+                                    class="text-body bg-transparent cursor-pointer hover:bg-neutral-tertiary hover:text-heading rounded-base text-sm w-9 h-9 ms-auto inline-flex justify-center items-center"
+                                    data-modal-hide="modal-card-1">
+                                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6" />
+                                    </svg>
+                                    <span class="sr-only">Close modal</span>
+                                </button>
+                            </div>
+                            <!-- Modal body -->
+                            <div class="space-y-4 md:space-y-6 py-4 md:py-6">
+                                <p class="leading-relaxed text-body">
+                                    Na LineSync, desenvolvemos soluções que automatizam processos manuais, eliminam
+                                    gargalos e integram todas as etapas do fluxo laboratorial. Com o nosso sistema
+                                    inteligente, você reduz retrabalho, acelera a entrega de resultados e aumenta a
+                                    produtividade da equipe. Tudo isso com uma interface intuitiva que se adapta à sua
+                                    rotina.
+                                </p>
+                                <ul class="leading-relaxed text-body list-disc list-inside">
+                                    <p class="leading-relaxed">
+                                        <strong>Benefícios principais:</strong>
+                                    </p>
+                                    <li>Automação de tarefas repetitivas</li>
+                                    <li>Integração entre diferentes etapas do processo</li>
+                                    <li>Redução de erros manuais</li>
+                                    <li>Aumento de produtividade em até 40%</li>
+                                </ul>
+                            </div>
+                            <!-- Modal footer -->
                             <div
-                                class="relative bg-neutral-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
-                                <!-- Modal header -->
-                                <div class="flex items-center justify-between border-b border-default pb-4 md:pb-5">
-                                    <h3 class="text-lg font-medium text-heading">
-                                        Terms of Service
-                                    </h3>
-                                    <button type="button"
-                                        class="text-body bg-transparent hover:bg-neutral-tertiary hover:text-heading rounded-base text-sm w-9 h-9 ms-auto inline-flex justify-center items-center"
-                                        data-modal-hide="default-modal">
-                                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                            width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                                stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6" />
-                                        </svg>
-                                        <span class="sr-only">Close modal</span>
-                                    </button>
-                                </div>
-                                <!-- Modal body -->
-                                <div class="space-y-4 md:space-y-6 py-4 md:py-6">
-                                    <p class="leading-relaxed text-body">
-                                        With less than a month to go before the European Union enacts new consumer
-                                        privacy laws for its citizens, companies around the world are updating their
-                                        terms of service agreements to comply.
-                                    </p>
-                                    <p class="leading-relaxed text-body">
-                                        The European Union’s General Data Protection Regulation (G.D.P.R.) goes into
-                                        effect on May 25 and is meant to ensure a common set of data rights in the
-                                        European Union. It requires organizations to notify users as soon as
-                                        possible of high-risk data breaches that could personally affect them.
-                                    </p>
-                                </div>
-                                <!-- Modal footer -->
-                                <div class="flex items-center border-t border-default space-x-4 pt-4 md:pt-5">
-                                    <button data-modal-hide="default-modal" type="button"
-                                        class=" text-[#1E1E1E] bg-pastelgreen-300 box-border border border-transparent hover:bg-pastelgreen-600 focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-[5px] text-sm px-4 py-2.5 focus:outline-none">I
-                                        accept</button>
-                                    <button data-modal-hide="default-modal" type="button"
-                                        class="text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-[5px] text-sm px-4 py-2.5 focus:outline-none">Decline</button>
-                                </div>
+                                class="flex items-center border-t border-default space-x-4 pt-4 md:pt-5 gap-2 md:gap-4">
+                                <p class="leading-relaxed text-body">
+                                    <em>Quer ver na prática? Agende uma demonstração personalizada.</em>
+                                </p>
+                                <a target="_blank" href="../contato/contato.html">
+                                    <button data-modal-hide="modal-card-1" type="button"
+                                        class=" text-[#1E1E1E] flex flex-nowrap gap-6 items-center bg-pastelgreen-300 box-border border text-nowrap border-transparent hover:bg-pastelgreen-600 focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-[5px] text-sm px-4 py-2.5 focus:outline-none">Demonstração
+                                        <i data-lucide="external-link"></i></button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -181,15 +191,72 @@
                             Monitoramento em Tempo Real
                         </h3>
                         <p class="text-sm text-misk-950">
-                            Descrição: Acompanhe indicadores, resultados e status de amostras em dashboards atualizados
+                            Acompanhe indicadores, resultados e status de amostras em dashboards atualizados
                             automaticamente.
                         </p>
                     </div>
-                    <button type="button" class="card-btn-icon">
+                    <button data-modal-target="modal-card-2" data-modal-toggle="modal-card-2" type="button"
+                        class="card-btn-icon">
                         Saiba
                         mais <i class="notebook-pen" data-lucide="chevron-right"></i>
                     </button>
                 </div>
+
+                <!-- Main modal - Card 2 -->
+                <div id="modal-card-2" tabindex="-1" aria-hidden="true"
+                    class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                    <div class="relative p-4 w-full max-w-2xl max-h-full">
+                        <!-- Modal content -->
+                        <div
+                            class="relative bg-neutral-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
+                            <!-- Modal header -->
+                            <div class="flex items-center justify-between border-b border-default pb-4 md:pb-5">
+                                <h3 class="text-lg font-semibold text-heading">
+                                    Dados em Tempo Real
+                                </h3>
+                                <button type="button"
+                                    class="text-body bg-transparent cursor-pointer hover:bg-neutral-tertiary hover:text-heading rounded-base text-sm w-9 h-9 ms-auto inline-flex justify-center items-center"
+                                    data-modal-hide="modal-card-2">
+                                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6" />
+                                    </svg>
+                                    <span class="sr-only">Close modal</span>
+                                </button>
+                            </div>
+                            <!-- Modal body -->
+                            <div class="space-y-4 md:space-y-6 py-4 md:py-6">
+                                <p class="leading-relaxed text-body">
+                                    Com a LineSync, você tem acesso a dashboards dinâmicos que atualizam automaticamente
+                                    conforme novos dados são inseridos. Monitore o status de amostras, visualize
+                                    indicadores de desempenho e tome decisões baseadas em informações precisas e
+                                    atualizadas.
+                                </p>
+                                <ul class="leading-relaxed text-body list-disc list-inside">
+                                    <p class="leading-relaxed">
+                                        <strong>Funcionalidades destacadas:</strong>
+                                    </p>
+                                    <li>Visualização de KPIs em tempo real</li>
+                                    <li>Alertas automáticos para desvios ou atrasos</li>
+                                    <li>Relatórios customizáveis</li>
+                                    <li>Exportação de dados para análises avançadas</li>
+                                </ul>
+                            </div>
+                            <!-- Modal footer -->
+                            <div
+                                class="flex items-center border-t border-default space-x-4 pt-4 md:pt-5 gap-2 md:gap-4">
+                                <p class="leading-relaxed text-body">
+                                    <em>Transforme dados em insights estratégicos.</em>
+                                </p>
+                                <a target="_blank" href="../contato/contato.html">
+                                   
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Card 3 -->
                 <div data-aos="flip-right" data-aos-delay="600" class="feature-card">
                     <div class="icon">
@@ -204,11 +271,68 @@
                             automatizados.
                         </p>
                     </div>
-                    <button type="button" class="card-btn-icon">
+                    <button data-modal-target="modal-card-3" data-modal-toggle="modal-card-3" type="button"
+                        class="card-btn-icon">
                         Saiba
                         mais <i class="text-pastelgreen" data-lucide="chevron-right"></i>
                     </button>
                 </div>
+
+                <!-- Main modal - Card 2 -->
+                <div id="modal-card-3" tabindex="-1" aria-hidden="true"
+                    class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                    <div class="relative p-4 w-full max-w-2xl max-h-full">
+                        <!-- Modal content -->
+                        <div
+                            class="relative bg-neutral-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
+                            <!-- Modal header -->
+                            <div class="flex items-center justify-between border-b border-default pb-4 md:pb-5">
+                                <h3 class="text-lg font-semibold text-heading">
+                                    Conformidade Regulatória com Segurança de Ponta a Ponta
+                                </h3>
+                                <button type="button"
+                                    class="text-body bg-transparent cursor-pointer hover:bg-neutral-tertiary hover:text-heading rounded-base text-sm w-9 h-9 ms-auto inline-flex justify-center items-center"
+                                    data-modal-hide="modal-card-3">
+                                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6" />
+                                    </svg>
+                                    <span class="sr-only">Close modal</span>
+                                </button>
+                            </div>
+                            <!-- Modal body -->
+                            <div class="space-y-4 md:space-y-6 py-4 md:py-6">
+                                <p class="leading-relaxed text-body">
+                                    Garantimos que seu laboratório opere dentro das mais rigorosas normas de qualidade e
+                                    regulamentação. Nossas soluções incluem auditoria integrada, rastreabilidade
+                                    completa de amostras e relatórios automáticos para inspeções. Tudo em um ambiente
+                                    seguro, com criptografia de dados e controle de acesso.
+                                </p>
+                                <ul class="leading-relaxed text-body list-disc list-inside">
+                                    <p class="leading-relaxed">
+                                        <strong>Funcionalidades destacadas:</strong>
+                                    </p>
+                                    <li>ISO 17025</li>
+                                    <li>BPF (Boas Práticas de Fabricação)</li>
+                                    <li>Regulamentações setoriais específicas</li>
+
+                                </ul>
+                            </div>
+                            <!-- Modal footer -->
+                            <div
+                                class="flex items-center border-t border-default space-x-4 pt-4 md:pt-5 gap-2 md:gap-4">
+                                <p class="leading-relaxed text-body">
+                                    <em>Opere com tranquilidade e credibilidade.</em>
+                                </p>
+                                <a target="_blank" href="../contato/contato.html">
+                                   
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Card 4 -->
                 <div data-aos="flip-right" data-aos-delay="800" class="feature-card">
                     <div class="icon">
@@ -326,7 +450,7 @@
                             Nossa solução é escalável para labs de qualquer porte, com dashboards personalizáveis e
                             integrações via API. Monitore KPIs, gere alertas automáticos e melhore a eficiência
                             operacional. LineSync: sincronizando sua linha de produção científica para resultados
-                            excepcionais. 
+                            excepcionais.
                         </p>
                     </div>
                 </div>
@@ -343,7 +467,10 @@
                 <div class="card__content">
                     <div class="produtosopcoescard bg-bluebell-200 grid  ">
                         <h3>LIMS Personalizado para o Seu Fluxo de Trabalho</h3>
-                        <p>Cada laboratório tem sua própria lógica, prioridades e ritmo. Por isso, desenvolvemos um LIMS totalmente adaptável à sua operação — desde o cadastro de amostras até a entrega de resultados. Uma solução moldada para reduzir retrabalho, aumentar a precisão e oferecer a agilidade que sua equipe precisa.</p>
+                        <p>Cada laboratório tem sua própria lógica, prioridades e ritmo. Por isso, desenvolvemos um LIMS
+                            totalmente adaptável à sua operação — desde o cadastro de amostras até a entrega de
+                            resultados. Uma solução moldada para reduzir retrabalho, aumentar a precisão e oferecer a
+                            agilidade que sua equipe precisa.</p>
                     </div>
                 </div>
             </li>
@@ -351,21 +478,28 @@
             <li class="card" id="card_2">
                 <div class="produtosopcoescard bg-bluebell-300 card__content grid  ">
                     <h3>Integrações Inteligentes com Equipamentos e Sistemas</h3>
-                    <p>A LineSync conecta seu laboratório ao que realmente importa. Integramos o LIMS a equipamentos analíticos, ERPs, CRMs e bancos de dados, garantindo um fluxo contínuo de informações. Menos tarefas manuais, mais segurança, rastreabilidade e automação real.</p>
+                    <p>A LineSync conecta seu laboratório ao que realmente importa. Integramos o LIMS a equipamentos
+                        analíticos, ERPs, CRMs e bancos de dados, garantindo um fluxo contínuo de informações. Menos
+                        tarefas manuais, mais segurança, rastreabilidade e automação real.</p>
                 </div>
             </li>
 
             <li class="card" id="card_3">
-                <div class="produtosopcoescard bg-bluebell-400 card__content">
-                    <h3 class="text-misk-50">ELN Digital Sob Medida para Pesquisas e Registros</h3>
-                    <p class="text-misk-50">Torne seus experimentos mais organizados e auditáveis com nosso Caderno Eletrônico de Laboratório (ELN). Uma plataforma moderna que centraliza registros, anotações e evidências — tudo com assinatura digital, histórico completo e conformidade com as principais normas.</p>
+                <div class="produtosopcoescard bg-bluebell-400 card__content grid">
+                    <h3 class=" ">ELN Digital Sob Medida para Pesquisas e Registros</h3>
+                    <p class=" ">Torne seus experimentos mais organizados e auditáveis com nosso Caderno
+                        Eletrônico de Laboratório (ELN). Uma plataforma moderna que centraliza registros, anotações e
+                        evidências — tudo com assinatura digital, histórico completo e conformidade com as principais
+                        normas.</p>
                 </div>
             </li>
 
             <li class="card" id="card_4">
-                <div class="produtosopcoescard card__content bg-bluebell-500 ">
+                <div class="produtosopcoescard card__content grid bg-bluebell-500 ">
                     <h3 class="text-misk-50">Escalabilidade e Segurança de Nível Corporativo</h3>
-                    <p class="text-misk-50">Seu laboratório cresce, e o LineSync cresce junto. Oferecemos infraestrutura escalável, ambiente seguro, backups automáticos e controle avançado de permissões. Tecnologia estável, confiável e pensada para longos ciclos de operação.</p>
+                    <p class="text-misk-50">Seu laboratório cresce, e o LineSync cresce junto. Oferecemos infraestrutura
+                        escalável, ambiente seguro, backups automáticos e controle avançado de permissões. Tecnologia
+                        estável, confiável e pensada para longos ciclos de operação.</p>
                 </div>
             </li>
         </ul>
