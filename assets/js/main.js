@@ -58,7 +58,11 @@ const swiperCases = new Swiper(".swiper-cases", {
     nextEl: ".swiper-button-next-cases",
     prevEl: ".swiper-button-prev-cases",
   },
-  pagination: { el: ".swiper-pagination-cases", clickable: true, type: "bullets" }, // ou fraction
+  pagination: {
+    el: ".swiper-pagination-cases",
+    clickable: true,
+    type: "bullets",
+  }, // ou fraction
   // breakpoints: {
   //   768: { slidesPerView: 2 },
   //   1024: { slidesPerView: 3 },
@@ -121,7 +125,6 @@ const swiperColab = new Swiper(".swiper-collaborators", {
   },
 });
 
-
 // Página de estágio Cultura
 const swiperCultureAbout = new Swiper(".swiper-culture-2", {
   slidesPerView: 1,
@@ -143,7 +146,6 @@ const swiperCultureAbout = new Swiper(".swiper-culture-2", {
     prevEl: ".swiper-button-prev-2",
   },
 });
-
 
 // Lucide
 console.log("tentando criar lucide");
@@ -210,7 +212,7 @@ navBtn.addEventListener("click", (e) => {
 
 // Fechar quando clica fora do menu
 document.addEventListener("click", (e) => {
-  console.log("log de clique")
+  console.log("log de clique");
   const clickedInside = navBtn.contains(e.target) || menu.contains(e.target);
   if (!clickedInside && menu.dataset.state === "open") {
     closeMobileMenu();
@@ -246,9 +248,12 @@ const countdown = () => {
   // Ano atual
   const actualYear = now.getFullYear(); // 2025
 
+  const actualDay = now.getDay();
+  const actualMonth = now.getMonth();
+
   // Janeiro é 0 porque os anos são contados em um array
   // primeiro param é o ano, segundo é o mês e o terceiro é o dia
-  const targetDate = new Date(actualYear, 11, 5);
+  const targetDate = new Date(actualYear, actualMonth, actualDay + 1);
 
   const timeLeft = targetDate - now; // retorna a data em milissegundos
 
@@ -262,7 +267,7 @@ const countdown = () => {
   render(days, hours, minutes, seconds);
 };
 
-// Usando Guard Clause para não rodar o countdown caso não tenha um component com id countdow na página
+// Usando Guard Clause para não rodar o countdown caso não tenha um component com id countdown na página
 const initCountdown = () => {
   const countdownContainer = document.getElementById("countdown");
 
@@ -276,7 +281,70 @@ const initCountdown = () => {
   setInterval(countdown, 1000);
 };
 
+const setDateLimit = () => {
+  const dateLimitContainer = document.getElementById("limit-date");
+  if (!dateLimitContainer) {
+    return;
+  }
+
+  const now = new Date();
+  // Ano atual
+  const actualYear = String(now.getFullYear()); // 2025
+  const actualDay = String(now.getDay() + 1); // E se for dia 31? Daria erro?
+  const actualMonth = now.getMonth;
+
+  let formattedMonth = "";
+
+  switch (actualMonth) {
+    case 0:
+      formattedMonth = "Janeiro";
+      break;
+    case 1:
+      formattedMonth = "Fevereiro";
+      break;
+    case 2:
+      formattedMonth = "Março";
+      break;
+    case 3:
+      formattedMonth = "Abril";
+      break;
+    case 4:
+      formattedMonth = "Maio";
+      break;
+    case 5:
+      formattedMonth = "Junho";
+      break;
+    case 6:
+      formattedMonth = "Julho";
+      break;
+    case 7:
+      formattedMonth = "Agosto";
+      break;
+    case 8:
+      formattedMonth = "Setembro";
+      break;
+    case 9:
+      formattedMonth = "Outubro";
+      break;
+    case 10:
+      formattedMonth = "Novembro";
+      break;
+    default:
+      formattedMonth = "Dezembro";
+  }
+
+  const setDate = document.getElementById("limit-date");
+
+  let dateParagraph = document.createElement("p");
+
+  dateParagraph.innerText = `${actualDay} de ${formattedMonth} de ${actualYear}`;
+
+  setDate.appendChild(dateParagraph);
+};
+
 initCountdown();
+
+setDateLimit();
 
 // Efeito de reveal on scroll
 const observerOptions = {
@@ -308,13 +376,13 @@ AOS.init({
   offset: 100, // Distância em px do topo para disparar a animação
 });
 
-
 // ============================================
 // SCROLL TO TOP BUTTON (Optional)
 // ============================================
 
 const scrollToTopBtn = document.createElement("button");
-scrollToTopBtn.innerHTML = '<svg data-lucide="arrow-up" width="20" height="20"></svg>';
+scrollToTopBtn.innerHTML =
+  '<svg data-lucide="arrow-up" width="20" height="20"></svg>';
 scrollToTopBtn.className =
   "fixed bottom-6 right-6 w-12 h-12 bg-misk-600 text-white rounded-full flex items-center justify-center opacity-0 cursor-pointer pointer-events-none transition-opacity duration-300 hover:bg-misk-700 z-40";
 scrollToTopBtn.id = "scroll-to-top";

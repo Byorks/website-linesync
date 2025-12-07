@@ -1538,11 +1538,47 @@
   .h-full\! {
     height: 100% !important;
   }
+  .max-h-2 {
+    max-height: calc(var(--spacing) * 2);
+  }
+  .max-h-2\/5 {
+    max-height: calc(2/5 * 100%);
+  }
+  .max-h-2\/5\! {
+    max-height: calc(2/5 * 100%) !important;
+  }
+  .max-h-4 {
+    max-height: calc(var(--spacing) * 4);
+  }
+  .max-h-4\/5 {
+    max-height: calc(4/5 * 100%);
+  }
   .max-h-5 {
     max-height: calc(var(--spacing) * 5);
   }
   .max-h-5\/6 {
     max-height: calc(5/6 * 100%);
+  }
+  .max-h-20 {
+    max-height: calc(var(--spacing) * 20);
+  }
+  .max-h-64 {
+    max-height: calc(var(--spacing) * 64);
+  }
+  .max-h-80 {
+    max-height: calc(var(--spacing) * 80);
+  }
+  .max-h-96 {
+    max-height: calc(var(--spacing) * 96);
+  }
+  .max-h-\[200px\] {
+    max-height: 200px;
+  }
+  .max-h-\[300px\] {
+    max-height: 300px;
+  }
+  .max-h-\[500px\] {
+    max-height: 500px;
   }
   .max-h-dvh {
     max-height: 100dvh;
@@ -1943,6 +1979,9 @@
   .rounded {
     border-radius: var(--radius);
   }
+  .rounded\! {
+    border-radius: var(--radius) !important;
+  }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
   }
@@ -2124,9 +2163,6 @@
       background-color: var(--color-neutral-secondary-medium);
     }
   }
-  .bg-\[fff\] {
-    background-color: fff;
-  }
   .bg-\[ffff\] {
     background-color: ffff;
   }
@@ -2141,9 +2177,6 @@
   }
   .bg-blue-700 {
     background-color: var(--color-blue-700);
-  }
-  .bg-bluebell-50 {
-    background-color: var(--color-bluebell-50);
   }
   .bg-bluebell-200 {
     background-color: var(--color-bluebell-200);
@@ -2321,9 +2354,6 @@
     --tw-gradient-to: transparent;
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
-  .bg-contain {
-    background-size: contain;
-  }
   .bg-cover {
     background-size: cover;
   }
@@ -2403,6 +2433,9 @@
   }
   .object-cover {
     object-fit: cover;
+  }
+  .object-fill {
+    object-fit: fill;
   }
   .apexcharts-legend {
     .apexcharts-canvas & {
@@ -2561,9 +2594,6 @@
   .text-left {
     text-align: left;
   }
-  .text-right {
-    text-align: right;
-  }
   .align-baseline {
     vertical-align: baseline;
   }
@@ -2584,6 +2614,22 @@
   .text-4xl {
     font-size: var(--text-4xl);
     line-height: var(--tw-leading, var(--text-4xl--line-height));
+  }
+  .text-4xl\! {
+    font-size: var(--text-4xl) !important;
+    line-height: var(--tw-leading, var(--text-4xl--line-height)) !important;
+  }
+  .text-5xl {
+    font-size: var(--text-5xl);
+    line-height: var(--tw-leading, var(--text-5xl--line-height));
+  }
+  .text-6xl {
+    font-size: var(--text-6xl);
+    line-height: var(--tw-leading, var(--text-6xl--line-height));
+  }
+  .text-7xl {
+    font-size: var(--text-7xl);
+    line-height: var(--tw-leading, var(--text-7xl--line-height));
   }
   .text-base {
     font-size: var(--text-base);
@@ -2686,6 +2732,10 @@
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
+  }
+  .font-semibold\! {
+    --tw-font-weight: var(--font-weight-semibold) !important;
+    font-weight: var(--font-weight-semibold) !important;
   }
   .tracking-tight {
     --tw-tracking: var(--tracking-tight);
@@ -2929,6 +2979,18 @@
       inset: calc(var(--spacing) * 0);
     }
   }
+  .after\:mb-4 {
+    &::after {
+      content: var(--tw-content);
+      margin-bottom: calc(var(--spacing) * 4);
+    }
+  }
+  .after\:mb-12 {
+    &::after {
+      content: var(--tw-content);
+      margin-bottom: calc(var(--spacing) * 12);
+    }
+  }
   .after\:bg-\[url\(\'\.\.\/\.\.\/assets\/img\/ui\/bubbles-horizontal-2\.svg\'\)\] {
     &::after {
       content: var(--tw-content);
@@ -2963,6 +3025,24 @@
     &::after {
       content: var(--tw-content);
       background-repeat: repeat;
+    }
+  }
+  .after\:pb-12 {
+    &::after {
+      content: var(--tw-content);
+      padding-bottom: calc(var(--spacing) * 12);
+    }
+  }
+  .after\:opacity-35 {
+    &::after {
+      content: var(--tw-content);
+      opacity: 35%;
+    }
+  }
+  .after\:opacity-50 {
+    &::after {
+      content: var(--tw-content);
+      opacity: 50%;
     }
   }
   .after\:content-\[\'\'\] {
@@ -3349,6 +3429,16 @@
   .md\:max-h-\[75dvh\] {
     @media (width >= 48rem) {
       max-height: 75dvh;
+    }
+  }
+  .md\:w-1\/2 {
+    @media (width >= 48rem) {
+      width: calc(1/2 * 100%);
+    }
+  }
+  .md\:w-2\/5 {
+    @media (width >= 48rem) {
+      width: calc(2/5 * 100%);
     }
   }
   .md\:max-w-5xl {
