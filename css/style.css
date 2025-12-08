@@ -75,6 +75,14 @@
   Estilos globais para tags HTML puras.
 */
 @layer base {
+    /* :root {
+        -bg-
+    }
+
+    :root:has(.dark) {
+
+    } */
+
     html {
         scroll-behavior: smooth;
     }
