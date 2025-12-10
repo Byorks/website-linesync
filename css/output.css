@@ -2937,13 +2937,6 @@
       }
     }
   }
-  .hover\:text-misk-300\! {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-misk-300) !important;
-      }
-    }
-  }
   .hover\:text-red-600 {
     &:hover {
       @media (hover: hover) {
@@ -3469,47 +3462,52 @@
     }
   }
   .dark\:block {
-    @media (prefers-color-scheme: dark) {
+    &:where(.dark, .dark *) {
       display: block;
     }
   }
   .dark\:hidden {
-    @media (prefers-color-scheme: dark) {
+    &:where(.dark, .dark *) {
       display: none;
     }
   }
   .dark\:border-gray-500 {
-    @media (prefers-color-scheme: dark) {
+    &:where(.dark, .dark *) {
       border-color: var(--color-gray-500);
     }
   }
   .dark\:border-gray-600 {
-    @media (prefers-color-scheme: dark) {
+    &:where(.dark, .dark *) {
       border-color: var(--color-gray-600);
     }
   }
+  .dark\:bg-\[\#1B172D\] {
+    &:where(.dark, .dark *) {
+      background-color: #1B172D;
+    }
+  }
   .dark\:bg-blue-600 {
-    @media (prefers-color-scheme: dark) {
+    &:where(.dark, .dark *) {
       background-color: var(--color-blue-600);
     }
   }
   .dark\:bg-gray-600 {
-    @media (prefers-color-scheme: dark) {
+    &:where(.dark, .dark *) {
       background-color: var(--color-gray-600);
     }
   }
   .dark\:bg-gray-700 {
-    @media (prefers-color-scheme: dark) {
+    &:where(.dark, .dark *) {
       background-color: var(--color-gray-700);
     }
   }
   .dark\:bg-gray-800 {
-    @media (prefers-color-scheme: dark) {
+    &:where(.dark, .dark *) {
       background-color: var(--color-gray-800);
     }
   }
   .dark\:bg-gray-800\/50 {
-    @media (prefers-color-scheme: dark) {
+    &:where(.dark, .dark *) {
       background-color: color-mix(in srgb, oklch(27.8% 0.033 256.848) 50%, transparent);
       @supports (color: color-mix(in lab, red, red)) {
         background-color: color-mix(in oklab, var(--color-gray-800) 50%, transparent);
@@ -3517,7 +3515,7 @@
     }
   }
   .dark\:bg-gray-900\/80 {
-    @media (prefers-color-scheme: dark) {
+    &:where(.dark, .dark *) {
       background-color: color-mix(in srgb, oklch(21% 0.034 264.665) 80%, transparent);
       @supports (color: color-mix(in lab, red, red)) {
         background-color: color-mix(in oklab, var(--color-gray-900) 80%, transparent);
@@ -3525,22 +3523,42 @@
     }
   }
   .dark\:text-gray-300 {
-    @media (prefers-color-scheme: dark) {
+    &:where(.dark, .dark *) {
       color: var(--color-gray-300);
     }
   }
   .dark\:text-gray-400 {
-    @media (prefers-color-scheme: dark) {
+    &:where(.dark, .dark *) {
       color: var(--color-gray-400);
     }
   }
+  .dark\:text-misk-50 {
+    &:where(.dark, .dark *) {
+      color: var(--color-misk-50);
+    }
+  }
+  .dark\:text-misk-100 {
+    &:where(.dark, .dark *) {
+      color: var(--color-misk-100);
+    }
+  }
+  .dark\:text-misk-200 {
+    &:where(.dark, .dark *) {
+      color: var(--color-misk-200);
+    }
+  }
+  .dark\:text-misk-300 {
+    &:where(.dark, .dark *) {
+      color: var(--color-misk-300);
+    }
+  }
   .dark\:text-white {
-    @media (prefers-color-scheme: dark) {
+    &:where(.dark, .dark *) {
       color: var(--color-white);
     }
   }
   .dark\:hover\:bg-blue-700 {
-    @media (prefers-color-scheme: dark) {
+    &:where(.dark, .dark *) {
       &:hover {
         @media (hover: hover) {
           background-color: var(--color-blue-700);
@@ -3549,7 +3567,7 @@
     }
   }
   .dark\:hover\:bg-gray-600 {
-    @media (prefers-color-scheme: dark) {
+    &:where(.dark, .dark *) {
       &:hover {
         @media (hover: hover) {
           background-color: var(--color-gray-600);
@@ -3558,7 +3576,7 @@
     }
   }
   .dark\:hover\:bg-gray-800 {
-    @media (prefers-color-scheme: dark) {
+    &:where(.dark, .dark *) {
       &:hover {
         @media (hover: hover) {
           background-color: var(--color-gray-800);
@@ -3567,7 +3585,7 @@
     }
   }
   .dark\:hover\:text-white {
-    @media (prefers-color-scheme: dark) {
+    &:where(.dark, .dark *) {
       &:hover {
         @media (hover: hover) {
           color: var(--color-white);
@@ -3576,25 +3594,16 @@
     }
   }
   .dark\:focus\:ring-blue-800 {
-    @media (prefers-color-scheme: dark) {
+    &:where(.dark, .dark *) {
       &:focus {
         --tw-ring-color: var(--color-blue-800);
       }
     }
   }
   .dark\:focus\:ring-gray-600 {
-    @media (prefers-color-scheme: dark) {
+    &:where(.dark, .dark *) {
       &:focus {
         --tw-ring-color: var(--color-gray-600);
-      }
-    }
-  }
-  .hover\:\[\&\>svg\]\:text-misk-300 {
-    &:hover {
-      @media (hover: hover) {
-        &>svg {
-          color: var(--color-misk-300);
-        }
       }
     }
   }
@@ -3802,6 +3811,11 @@ input[type="checkbox"] {
   }
 }
 @layer base {
+  :root:has(.dark) {
+    html {
+      background-color: #f472b6;
+    }
+  }
   html {
     scroll-behavior: smooth;
   }
@@ -4200,6 +4214,9 @@ input[type="checkbox"] {
     padding: calc(var(--spacing) * 4);
     --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    &:where(.dark, .dark *) {
+      background-color: var(--color-bluebell-900);
+    }
   }
   .feature-card .icon {
     display: flex;
@@ -4225,6 +4242,9 @@ input[type="checkbox"] {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
     color: var(--color-misk-950);
+    &:where(.dark, .dark *) {
+      color: var(--color-misk-50);
+    }
   }
   .feature-card .text-card p {
     font-size: var(--text-sm);

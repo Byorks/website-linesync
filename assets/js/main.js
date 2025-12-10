@@ -178,6 +178,7 @@ const navHiddenDistance = "-100dvh";
 
 // Troca o ícone do lucide
 const updateIcon = (isOpen) => {
+  if (!iconElement) return;
   navBtn
     .querySelector("svg")
     .setAttribute("data-lucide", isOpen ? "x" : "menu");
@@ -227,7 +228,7 @@ document.addEventListener("keydown", (e) => {
 });
 
 // =========================================
-// Contdown
+// Countdown
 // =========================================
 const daysElements = document.querySelector("[count-days]");
 const hoursElements = document.querySelector("[count-hours]");
@@ -445,16 +446,16 @@ const toggleTheme = () => {
   }
 }
 
-// Atualiza o ícone (Lucide)
-function updateIcon(mode) {
-    if (!iconElement) return;
+// // Atualiza o ícone (Lucide)
+// function updateIcon(mode) {
+//     if (!iconElement) return;
     
-    // Se estiver usando data-lucide, precisamos pedir pro lucide renderizar novamente ou trocar o atributo
-    // Uma forma simples é trocar o atributo data-lucide e rodar lucide.createIcons()
-    // Mas como o Lucide substitui o <i> por <svg>, é melhor ter dois ícones no HTML e alternar a visibilidade (hidden/block)
+//     // Se estiver usando data-lucide, precisamos pedir pro lucide renderizar novamente ou trocar o atributo
+//     // Uma forma simples é trocar o atributo data-lucide e rodar lucide.createIcons()
+//     // Mas como o Lucide substitui o <i> por <svg>, é melhor ter dois ícones no HTML e alternar a visibilidade (hidden/block)
     
-    // *DICA PRO:* Veja a implementação no HTML abaixo para a troca de ícones mais fácil.
-}
+//     // *DICA PRO:* Veja a implementação no HTML abaixo para a troca de ícones mais fácil.
+// }
 
 loadTheme();
 

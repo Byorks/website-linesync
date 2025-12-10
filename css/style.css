@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @import "flowbite/src/themes/default";
 @import "./components.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
 /* 
   1. Fontes e Plugins 
 */
@@ -11,7 +13,7 @@
   2. Tema Personalizado (Design System)
 */
 @theme {
-
+    
     /* 🎨 Pastel Green */
     --color-pastelgreen-50: #f3faeb;
     --color-pastelgreen-100: #e2f4d3;
@@ -70,18 +72,23 @@
 
 }
 
+@media ( prefers-color-scheme: dark ) {
+    .theme-a {
+        
+    }
+}
 /* 
   3. Camada Base 
   Estilos globais para tags HTML puras.
 */
 @layer base {
-    /* :root {
-        -bg-
-    }
+ 
 
     :root:has(.dark) {
-
-    } */
+       html {
+        background-color: #f472b6;
+       }
+    }
 
     html {
         scroll-behavior: smooth;
@@ -163,7 +170,7 @@
 
     /* Cards */
     .feature-card {
-        @apply shadow-md bg-misk-50 col-span-4 rounded-lg p-4 flex flex-col justify-between gap-4;
+        @apply shadow-md bg-misk-50 dark:bg-bluebell-900 col-span-4 rounded-lg p-4 flex flex-col justify-between gap-4;
     }
 
     .feature-card .icon {
@@ -175,7 +182,7 @@
     }
 
     .feature-card .text-card h3 {
-        @apply font-title font-bold text-lg pb-2 text-misk-950;
+        @apply font-title font-bold text-lg pb-2 text-misk-950 dark:text-misk-50;
     }
 
     .feature-card .text-card p {
@@ -284,3 +291,4 @@
     font-weight: 100 900;
     font-style: normal;
 }
+
