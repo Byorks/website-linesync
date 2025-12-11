@@ -53,9 +53,15 @@
     --color-bluebell-900: #4e466c;
     --color-bluebell-950: #322d48;
 
+     /* Design System */
+    --color-primary: var(--color-misk-900);
+    --color-secondary: var(--color-misk-200);
+    --color-terciary: var(--color-bluebell-500);
+
     /* Tipografia */
+    --color-text-primary: var(--color-misk-950);
     --font-title: "Manrope", sans-serif;
-    --font-body: "Inter", sans-serif, i-sans-serif, system-ui, ;
+    --font-body: "Inter", sans-serif, i-sans-serif, system-ui,;
 
     /* Animações */
     --animate-loop-scroll: loop-scroll 50s linear infinite;
@@ -70,11 +76,18 @@
         }
     }
 
+    
 }
+  
 
 @media ( prefers-color-scheme: dark ) {
-    .theme-a {
+    .dark {
+        --color-primary: var(--color-misk-300);
+        --color-secondary: var(--color-misk-900);
+        --color-terciary: var(--color-bluebell-950);
+
         
+        --color-text-primary: var(--color-bluebell-300);
     }
 }
 /* 
@@ -82,13 +95,6 @@
   Estilos globais para tags HTML puras.
 */
 @layer base {
- 
-
-    :root:has(.dark) {
-       html {
-        background-color: #f472b6;
-       }
-    }
 
     html {
         scroll-behavior: smooth;
@@ -110,7 +116,8 @@
     {
     font-family: var(--font-body);
     text-align: left;
-}
+    color: var(--color-text-primary);
+    }
 }
 
 /* 
@@ -123,7 +130,11 @@
 
     /* --- Tipografia & Links --- */
     .title-h2 {
-        @apply text-3xl md:text-4xl font-title font-semibold text-misk-900;
+        @apply text-3xl md:text-4xl font-title font-semibold text-misk-900 dark:text-primary;
+    }
+
+    .footer-title {
+        @apply font-title font-bold text-xl text-misk-900 dark:text-primary;
     }
 
     .link-nav {
@@ -131,13 +142,17 @@
     }
 
     .link-hover-underline {
-        @apply relative text-bluebell-900 font-medium after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-bluebell-900 after:transition-all after:duration-300 hover:after:w-full;
+        @apply relative text-bluebell-900 dark:text-text-primary font-medium after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-bluebell-900 dark:after:bg-primary after:transition-all after:duration-300 hover:after:w-full;
     }
 
     .link-hover-zoom {
         @apply inline-block transition-transform duration-300 ease-in-out hover:scale-105;
     }
-
+    
+    .social-links {
+        @apply text-misk-950 dark:text-text-primary hover:bg-misk-600/50 active:bg-misk-100 rounded transition duration-300 ease-in-out cursor-pointer;
+    }
+    
     /* --- Botões --- */
     .nav-btn {
         @apply w-11 h-11 border border-bluebell-900 hover:border-misk-400 bg-bluebell-900 rounded-md [&>svg]:text-pastelgreen-300 hover:[&>svg]:text-misk-300 hover:[&>svg]:transition hover:[&>svg]:ease-in-out hover:[&>svg]:duration-300 transition ease-out duration-300 cursor-pointer flex items-center justify-center;
@@ -161,13 +176,14 @@
 
     /* --- Elementos de UI --- */
     .cases-bullet {
-        @apply max-w-fit h-auto font-semibold bg-pastelgreen-300 text-[#1E1E1E] py-1 px-6 rounded-3xl;
+        @apply max-w-fit h-auto font-semibold bg-pastelgreen-300 dark:bg-secondary text-[#1E1E1E] py-1 px-6 rounded-3xl;
     }
 
     .form-label {
         @apply font-medium text-misk-800 font-body;
     }
 
+    
     /* Cards */
     .feature-card {
         @apply shadow-md bg-misk-50 dark:bg-bluebell-900 col-span-4 rounded-lg p-4 flex flex-col justify-between gap-4;
@@ -186,7 +202,7 @@
     }
 
     .feature-card .text-card p {
-        @apply text-sm text-misk-950;
+        @apply text-sm text-text-primary;
     }
 
     /* --- Swiper Custom Overrides --- */
