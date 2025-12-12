@@ -25,16 +25,31 @@
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="./assets/libs/swiper/swiper-bundle.min.css" />
 
+    <script>
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      </script>
+
 </head>
 
 <body class="font-body dark:bg-[#1B172D]">
-    <header class="w-full h-[66px] bg-misk-200 border-b-[1.3px] border-pastelgreen-300 sticky top-0 z-100">
+    <header class="w-full h-[66px] bg-misk-200  dark:bg-terciary border-b-[1.3px] border-pastelgreen-300 sticky top-0 z-100">
         <div class="w-full h-full px-6 flex items-center justify-between">
-            <div class="logo">
+            <div class="logo dark:hidden">
                 <a class="block text-misk-700 font-bold text-lg" href="./">
                     <img src="./assets/img/ui/linesync-header-logo.svg" alt="LineSync" class="h-12">
                 </a>
             </div>
+            
+            <div class="logo hidden dark:block">
+                <a class="block text-misk-700 font-bold text-lg" href="./">
+                    <img src="./assets/img/ui/logo-fundo-escuro.svg" alt="LineSync" class="h-12">
+                </a>
+            </div>
+            
 
             <!-- Opção 1 Menu -->
             <div id="nav-btn" class="nav-btn flex items-center justify-center md:hidden z-50">
@@ -45,7 +60,7 @@
                 class="w-full h-dvh md:h-full duration-300 grow flex justify-center md:relative md:top-[inherit] top-[-100dvh] absolute left-0 z-40 bg-transparent">
                 <nav aria-label="Global">
                     <ul
-                        class="py-12 md:py-6 w-full h-fit md:h-full flex items-center gap-12 md:gap-6 text-lg md:text-sm flex-col md:flex-row absolute md:relative bg-misk-200 md:bg-transparent rounded-b-sm  right-0">
+                        class="py-12 md:py-6 w-full h-fit md:h-full flex items-center gap-12 md:gap-6 text-lg md:text-sm flex-col md:flex-row absolute md:relative bg-misk-200 dark:bg-terciary md:bg-transparent rounded-b-sm  right-0">
                         <li>
                             <a class="link-nav" href="./pages/about/"> Sobre </a>
                         </li>
@@ -79,12 +94,12 @@
                                 fill="currentColor" />
                         </svg> -->
                         <!-- Sun -->
-                        <i data-lucide="sun" class="w-5 h-5 hidden dark:block text-misk-900"></i>
+                        <i data-lucide="sun" class="w-5 h-5 hidden dark:block text-pastelgreen-300 hover:text-misk-300 cursor-pointer transition ease-in-out duration-300"></i>
 
 
 
                         <!-- Ícone Lua (Esconde no Light, aparece no Dark) -->
-                        <i data-lucide="moon" class="w-5 h-5  dark:hidden text-pastelgreen-300"></i>
+                        <i data-lucide="moon" fill="currentColor" class="w-5 h-5  dark:hidden text-pastelgreen-300 hover:text-misk-300 cursor-pointer transition ease-in-out duration-300"></i>
                     </button>
                 </div>
 
@@ -142,7 +157,7 @@
                     <div class="swiper-wrapper ">
                         <div class="swiper-slide h-full ">
                             <img src="./assets/img/banners/mobile-banner.png"
-                                class=" h-dvh max-h-dvh md:max-h-[60dvh] 2xl:max-h-[75dvh] min-h-[60dvh]"
+                                class="h-dvh max-h-dvh md:max-h-[60dvh] 2xl:max-h-[75dvh] min-h-[60dvh]"
                                 loading="eager">
                         </div>
 
@@ -170,21 +185,21 @@
                     <div class="swiper-wrapper">
                         <!-- Frase 1 -->
                         <div class="swiper-slide flex items-center justify-center">
-                            <p class="slide-text text-center text-4xl font-bold   bg-clip-text text-misk-900 dark:text-misk-300"
+                            <p class="slide-text text-center text-4xl font-bold  bg-clip-text text-misk-900 dark:text-misk-300"
                                 data-splitting>
                                 Tecnologia
                             </p>
                         </div>
                         <!-- Frase 2 -->
                         <div class="swiper-slide flex items-center justify-center">
-                            <p class="slide-text text-center text-4xl font-bold   bg-clip-text text-misk-900 dark:text-misk-300"
+                            <p class="slide-text text-center text-4xl font-bold  bg-clip-text text-misk-900 dark:text-misk-300"
                                 data-splitting>
                                 Automação
                             </p>
                         </div>
                         <!-- Frase 3 -->
                         <div class="swiper-slide flex items-center justify-center">
-                            <p class="slide-text text-center text-4xl font-bold   bg-clip-text text-misk-900 dark:text-misk-300"
+                            <p class="slide-text text-center text-4xl font-bold  bg-clip-text text-misk-900 dark:text-misk-300"
                                 data-splitting="">
                                 Eficiência
                             </p>
@@ -195,7 +210,7 @@
 
         </section>
 
-        <section class="mb-16 px-4 md:px-12 xl:px-0 mx-auto bg-misk-50">
+        <section class="mb-16 px-4 md:px-12 xl:px-0 mx-auto bg-misk-50 dark:bg-bluebell-950">
             <div class="max-w-6xl py-12 mx-auto ">
                 <!-- Swiper -->
                 <div class="swiper swiper-services">
@@ -244,27 +259,6 @@
                             </div>
                         </div>
 
-                        <!-- <div class="swiper-slide">
-                            <div
-                                class="w-full h-full! flex flex-col-reverse sm:grid sm:grid-cols-4 md:grid-cols-12 gap-5 items-center justify-center">
-                                <div class=" w-full  col-span-6">
-                                    <img src="./assets/img/mockups/mockup-3.png"
-                                        class="rounded-lg w-full! object-contain!" alt="imagem ilustrativa">
-                                </div>
-                                <div class="col-span-4 md:col-span-5 md:col-end-13">
-                                    <h2 class="pb-8 title-h2">
-                                        Mobile
-                                    </h2>
-                                    <p class="mb-8 md:mb-12">
-                                        Acesso remoto aos dados do seu laboratório, a qualquer hora e lugar — acompanhe resultados, autores e tarefas direto do celular.
-                                    </p>
-                                    <button class="btn-primary">
-                                        Contato
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                         -->
                         <div class="swiper-slide">
                             <div
                                 class="w-full flex flex-col sm:grid sm:grid-cols-4 md:grid-cols-12 gap-5 items-center justify-center">
@@ -315,7 +309,7 @@
                             <h3>
                                 Integração completa do fluxo laboratorial
                             </h3>
-                            <p class="text-sm text-misk-950">
+                            <p class="text-">
                                 Do registro de dados ao resultado final: todos os processos concentrados em uma única
                                 plataforma.
                             </p>
@@ -385,7 +379,7 @@
                             <h3>
                                 Segurança e conformidade regulatória
                             </h3>
-                            <p class="text-sm text-misk-950">
+                            <p class="text-sm">
                                 Desenvolvemos pensando nas normas e boas práticas, garantindo confiabilidade e
                                 rastreabilidade.
                             </p>
@@ -406,7 +400,7 @@
                             <h3>
                                 Automação e eficiência com tecnologia de ponta
                             </h3>
-                            <p class="text-sm text-misk-950">
+                            <p class="text-sm">
                                 Reduza tempo de análise e maximize produtividade com IA e automações inteligentes.
                             </p>
                         </div>
@@ -572,8 +566,10 @@
                         <img class="w-full h-full rounded" src="./assets/img/banners/banner-carreira.png" alt="">
 
 
-                        <button type="button" class="btn-primary absolute left-1/2 bottom-8 -translate-x-1/2">Saiba
-                            mais</button>
+                        <a href="./pages/trainee-promo.html">
+                            <button type="button" class="btn-primary absolute left-1/2 bottom-8 -translate-x-1/2">Saiba
+                                mais</button>
+                        </a>
                     </div>
                 </div>
 
@@ -593,6 +589,8 @@
         <!-- Modo Dark -->
         <div class="w-full  hidden dark:block">
             <img class="w-full h-fit hidden md:block pointer-events-none" src="./assets/img/ui/footer-4-dark.svg">
+            <img class="w-full md:hidden pointer-events-none" src="./assets/img/ui/footer-4-mobile-dark.svg"
+            alt="Imagem">
         </div>
 
         <div class="w-full bg-misk-200 dark:bg-terciary md:pb-20 -mt-0.5">
@@ -619,7 +617,7 @@
                         Conheça nossas mídias
                     </h2>
 
-                    <div class="flex gap-1">
+                    <div class="flex gap-1 py-3">
                         <a class="social-links" target="_blank" href="https://www.instagram.com/linesync_tech">
                             <svg width="51" height="52" viewBox="0 0 51 52" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">

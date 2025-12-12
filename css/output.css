@@ -27,7 +27,6 @@
     --color-orange-800: oklch(47% 0.157 37.304);
     --color-orange-900: oklch(40.8% 0.123 38.172);
     --color-orange-950: oklch(26.6% 0.079 36.259);
-    --color-amber-300: oklch(87.9% 0.169 91.605);
     --color-yellow-50: oklch(98.7% 0.026 102.212);
     --color-yellow-100: oklch(97.3% 0.071 103.193);
     --color-yellow-200: oklch(94.5% 0.129 101.54);
@@ -1464,9 +1463,6 @@
   .h-full {
     height: 100%;
   }
-  .h-full\! {
-    height: 100% !important;
-  }
   .max-h-5\/6 {
     max-height: calc(5/6 * 100%);
   }
@@ -1597,9 +1593,6 @@
   }
   .w-full {
     width: 100%;
-  }
-  .w-full\! {
-    width: 100% !important;
   }
   .max-w-2xl {
     max-width: var(--container-2xl);
@@ -2662,6 +2655,9 @@
   .opacity-100 {
     opacity: 100%;
   }
+  .bg-blend-multiply {
+    background-blend-mode: multiply;
+  }
   .mix-blend-multiply {
     mix-blend-mode: multiply;
   }
@@ -2932,6 +2928,13 @@
     &:hover {
       @media (hover: hover) {
         color: var(--color-heading);
+      }
+    }
+  }
+  .hover\:text-misk-300 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-misk-300);
       }
     }
   }
@@ -3489,6 +3492,11 @@
       background-color: var(--color-blue-600);
     }
   }
+  .dark\:bg-bluebell-950 {
+    &:where(.dark, .dark *) {
+      background-color: var(--color-bluebell-950);
+    }
+  }
   .dark\:bg-gray-600 {
     &:where(.dark, .dark *) {
       background-color: var(--color-gray-600);
@@ -3837,7 +3845,7 @@ input[type="checkbox"] {
     --color-primary: var(--color-misk-300);
     --color-secondary: var(--color-misk-900);
     --color-terciary: var(--color-bluebell-950);
-    --color-text-primary: var(--color-bluebell-300);
+    --color-text-primary: var(--color-misk-200);
   }
 }
 @layer base {
@@ -3905,6 +3913,9 @@ input[type="checkbox"] {
           color: color-mix(in oklab, var(--color-misk-950) 75%, transparent);
         }
       }
+    }
+    &:where(.dark, .dark *) {
+      color: var(--color-misk-100);
     }
   }
   .link-hover-underline {
@@ -4307,6 +4318,12 @@ input[type="checkbox"] {
     background-color: var(--color-misk-200);
     padding: calc(var(--spacing) * 3);
     color: var(--color-misk-900);
+    &:where(.dark, .dark *) {
+      background-color: var(--color-bluebell-950);
+    }
+    &:where(.dark, .dark *) {
+      color: var(--color-misk-50);
+    }
   }
   .feature-card .icon svg {
     height: 100%;

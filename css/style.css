@@ -86,8 +86,7 @@
         --color-secondary: var(--color-misk-900);
         --color-terciary: var(--color-bluebell-950);
 
-        
-        --color-text-primary: var(--color-bluebell-300);
+        --color-text-primary: var(--color-misk-200);
     }
 }
 /* 
@@ -138,7 +137,7 @@
     }
 
     .link-nav {
-        @apply text-misk-900 font-body transition ease-in-out duration-300 font-medium hover:font-semibold hover:text-misk-950/75;
+        @apply text-misk-900 dark:text-misk-100 font-body transition ease-in-out duration-300 font-medium hover:font-semibold hover:text-misk-950/75;
     }
 
     .link-hover-underline {
@@ -190,7 +189,7 @@
     }
 
     .feature-card .icon {
-        @apply p-3 bg-misk-200 text-misk-900 aspect-square w-13 h-13 flex justify-center items-center rounded-md;
+        @apply p-3 bg-misk-200 dark:bg-bluebell-950 text-misk-900 dark:text-misk-50 aspect-square w-13 h-13 flex justify-center items-center rounded-md;
     }
 
     .feature-card .icon svg {
