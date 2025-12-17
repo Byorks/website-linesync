@@ -153,6 +153,7 @@ h1 {
 .card-content p {
   max-width: 80%;
   font-size: 0.95rem;
+  color: var(--misk-100);
 }
 
 .card-seta {
@@ -186,6 +187,9 @@ h1 {
   flex-direction: column;
 }
 
+.modal-content p {
+  color: white;
+}
 
 .modal-image {
   width: 100%;
