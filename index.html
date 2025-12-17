@@ -303,7 +303,7 @@
                                 plataforma.
                             </p>
                         </div>
-                        <button data-modal-target="default-modal" data-modal-toggle="default-modal" type="button"
+                        <button data-modal-target="modal-card-1" data-modal-toggle="modal-card-1" type="button"
                             class="card-btn-icon">
                             Saiba
                             mais <i class="text-pastelgreen" data-lucide="chevron-right"></i>
@@ -311,8 +311,8 @@
 
                     </div>
 
-                    <!-- Main modal -->
-                    <div id="default-modal" tabindex="-1" aria-hidden="true"
+                    <!-- Main modal - Card 1 -->
+                    <div id="modal-card-1" tabindex="-1" aria-hidden="true"
                         class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
                         <div class="relative p-4 w-full max-w-2xl max-h-full">
                             <!-- Modal content -->
@@ -320,12 +320,12 @@
                                 class="relative bg-neutral-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
                                 <!-- Modal header -->
                                 <div class="flex items-center justify-between border-b border-default pb-4 md:pb-5">
-                                    <h3 class="text-lg font-medium text-heading">
-                                        Terms of Service
+                                    <h3 class="text-lg font-semibold text-heading">
+                                        Integração completa do fluxo laboratorial
                                     </h3>
                                     <button type="button"
-                                        class="text-body bg-transparent hover:bg-neutral-tertiary hover:text-heading rounded-base text-sm w-9 h-9 ms-auto inline-flex justify-center items-center"
-                                        data-modal-hide="default-modal">
+                                        class="text-body bg-transparent cursor-pointer hover:bg-neutral-tertiary hover:text-heading rounded-base text-sm w-9 h-9 ms-auto inline-flex justify-center items-center"
+                                        data-modal-hide="modal-card-1">
                                         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                             width="24" height="24" fill="none" viewBox="0 0 24 24">
                                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -337,24 +337,35 @@
                                 <!-- Modal body -->
                                 <div class="space-y-4 md:space-y-6 py-4 md:py-6">
                                     <p class="leading-relaxed text-body">
-                                        With less than a month to go before the European Union enacts new consumer
-                                        privacy laws for its citizens, companies around the world are updating their
-                                        terms of service agreements to comply.
+                                        A LineSync centraliza todas as etapas do trabalho laboratorial em uma única
+                                        plataforma, eliminando sistemas isolados e processos manuais desconectados.
                                     </p>
                                     <p class="leading-relaxed text-body">
-                                        The European Union’s General Data Protection Regulation (G.D.P.R.) goes into
-                                        effect on May 25 and is meant to ensure a common set of data rights in the
-                                        European Union. It requires organizations to notify users as soon as
-                                        possible of high-risk data breaches that could personally affect them.
-                                    </p>
+                                        Do registro inicial das amostras até a emissão de resultados e relatórios, cada
+                                        etapa é integrada de forma contínua, garantindo fluidez, organização e controle
+                                        total.</p>
+                                    <ul class="leading-relaxed text-body list-disc list-inside">
+                                        <p class="leading-relaxed">
+                                            <strong>Benefícios principais:</strong>
+                                        </p>
+                                        <li>Cadastro e rastreabilidade de amostras em tempo real</li>
+                                        <li>Integração entre setores e equipes</li>
+                                        <li>Histórico completo de dados e ações</li>
+                                        <li>Redução de retrabalho e inconsistências</li>
+                                    </ul>
                                 </div>
                                 <!-- Modal footer -->
-                                <div class="flex items-center border-t border-default space-x-4 pt-4 md:pt-5">
-                                    <button data-modal-hide="default-modal" type="button"
-                                        class=" text-[#1E1E1E] bg-pastelgreen-300 box-border border border-transparent hover:bg-pastelgreen-600 focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-[5px] text-sm px-4 py-2.5 focus:outline-none">I
-                                        accept</button>
-                                    <button data-modal-hide="default-modal" type="button"
-                                        class="text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-[5px] text-sm px-4 py-2.5 focus:outline-none">Decline</button>
+                                <div
+                                    class="flex items-center border-t border-default space-x-4 pt-4 md:pt-5 gap-2 md:gap-4">
+                                    <p class="leading-relaxed text-body">
+                                        <em>Mais integração significa mais eficiência e menos erros no dia a dia do
+                                            laboratório.</em>
+                                    </p>
+                                    <a target="_blank" href="./pages/contato/contato.html">
+                                        <button data-modal-hide="modal-card-1" type="button"
+                                            class=" text-[#1E1E1E] flex flex-nowrap gap-6 items-center bg-pastelgreen-300 box-border border text-nowrap border-transparent hover:bg-pastelgreen-600 focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-[5px] text-sm px-4 py-2.5 focus:outline-none">Demonstração
+                                            <i data-lucide="external-link"></i></button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -373,12 +384,73 @@
                                 rastreabilidade.
                             </p>
                         </div>
-                        <button type="button" class="card-btn-icon">
+                        <button data-modal-target="modal-card-2" data-modal-toggle="modal-card-2" type="button"
+                            class="card-btn-icon">
                             Saiba
-                            mais <i class="text-pastelgreen" data-lucide="chevron-right"></i>
+                            mais <i class="notebook-pen" data-lucide="chevron-right"></i>
                         </button>
                     </div>
 
+                    <!-- Main modal - Card 2 -->
+                    <div id="modal-card-2" tabindex="-1" aria-hidden="true"
+                        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                        <div class="relative p-4 w-full max-w-2xl max-h-full">
+                            <!-- Modal content -->
+                            <div
+                                class="relative bg-neutral-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
+                                <!-- Modal header -->
+                                <div class="flex items-center justify-between border-b border-default pb-4 md:pb-5">
+                                    <h3 class="text-lg font-semibold text-heading">
+                                        Segurança e conformidade regulatória
+                                    </h3>
+                                    <button type="button"
+                                        class="text-body bg-transparent cursor-pointer hover:bg-neutral-tertiary hover:text-heading rounded-base text-sm w-9 h-9 ms-auto inline-flex justify-center items-center"
+                                        data-modal-hide="modal-card-2">
+                                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                            width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6" />
+                                        </svg>
+                                        <span class="sr-only">Close modal</span>
+                                    </button>
+                                </div>
+                                <!-- Modal body -->
+                                <div class="space-y-4 md:space-y-6 py-4 md:py-6">
+                                    <p class="leading-relaxed text-body">
+                                        As soluções da LineSync são desenvolvidas com foco em segurança da informação,
+                                        confiabilidade dos dados e aderência às normas e boas práticas laboratoriais.
+                                    </p>
+                                    <p class="leading-relaxed text-body">
+                                        Garantimos que cada registro, alteração e resultado seja rastreável, auditável e
+                                        protegido, oferecendo tranquilidade em inspeções, auditorias e tomadas de
+                                        decisão.
+                                    </p>
+                                    <ul class="leading-relaxed text-body list-disc list-inside">
+                                        <p class="leading-relaxed">
+                                            <strong>Funcionalidades destacadas:</strong>
+                                        </p>
+                                        <li>Rastreabilidade completa de dados e processos</li>
+                                        <li>Controle de acesso por perfis de usuário</li>
+                                        <li>Histórico de alterações e auditoria</li>
+                                        <li>Conformidade com padrões de qualidade</li>
+                                    </ul>
+                                </div>
+                                <!-- Modal footer -->
+                                <div
+                                    class="flex items-center border-t border-default space-x-4 pt-4 md:pt-5 gap-2 md:gap-4">
+                                    <p class="leading-relaxed text-body">
+                                        <em>Confiança e segurança são pilares essenciais da gestão laboratorial
+                                            moderna.</em>
+                                    </p>
+                                    <a target="_blank" href="./pages/contato/contato.html">
+                                        <button data-modal-hide="modal-card-1" type="button"
+                                            class=" text-[#1E1E1E] flex flex-nowrap gap-6 items-center bg-pastelgreen-300 box-border border text-nowrap border-transparent hover:bg-pastelgreen-600 focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-[5px] text-sm px-4 py-2.5 focus:outline-none">Demonstração
+                                            <i data-lucide="external-link"></i></button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- Card 3 -->
                     <div data-aos="flip-right" data-aos-delay="600" class="feature-card">
@@ -393,13 +465,74 @@
                                 Reduza tempo de análise e maximize produtividade com IA e automações inteligentes.
                             </p>
                         </div>
-                        <button type="button" class="card-btn-icon">
+                        <button data-modal-target="modal-card-3" data-modal-toggle="modal-card-3" type="button"
+                            class="card-btn-icon">
                             Saiba
                             mais <i class="text-pastelgreen" data-lucide="chevron-right"></i>
                         </button>
                     </div>
-                </div>
-            </div>
+
+                    <!-- Main modal - Card 2 -->
+                    <div id="modal-card-3" tabindex="-1" aria-hidden="true"
+                        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                        <div class="relative p-4 w-full max-w-2xl max-h-full">
+                            <!-- Modal content -->
+                            <div
+                                class="relative bg-neutral-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
+                                <!-- Modal header -->
+                                <div class="flex items-center justify-between border-b border-default pb-4 md:pb-5">
+                                    <h3 class="text-lg font-semibold text-heading">
+                                        Automação e eficiência com tecnologia de ponta
+                                    </h3>
+                                    <button type="button"
+                                        class="text-body bg-transparent cursor-pointer hover:bg-neutral-tertiary hover:text-heading rounded-base text-sm w-9 h-9 ms-auto inline-flex justify-center items-center"
+                                        data-modal-hide="modal-card-3">
+                                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                            width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6" />
+                                        </svg>
+                                        <span class="sr-only">Close modal</span>
+                                    </button>
+                                </div>
+                                <!-- Modal body -->
+                                <div class="space-y-4 md:space-y-6 py-4 md:py-6">
+                                    <p class="leading-relaxed text-body">
+                                        A LineSync utiliza automações inteligentes e recursos de inteligência artificial
+                                        para otimizar análises, reduzir erros manuais e acelerar processos
+                                        laboratoriais.
+                                    </p>
+                                    <p class="leading-relaxed text-body">
+                                        Com menos tarefas repetitivas e mais inteligência aplicada aos dados, sua equipe
+                                        ganha tempo para focar no que realmente importa: qualidade e tomada de decisões
+                                        estratégicas.
+                                    </p>
+                                    <ul class="leading-relaxed text-body list-disc list-inside">
+                                        <p class="leading-relaxed">
+                                            <strong>Destaques:</strong>
+                                        </p>
+                                        <li>Automação de processos repetitivos</li>
+                                        <li>Análise inteligente de dados</li>
+                                        <li>Redução do tempo de análise</li>
+                                        <li>Aumento da produtividade da equipe</li>
+                                    </ul>
+                                </div>
+                                <!-- Modal footer -->
+                                <div
+                                    class="flex items-center border-t border-default space-x-4 pt-4 md:pt-5 gap-2 md:gap-4">
+                                    <p class="leading-relaxed text-body">
+                                        <em>Tecnologia que trabalha por você, todos os dias.</em>
+                                    </p>
+                                    <a target="_blank" href="./pages/contato/contato.html">
+                                        <button data-modal-hide="modal-card-1" type="button"
+                                            class=" text-[#1E1E1E] flex flex-nowrap gap-6 items-center bg-pastelgreen-300 box-border border text-nowrap border-transparent hover:bg-pastelgreen-600 focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-[5px] text-sm px-4 py-2.5 focus:outline-none">Fale
+                                            com a LineSync
+                                            <i data-lucide="external-link"></i></button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
         </section>
 
 
