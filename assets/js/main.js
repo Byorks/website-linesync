@@ -244,14 +244,14 @@ const render = (days, hours, minutes, seconds) => {
 
 const countdown = () => {
   const now = new Date();
-  console.log(now);
+  // console.log(now);
 
   // Ano atual
   const actualYear = now.getFullYear(); // 2025
 
   const actualDay = now.getDate();
   const actualMonth = now.getMonth();
-  console.log(actualDay)
+  // console.log(actualDay)
 
   // Janeiro é 0 porque os anos são contados em um array
   // primeiro param é o ano, segundo é o mês e o terceiro é o dia
@@ -293,12 +293,14 @@ const setDateLimit = () => {
   // Ano atual
   const actualYear = String(now.getFullYear()); // 2025
 
-  let actualDay;
-  if(getDate() + 1 == 32) {
+  let actualDay = new Date().setDate(now.getDate() + 1) ;
+
+  if(actualDay + 1 == 32) {
     actualDay = "1";
   } else {
     actualDay = String(now.getDate() + 1); // E se for dia 31? Daria erro?
   }
+
   const actualMonth = now.getMonth;
 
   let formattedMonth = "";
@@ -427,10 +429,10 @@ const loadTheme = () => {
 
   if(localTheme === 'dark' || (!localTheme && systemTheme)) {
     htmlElement.classList.add('dark');
-    updateIcon('moon');
+   
   } else {
     htmlElement.classList.remove('dark')
-    updateIcon('sun');
+   
   }
 }
 
@@ -438,24 +440,13 @@ const toggleTheme = () => {
   if (htmlElement.classList.contains('dark')) {
     htmlElement.classList.remove('dark');
     localStorage.setItem('theme', 'light');
-    updateIcon('sun');
+
   } else {
     htmlElement.classList.add('dark');
     localStorage.setItem('theme', 'dark');
-    updateIcon('moon');
+   
   }
 }
-
-// // Atualiza o ícone (Lucide)
-// function updateIcon(mode) {
-//     if (!iconElement) return;
-    
-//     // Se estiver usando data-lucide, precisamos pedir pro lucide renderizar novamente ou trocar o atributo
-//     // Uma forma simples é trocar o atributo data-lucide e rodar lucide.createIcons()
-//     // Mas como o Lucide substitui o <i> por <svg>, é melhor ter dois ícones no HTML e alternar a visibilidade (hidden/block)
-    
-//     // *DICA PRO:* Veja a implementação no HTML abaixo para a troca de ícones mais fácil.
-// }
 
 loadTheme();
 

@@ -1,45 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 1447 213">
-  <!-- Generator: Adobe Illustrator 29.1.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 142)  -->
+<svg id="Camada_1" data-name="Camada 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1447 213">
   <defs>
     <style>
-      .st0 {
-        mask: url(#mask);
-      }
-
-      .st1 {
-        fill: #d9d9d9;
-      }
-
-      .st2 {
-        fill: #322d48;
-      }
-
-      .st3 {
-        fill: #a6aaff;
-      }
-
-      .st4 {
+      .cls-1 {
         fill: url(#Gradiente_sem_nome);
         isolation: isolate;
         opacity: .8;
       }
+
+      .cls-2 {
+        fill: #322d48;
+      }
+
+      .cls-3 {
+        fill: #a6aaff;
+      }
     </style>
-    <mask id="mask" x="-167" y="0" width="2191.4" height="555" maskUnits="userSpaceOnUse">
-      <g id="mask0_670_4723">
-        <rect class="st1" y="0" width="1447" height="213"/>
-      </g>
-    </mask>
-    <linearGradient id="Gradiente_sem_nome" data-name="Gradiente sem nome" x1="790.7" y1="209.7" x2="786.7" y2="105.9" gradientTransform="translate(0 213.9) scale(1 -1)" gradientUnits="userSpaceOnUse">
+    <linearGradient id="Gradiente_sem_nome" data-name="Gradiente sem nome" x1="790.83" y1="870.31" x2="786.83" y2="974.11" gradientTransform="translate(0 -866.1)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#988fc5"/>
       <stop offset="1" stop-color="#392779"/>
     </linearGradient>
   </defs>
-  <g class="st0">
-    <g>
-      <path class="st4" d="M1434.9,398.5c10,196.9-553.6,0-1003.7,0s-281.1-89.5-281.1-214.7C431.2-20.5,1040.3,2,1279.8,132.2c239.6,130.2,106.5,196,155,266.2Z"/>
-      <path class="st3" d="M1475.2,143.3c0,118.5-320.3,335-755.5,335S-122.5,297.1-167,187.3C-66.5,88.8,85.7-75.7,605.7,55.8c520,131.5,881-12.5,869.5,87.5Z"/>
-      <path class="st2" d="M2024.3,271c10,199.2-785.8,284-1235.8,284S-129.8,356.2-129.8,229.5c374.8-346.5,784.3-14.5,1093.8-88C1273.5,68,1583.8,2.5,2024.3,271Z"/>
-    </g>
+  <g>
+    <path class="cls-1" d="M1434.9,398.5c10,196.9-553.6,0-1003.7,0s-281.1-89.5-281.1-214.7C431.2-20.5,1040.3,2,1279.8,132.2c239.6,130.2,106.5,196,155,266.2l.1.1Z"/>
+    <path class="cls-3" d="M1475.2,143.3c0,118.5-320.3,335-755.5,335S-122.5,297.1-167,187.3C-66.5,88.8,85.7-75.7,605.7,55.8c520,131.5,881-12.5,869.5,87.5Z"/>
+    <path class="cls-2" d="M2022.3,275c10,199.2-785.8,284-1235.8,284S-131.8,360.2-131.8,233.5c374.8-346.5,784.3-14.5,1093.8-88C1271.5,72,1581.8,6.5,2022.3,275Z"/>
   </g>
+  <path class="cls-2" d="M2022.3,275c10,199.2-785.8,284-1235.8,284S-131.8,360.2-131.8,233.5c374.8-346.5,784.3-14.5,1093.8-88C1271.5,72,1581.8,6.5,2022.3,275Z"/>
 </svg>
