@@ -232,7 +232,11 @@
     }
 
     .trainee-culture-card {
-        @apply flex flex-col gap-4 p-8 bg-misk-500  dark:bg-misk-950 dark:border dark:border-misk-200 rounded-lg text-white min-h-80;
+        @apply flex flex-col gap-4 p-8 bg-misk-200 border border-misk-300  dark:bg-misk-950 dark:border dark:border-misk-200 rounded-lg text-white min-h-80;
+    }
+
+    .trainee-culture-card h3 {
+        @apply text-primary
     }
 
     .collaborators-cards {
